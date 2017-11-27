@@ -1,0 +1,37 @@
+.p7bodyContainer
+  // background: #FFFEFC
+  background: #FFF	
+
+.p7Title
+  font-family: CircularStd-Medium
+  font-size: 3.6rem
+  color: #333132
+  text-align: center
+  padding-top: 4.4rem
+  padding-bottom: 6rem
+
+.p7OuterTweetContainer
+	width: 100%
+	display: flex
+	justify-content: center
+	overflow-x: hidden
+
+.p7InnerTweetContainer
+	min-width: 1680px
+	display: flex
+	justify-content: center
+	flex-wrap: wrap
+
+// Specific to Embedded Tweet
+.twitter-tweet-rendered
+	transform: scale(1) !important
+	margin: 10px 5px !important
+	width: calc(260px) !important
+
+.twitter-tweet-rendered:nth-child(-n+11)
+	align-self: flex-end
+	transform: translateX(-20px) !important
+
+.twitter-tweet-rendered:nth-child(n+12)
+	align-self: flex-start
+	transform: translateX(20px) !important

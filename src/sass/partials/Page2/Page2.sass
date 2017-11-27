@@ -1,0 +1,82 @@
+.p2bodyContainer
+  height: 22rem
+  background: rgb(248, 248, 248)
+  opacity: 0.8
+  padding: 0 18rem 0 15rem
+  display: flex
+  justify-content: space-between
+  flex-wrap: wrap
+  position: relative
+  overflow: hidden  
+  box-shadow: inset  0 -1px 1px -1px rgba(0,0,0,0.10)
+
+// In the 'absolute / relative' stacking context 
+// Z-index: 2 - numbers & Units
+// Z-index: -1 - Radial Gradient
+// Z-index: -2 - scroller Container  
+
+.p2Section
+  margin-top: 6.4rem
+  width: 18rem
+  position: relative
+  ::before
+    background: radial-gradient(circle closest-side, #f8f8f8 0%, rgba(248,248,248,0.85) 50%, rgba(248,248,248,0) 100%)
+    z-index: -1
+    content: ''
+    display: block
+    position: absolute
+    width: 25rem
+    height: 17rem
+    top: -19%
+    left: -19%
+  & *
+    z-index: 2
+    position: relative
+
+.p2Number
+  color: $black
+  font-family: CamphorStd-Regular
+  font-size: 4.8rem
+  display: flex
+  justify-content: center
+
+.p2Units
+  opacity: 0.6
+  font-family: CamphorStd-Light
+  font-size: 40px
+  color: #1A1819
+  display: flex
+  justify-content: center
+  margin-top: 1.9rem
+
+// Scroller Section 1
+.scrollerContainer
+  width: 100%
+  position: absolute
+  left: 0
+  transition: all ease
+  opacity: .25
+  z-index: -2
+
+.sc1
+  top: 0rem
+
+.sc2
+  top: 32rem
+
+.scrollerGroup
+  width: 100%
+  height: 7rem
+  display: flex
+  justify-content: space-between
+  align-items: center
+  margin-top: 3rem
+
+.sg1
+  padding: 0 7.4rem
+
+.sg2
+  padding: 0 11rem
+
+.sg3
+  padding: 0 14rem

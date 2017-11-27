@@ -1,0 +1,138 @@
+.p4bodyContainer
+  background: #F8F9FB
+  padding: 0 0 0 19.5rem
+  height: 100vh
+
+.p4Title
+  font-family: CamphorStd-Bold
+  font-size: 2.2rem
+  color: #2170B0
+  letter-spacing: 0.058rem
+  padding-top: 4.4rem
+
+.p4Subtitle
+  font-family: CamphorStd-Regular
+  font-size: 2.4rem
+  color: #525F7F
+  line-height: 3.6rem
+  margin-top: 2rem
+  width: 83.8rem
+
+// P4 Menu
+
+.p4Menu
+  margin-top: 4.1rem
+  display: flex
+  position: relative
+  li
+    display: flex
+    justify-content: center
+    margin-right: 1.4em
+
+
+.p4MenuButton
+  font-family: CamphorStd-Medium
+  font-size: 1.5rem
+  color: rgba(0,56,108,0.60)
+  border: 1px solid #E1E8F0
+  border-radius: 66em
+  padding: 0.63em 2em 
+  position: relative
+  cursor: pointer
+  +flexed
+
+
+
+// Dropdown
+
+.p4Dropdown
+  top: 7rem
+  position: absolute
+  width: 36rem
+  opacity: 0
+  display: none
+  transition: all 0.5s
+  box-sizing: content-box
+  padding: 2.0rem 1.8rem 3.1rem 4.5rem
+
+// AnimateDropdown
+
+.trigger-enter .p4Dropdown
+  display: block
+
+.trigger-enter-active .p4Dropdown 
+  opacity: 1
+
+// Dropdown Contents
+
+.p4DTitle
+  font-family: CamphorStd-Medium
+  font-size: 16px
+  letter-spacing: 0.8px  
+
+.p4DSubtitle
+  font-family: CamphorStd-Regular
+  font-size: 1.7rem
+  color: #333132
+  line-height: 2.4rem
+  margin-top: 2.2rem
+  width: 34.5rem
+
+.p4DT2
+  margin-top: 2.2rem
+
+.p4TopicSection
+  margin-top: 2.2rem
+  .p4TS
+    display: flex
+    .p4TSIcon
+      margin-right: 1.2rem
+    .p4TSText
+      font-family: CamphorStd-Regular
+      font-size: 1.6rem
+      color: #333132
+      letter-spacing: 0.08rem
+    .p4TSTextWithMargin
+      width: 16.1rem
+  
+.p4TSMarginTop
+  margin-top: 1.8rem
+
+.p4Book
+  position: absolute
+  top: 2.05rem
+  left: 1.7rem
+
+// Dropdown Background
+
+.dropdownBackground
+  width: 100px
+  height: 100px
+  position: absolute
+  background: #fff
+  border-radius: 8px
+  box-shadow: 0 6px 18px 3px rgba(189,208,223,0.38)  
+  transition: all 0.3s, opacity .3s, transform 0.3s
+  top: 0
+  left: 0
+  display: flex
+  justify-content: center
+
+.arrow
+  position: absolute
+  top: -16px
+  width: 32px
+  height: 32px
+  transform: rotate(225deg)
+  border-radius: 0px 0 8px 0
+  background-color: inherit
+  box-shadow: 2px 2px 5px rgba(82,95,127,.07)
+    
+
+// .dropdownBackground.open
+//   opacity: 1
+
+
+
+
+

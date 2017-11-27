@@ -1,0 +1,116 @@
+.p1Wrapper
+  height: 94vh
+  width: 100vw
+  position: relative
+  padding: 0 8rem
+
+.p1WrapperBackground
+  height: 100%
+  width: 100%
+  position: absolute
+  top: 0
+  left: 0
+  background-image: linear-gradient(154deg, rgba(33,86,184,0.99) 13%, rgba(33,112,176,0.99) 100%)
+  box-shadow: inset 0 0 6px 0 rgba(0,0,0,0.40)
+  z-index: -1
+
+// bodyContainer
+
+.p1BodyContainer
+  width: 60rem
+  position: relative
+  top: 4.2rem
+
+.p1NewBodyText
+  width: 33.8rem
+  height: 2.6rem
+  border-radius: 10rem
+  background: rgba(15, 0, 180, .15)
+  display: flex
+  align-items: center
+  font-family: CamphorStd-Medium
+  font-size: 1.4em
+  color: #FFFFFF
+
+.p1NewGreenPill
+  width: 4rem
+  height: 1.6rem
+  background: #3ECF8E
+  font-family: CamphorStd-Bold
+  font-size: 1.2rem
+  color: #FFFFFF
+  border-radius: 10rem
+  margin: 0 0.8rem 0 0.5rem
+  +flexed
+
+.p1Title
+  font-family: CamphorStd-Medium
+  font-size: 3.6rem
+  color: white
+  text-shadow: 0 1px 2px rgba(0,0,0,0.20)
+  padding-top: 6.2rem
+
+.p1Body
+  font-family: CamphorStd-Regular
+  font-size: 1.7rem
+  color: #E4E3FF
+  line-height: 2.6rem
+  width: 38.4rem
+  margin-top: 2.7rem
+  text-shadow: 0 1px 2px rgba(0,0,0,0.20)
+  
+// Buttons
+.p1ButtonContainer
+  display: flex
+  margin-top: 7.7rem  
+
+.p1Button
+  width: 16rem
+  height: 4rem
+  box-shadow: 0 4px 6px 5px rgba(50,50,93,0.33), 0 1px 3px 1px rgba(0,0,0,0.35)
+  border-radius: 3px
+  font-family: CamphorStd-Bold
+  font-size: 1.5rem
+  letter-spacing: 0.038rem
+  text-shadow: 0 1px 3px rgba(0,0,0,0.10)
+  +flexed
+  &:hover
+    +hover
+
+.enquireNow
+  background-color: #3ECF8E  
+  color: #FFFFFF
+  margin-right: 3.6rem  
+
+.learnMore
+  background-color: #FFF 
+  color: #2156B8
+
+// Video
+video
+  width: 42rem
+  height: 23.8rem
+  box-shadow: 0px 0px 20px 0 rgba(0,0,0,0.30)
+  border-radius: 1rem
+  position: absolute
+  bottom: 14.3rem
+  right: 13.8rem
+  &:hover
+    +hover
+
+// SVG
+.bottomSVG
+  width: 1269px
+  height: 150px
+  position: absolute
+  bottom: 0
+  left: 0
+  z-index: -1
+
+.topRightSVG
+  width: 379px
+  height: 369px
+  position: absolute
+  top: 0
+  right: 0
+  z-index: -1   

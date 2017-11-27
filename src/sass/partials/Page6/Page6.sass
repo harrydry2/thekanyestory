@@ -1,0 +1,73 @@
+.p6bodyContainer
+  background: #F8F9FB
+  padding: 0 8.3rem
+  // box-shadow: inset  0 -3px 3px -3px rgba(0,0,0,0.10)
+
+.p6Title
+  font-family: CircularStd-Medium
+  font-size: 3.6rem
+  color: #333132
+  padding-top: 4.4rem
+
+.p6Subtitle
+  font-family: CamphorStd-Regular
+  font-size: 2.4rem
+  color: #525F7F
+  line-height: 3.6rem
+  padding-top: 2.6rem
+  width: 82rem
+
+.p6BlogSection
+  display: flex
+  justify-content: space-between
+  padding: 4.4rem 0 8rem 0
+  .p6Blog
+    width: 34.8rem
+    height: 54.6rem
+    padding: 0 2.6rem 3.3rem 2.6rem
+    background-image: url("https://s3.eu-west-2.amazonaws.com/maximizeyp/blog2a.jpg")
+    position: relative
+    cursor: pointer
+    transition: all .5s
+    .p6BlogOverlay
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+      background: linear-gradient(180deg,transparent 70%,#333132)
+    .p6BlogTitleNameSection
+      bottom: -2.8rem      
+      position: absolute
+      transition: all .5s cubic-bezier(.18,.89,.32,1.28)
+      .p6BlogTitle
+        font-family: CamphorStd-Bold
+        font-size: 2.4rem
+        color: #FFFFFF
+        line-height: 2.8rem
+        width: 23rem
+      .p6BlogName
+        font-family: CamphorStd-Bold
+        font-size: 1.2rem
+        color: #B2B2B2
+        letter-spacing: 0.04rem
+        padding-top: 1.35rem
+      .p6ReadSection
+        margin-top: 4.5rem
+        display: flex
+        .p6Read
+          font-family: CamphorStd-Bold
+          font-size: 1.3rem
+          color: #FFFFFF
+          letter-spacing: 0.065rem
+          margin-right: 0.8rem
+        .p6Arrow
+          width: 2.4rem
+          height: 0.9rem
+          transform: translateY(0.1rem)
+
+.hoverenterOpacity
+  opacity: 0.45 !important
+
+.p6HoverUp .p6BlogTitleNameSection
+  transform: translateY(-5.8rem)
