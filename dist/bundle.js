@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 1);
+/******/ 	return __webpack_require__(__webpack_require__.s = 2);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -93,202 +93,6 @@ exports.$$ = $$;
 
 /***/ }),
 /* 1 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__(2);
-
-
-/***/ }),
-/* 2 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-__webpack_require__(3);
-
-var _bling = __webpack_require__(0);
-
-var _video = __webpack_require__(4);
-
-var _video2 = _interopRequireDefault(_video);
-
-var _blogHover = __webpack_require__(5);
-
-var _blogHover2 = _interopRequireDefault(_blogHover);
-
-var _zenscroll = __webpack_require__(6);
-
-var _zenscroll2 = _interopRequireDefault(_zenscroll);
-
-var _scroller = __webpack_require__(8);
-
-var _scroller2 = _interopRequireDefault(_scroller);
-
-var _programHover = __webpack_require__(9);
-
-var _programHover2 = _interopRequireDefault(_programHover);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-// JS
-if ((0, _bling.$)("body").classList.contains("Index")) {
-  (0, _video2.default)();
-  (0, _blogHover2.default)();
-  (0, _zenscroll2.default)();
-  (0, _scroller2.default)();
-  (0, _programHover2.default)();
-} // Sass
-
-
-if ((0, _bling.$)("body").classList.contains("Blog")) {
-  (0, _blogHover2.default)();
-}
-
-/***/ }),
-/* 3 */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-/* 4 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _bling = __webpack_require__(0);
-
-var video = (0, _bling.$)("video");
-
-function videoPlay() {
-  video.on("click", function () {
-    this.paused ? this.play() : this.pause();
-  });
-}
-
-exports.default = videoPlay;
-
-/***/ }),
-/* 5 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _bling = __webpack_require__(0);
-
-var blogs = Array.from((0, _bling.$$)(".p6Blog"));
-
-function blogHover() {
-  blogs.forEach(function (blog) {
-    return blog.on("mouseenter", hoverEnter);
-  });
-  blogs.forEach(function (blog) {
-    return blog.on("mouseleave", hoverLeave);
-  });
-
-  function hoverEnter() {
-    var _this = this;
-
-    this.classList.add("p6HoverUp");
-    blogs.forEach(function (blog) {
-      if (blog !== _this) {
-        blog.classList.add("hoverenterOpacity");
-      }
-    });
-  }
-
-  function hoverLeave() {
-    this.classList.remove("p6HoverUp");
-    blogs.forEach(function (blog) {
-      blog.classList.remove("hoverenterOpacity");
-    });
-  }
-}
-
-exports.default = blogHover;
-
-/***/ }),
-/* 6 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _bling = __webpack_require__(0);
-
-var zenscroll = __webpack_require__(7);
-
-
-// Menu
-var menuAbout = (0, _bling.$)(".menuAbout");
-var menuProgrammes = (0, _bling.$)(".menuProgrammes");
-var menuSchools = (0, _bling.$)(".menuSchools");
-var menuBlog = (0, _bling.$)(".menuBlog");
-
-// Buttons
-var enquireNow = (0, _bling.$)(".enquireNow");
-var learnMore = (0, _bling.$)(".learnMore");
-// Footer
-var footerUpArrow = (0, _bling.$)(".footerUpArrow");
-// Section Items
-var landerSection = (0, _bling.$)(".p1WrapperBackground");
-var aboutSection = (0, _bling.$)(".p3bodyContainer");
-var programmesSection = (0, _bling.$)(".p4bodyContainer");
-var schoolsSection = (0, _bling.$)(".p5bodyContainer");
-var blogSection = (0, _bling.$)(".p6bodyContainer");
-
-//Menu Clicks
-
-function zenscrollFunction() {
-  menuAbout.on("click", function () {
-    zenscroll.to(aboutSection);
-  });
-
-  menuProgrammes.on("click", function () {
-    zenscroll.to(programmesSection);
-  });
-
-  menuSchools.on("click", function () {
-    zenscroll.to(schoolsSection);
-  });
-
-  menuBlog.on("click", function () {
-    zenscroll.to(blogSection);
-  });
-
-  // Button Clicks
-  enquireNow.on("click", function () {
-    zenscroll.to(schoolsSection);
-  });
-
-  learnMore.on("click", function () {
-    zenscroll.to(aboutSection);
-  });
-
-  // Footer Clicks
-  footerUpArrow.on("click", function () {
-    zenscroll.to(landerSection);
-  });
-}
-exports.default = zenscrollFunction;
-
-/***/ }),
-/* 7 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/**
@@ -649,7 +453,167 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 
 
 /***/ }),
-/* 8 */
+/* 2 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__(3);
+
+
+/***/ }),
+/* 3 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+__webpack_require__(4);
+
+var _bling = __webpack_require__(0);
+
+var _video = __webpack_require__(5);
+
+var _video2 = _interopRequireDefault(_video);
+
+var _zenscroll = __webpack_require__(6);
+
+var _zenscroll2 = _interopRequireDefault(_zenscroll);
+
+var _scroller = __webpack_require__(7);
+
+var _scroller2 = _interopRequireDefault(_scroller);
+
+var _programHover = __webpack_require__(8);
+
+var _programHover2 = _interopRequireDefault(_programHover);
+
+var _blogHover = __webpack_require__(9);
+
+var _blogHover2 = _interopRequireDefault(_blogHover);
+
+var _zenscrollBlog = __webpack_require__(10);
+
+var _zenscrollBlog2 = _interopRequireDefault(_zenscrollBlog);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+// JS
+
+
+// Blog
+// Sass
+if ((0, _bling.$)("body").classList.contains("Index")) {
+  (0, _video2.default)();
+  (0, _blogHover2.default)();
+  (0, _zenscroll2.default)();
+  (0, _scroller2.default)();
+  (0, _programHover2.default)();
+}
+
+if ((0, _bling.$)("body").classList.contains("Blog")) {
+  (0, _blogHover2.default)();
+  (0, _zenscrollBlog2.default)();
+}
+
+/***/ }),
+/* 4 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 5 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _bling = __webpack_require__(0);
+
+var video = (0, _bling.$)("video");
+
+function videoPlay() {
+  video.on("click", function () {
+    this.paused ? this.play() : this.pause();
+  });
+}
+
+exports.default = videoPlay;
+
+/***/ }),
+/* 6 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _bling = __webpack_require__(0);
+
+var zenscroll = __webpack_require__(1);
+
+
+// Menu
+var menuAbout = (0, _bling.$)(".menuAbout");
+var menuProgrammes = (0, _bling.$)(".menuProgrammes");
+var menuSchools = (0, _bling.$)(".menuSchools");
+var menuBlog = (0, _bling.$)(".menuBlog");
+
+// Buttons
+var enquireNow = (0, _bling.$)(".enquireNow");
+var learnMore = (0, _bling.$)(".learnMore");
+// Footer
+var footerUpArrow = (0, _bling.$)(".footerUpArrow");
+// Section Items
+var landerSection = (0, _bling.$)(".p1WrapperBackground");
+var aboutSection = (0, _bling.$)(".p3bodyContainer");
+var programmesSection = (0, _bling.$)(".p4bodyContainer");
+var schoolsSection = (0, _bling.$)(".p5bodyContainer");
+var blogSection = (0, _bling.$)(".p6bodyContainer");
+
+//Menu Clicks
+
+function zenscrollFunction() {
+  menuAbout.on("click", function () {
+    zenscroll.to(aboutSection);
+  });
+
+  menuProgrammes.on("click", function () {
+    zenscroll.to(programmesSection);
+  });
+
+  menuSchools.on("click", function () {
+    zenscroll.to(schoolsSection);
+  });
+
+  menuBlog.on("click", function () {
+    zenscroll.to(blogSection);
+  });
+
+  // Button Clicks
+  enquireNow.on("click", function () {
+    zenscroll.to(schoolsSection);
+  });
+
+  learnMore.on("click", function () {
+    zenscroll.to(aboutSection);
+  });
+
+  // Footer Clicks
+  footerUpArrow.on("click", function () {
+    zenscroll.to(landerSection);
+  });
+}
+exports.default = zenscrollFunction;
+
+/***/ }),
+/* 7 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -699,7 +663,7 @@ function scrollerFunction() {
 exports.default = scrollerFunction;
 
 /***/ }),
-/* 9 */
+/* 8 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -768,6 +732,76 @@ function programHover() {
 }
 
 exports.default = programHover;
+
+/***/ }),
+/* 9 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _bling = __webpack_require__(0);
+
+var blogs = Array.from((0, _bling.$$)(".p6Blog"));
+
+function blogHover() {
+  blogs.forEach(function (blog) {
+    return blog.on("mouseenter", hoverEnter);
+  });
+  blogs.forEach(function (blog) {
+    return blog.on("mouseleave", hoverLeave);
+  });
+
+  function hoverEnter() {
+    var _this = this;
+
+    this.classList.add("p6HoverUp");
+    blogs.forEach(function (blog) {
+      if (blog !== _this) {
+        blog.classList.add("hoverenterOpacity");
+      }
+    });
+  }
+
+  function hoverLeave() {
+    this.classList.remove("p6HoverUp");
+    blogs.forEach(function (blog) {
+      blog.classList.remove("hoverenterOpacity");
+    });
+  }
+}
+
+exports.default = blogHover;
+
+/***/ }),
+/* 10 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _bling = __webpack_require__(0);
+
+var zenscroll = __webpack_require__(1);
+
+
+var footerUpArrowBlog = (0, _bling.$)(".footerUpArrowBlog");
+var Blog = (0, _bling.$)(".Blog");
+
+function zenscrollFunctionBlog() {
+  footerUpArrowBlog.on("click", function () {
+    zenscroll.to(Blog);
+  });
+}
+exports.default = zenscrollFunctionBlog;
 
 /***/ })
 /******/ ]);

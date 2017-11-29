@@ -78,6 +78,12 @@ table {
 
 html {
   font-size: 10px; }
+  @media screen and (max-width: 1120px) {
+    html {
+      font-size: 9.5px; } }
+  @media screen and (max-width: 1020px) {
+    html {
+      font-size: 9px; } }
 
 @font-face {
   font-family: CamphorStd-Bold;
@@ -103,6 +109,14 @@ html {
   font-family: CamphorStd-Thin;
   src: url("/fonts/CamphorStd-Thin.woff2") format("woff"); }
 
+@font-face {
+  font-family: CamphorStd-Heavy;
+  src: url("/fonts/CamphorStd-Heavy.woff2") format("woff"); }
+
+@font-face {
+  font-family: Freight-Bold;
+  src: url("/fonts/FreightBold.ttf") format("ttf"); }
+
 body, html {
   box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
@@ -118,7 +132,8 @@ body, html {
   height: 9.6rem;
   display: flex;
   align-items: center;
-  justify-content: space-between; }
+  justify-content: space-between;
+  color: white; }
 
 .logoWrapper {
   display: flex;
@@ -138,7 +153,6 @@ body, html {
   display: flex; }
 
 .centerMenu div {
-  color: white;
   font-family: CamphorStd-Medium;
   font-size: 1.6rem;
   padding-right: 3rem; }
@@ -147,11 +161,27 @@ body, html {
     color: rgba(255, 255, 255, 0.7);
     fill: rgba(255, 255, 255, 0.7);
     cursor: pointer; }
+  @media screen and (max-width: 900px) {
+    .centerMenu div {
+      padding-right: 2.3rem; } }
+  @media screen and (max-width: 840px) {
+    .centerMenu div {
+      display: none; } }
+
+.rightSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateY(1px); }
+
+.phoneNumber {
+  font-family: CamphorStd-Medium;
+  font-size: 1.6rem;
+  margin-right: 3rem; }
 
 .twitterSVG {
   width: 2.2rem;
-  height: 1.8rem;
-  transform: translateY(0.2rem); }
+  height: 1.8rem; }
   .twitterSVG *:hover {
     transition: all 0.1s ease;
     color: rgba(255, 255, 255, 0.7);
@@ -159,10 +189,22 @@ body, html {
     cursor: pointer; }
 
 .p1Wrapper {
-  height: 94vh;
   width: 100vw;
   position: relative;
-  padding: 0 8rem; }
+  padding: 0 8rem;
+  overflow-x: hidden; }
+  @media screen and (max-width: 1270px) {
+    .p1Wrapper {
+      padding: 0 5rem; } }
+  @media screen and (max-width: 1160px) {
+    .p1Wrapper {
+      padding: 0 4rem 0 5rem; } }
+  @media screen and (max-width: 1050px) {
+    .p1Wrapper {
+      padding: 0 3.8rem 0 3.8rem; } }
+  @media screen and (max-width: 955px) {
+    .p1Wrapper {
+      padding: 0 3rem 0 3rem; } }
 
 .p1WrapperBackground {
   height: 100%;
@@ -175,9 +217,11 @@ body, html {
   z-index: -1; }
 
 .p1BodyContainer {
-  width: 60rem;
+  width: 100%;
   position: relative;
-  top: 4.2rem; }
+  margin: 4.2rem 0 12rem 0;
+  display: flex;
+  justify-content: space-between; }
 
 .p1NewBodyText {
   width: 33.8rem;
@@ -215,7 +259,7 @@ body, html {
   font-size: 1.7rem;
   color: #E4E3FF;
   line-height: 2.6rem;
-  width: 38.4rem;
+  width: 38.8rem;
   margin-top: 2.7rem;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2); }
 
@@ -255,24 +299,39 @@ video {
   box-shadow: 0px 0px 20px 0 rgba(0, 0, 0, 0.3);
   border-radius: 1rem;
   position: absolute;
-  bottom: 14.3rem;
-  right: 13.8rem; }
+  bottom: 0;
+  right: 0; }
   video:hover {
     box-shadow: 0 7px 18px 5px rgba(50, 50, 93, 0.33), 0 3px 10px 1px rgba(0, 0, 0, 0.35);
     transform: translateY(-1px);
     cursor: pointer; }
+  @media screen and (max-width: 1100px) {
+    video {
+      width: 40rem;
+      height: 22.6rem; } }
+  @media screen and (max-width: 955px) {
+    video {
+      width: 38rem;
+      height: 21.5rem; } }
+  @media screen and (max-width: 785px) {
+    video {
+      width: 35.7rem;
+      height: 20.2rem; } }
+  @media screen and (max-width: 760px) {
+    video {
+      display: none; } }
 
 .bottomSVG {
-  width: 1269px;
-  height: 150px;
+  width: 126.9rem;
+  height: 15rem;
   position: absolute;
   bottom: 0;
   left: 0;
   z-index: -1; }
 
 .topRightSVG {
-  width: 379px;
-  height: 369px;
+  width: 37.9rem;
+  height: 36.9rem;
   position: absolute;
   top: 0;
   right: 0;
@@ -289,6 +348,15 @@ video {
   position: relative;
   overflow: hidden;
   box-shadow: inset 0 -1px 1px -1px rgba(0, 0, 0, 0.1); }
+  @media screen and (max-width: 1160px) {
+    .p2bodyContainer {
+      padding: 0 14.4rem 0 12rem; } }
+  @media screen and (max-width: 950px) {
+    .p2bodyContainer {
+      padding: 0 11.5rem 0 9.6rem; } }
+  @media screen and (max-width: 830px) {
+    .p2bodyContainer {
+      padding: 0 8.6rem 0 7.2rem; } }
 
 .p2Section {
   margin-top: 6.4rem;
@@ -348,16 +416,46 @@ video {
 
 .sg1 {
   padding: 0 7.4rem; }
+  @media screen and (max-width: 1060px) {
+    .sg1 {
+      padding: 0 6.3rem; } }
+  @media screen and (max-width: 950px) {
+    .sg1 {
+      padding: 0 4.4rem; } }
 
 .sg2 {
   padding: 0 11rem; }
+  @media screen and (max-width: 1060px) {
+    .sg2 {
+      padding: 0 9.5rem; } }
+  @media screen and (max-width: 950px) {
+    .sg2 {
+      padding: 0 6.7rem; } }
+  @media screen and (max-width: 870px) {
+    .sg2 {
+      padding: 0 3rem; } }
+  @media screen and (max-width: 830px) {
+    .sg2 {
+      padding: 0 7rem; } }
 
 .sg3 {
   padding: 0 14rem; }
+  @media screen and (max-width: 1060px) {
+    .sg3 {
+      padding: 0 12rem; } }
+  @media screen and (max-width: 950px) {
+    .sg3 {
+      padding: 0 8.4rem; } }
+  @media screen and (max-width: 870px) {
+    .sg3 {
+      padding: 0 3.8rem; } }
 
 .logo1 {
   width: 13.7rem;
   height: 5.4rem; }
+  @media screen and (max-width: 870px) {
+    .logo1 {
+      display: none; } }
 
 .logo2 {
   width: 16rem;
@@ -402,13 +500,29 @@ video {
 .logo12 {
   width: 22rem;
   height: 4.1rem; }
+  @media screen and (max-width: 830px) {
+    .logo12 {
+      display: none; } }
 
 .logo13 {
   width: 18rem;
   height: 5.9rem; }
 
 .p3bodyContainer {
-  background: #EFF3F5; }
+  background: #EFF3F5;
+  font-size: 10px; }
+  @media screen and (max-width: 1120px) {
+    .p3bodyContainer {
+      font-size: 9.5px; } }
+  @media screen and (max-width: 1020px) {
+    .p3bodyContainer {
+      font-size: 9px; } }
+  @media screen and (max-width: 830px) {
+    .p3bodyContainer {
+      font-size: 10px; } }
+  @media screen and (max-width: 770px) {
+    .p3bodyContainer {
+      font-size: 9px; } }
 
 .p3tsWrapper {
   display: flex;
@@ -417,52 +531,72 @@ video {
 
 .p3Title {
   font-family: CamphorStd-Medium;
-  font-size: 3.6rem;
+  font-size: 3.6em;
   color: #2170B0;
   letter-spacing: 0.5px;
-  padding-top: 5rem; }
+  padding-top: 1.38em;
+  margin: 0 2.77em; }
 
 .p3Subtitle {
+  text-align: center;
   font-family: CamphorStd-Regular;
-  font-size: 2.4rem;
+  font-size: 2.4em;
   color: #525F7F;
-  line-height: 3.6rem;
-  margin-top: 2.6rem;
-  width: 67rem; }
+  line-height: 1.5em;
+  margin-top: 1.08em;
+  width: 31.6em; }
 
 .p3Power6 {
-  margin-top: 9rem;
-  padding-bottom: 4.6rem; }
+  margin-top: 9em;
+  padding-bottom: 4.6em; }
   .p3Power6 .p3Section {
     display: flex;
     justify-content: space-between;
-    padding: 0 13rem 0 16rem; }
+    padding: 0 13em 0 16em; }
+    @media screen and (max-width: 1250px) {
+      .p3Power6 .p3Section {
+        padding: 0 6em 0 10em; } }
+    @media screen and (max-width: 950px) {
+      .p3Power6 .p3Section {
+        padding: 0 2em 0 8em; } }
+    @media screen and (max-width: 870px) {
+      .p3Power6 .p3Section {
+        padding: 0 0.5em 0 6em; } }
+    @media screen and (max-width: 830px) {
+      .p3Power6 .p3Section {
+        padding: 0 9em 0 11.2em; } }
     .p3Power6 .p3Section .p3Box {
       position: relative; }
       .p3Power6 .p3Section .p3Box .p3Icon {
         position: absolute;
-        top: -0.5rem;
-        left: -3.7rem; }
+        top: -0.5em;
+        left: -3.7em; }
       .p3Power6 .p3Section .p3Box .p3Power6Title {
         font-family: CamphorStd-Bold;
-        font-size: 1.7rem;
+        font-size: 1.7em;
         color: #32325D;
-        letter-spacing: 0.1rem; }
+        letter-spacing: 0.059em; }
       .p3Power6 .p3Section .p3Box .p3Power6Body {
         font-family: CamphorStd-Regular;
-        font-size: 1.7rem;
+        font-size: 1.7em;
         color: #6B7C93;
-        line-height: 2.4rem;
-        width: 26.2rem;
-        margin-top: 1.8rem; }
+        line-height: 1.4em;
+        width: 15.4em;
+        margin-top: 1.06em; }
 
 .p3S2 {
-  margin-top: 5.5rem; }
+  margin-top: 5.5em; }
+
+@media screen and (max-width: 830px) {
+  .p3TBD {
+    display: none; } }
 
 .p4bodyContainer {
   background: #F8F9FB;
-  padding: 0 0 0 19.5rem;
-  height: 100vh; }
+  padding: 0 0 0 17%; }
+  @media screen and (max-width: 1150px) {
+    .p4bodyContainer {
+      padding: 0 0 0 15%; } }
 
 .p4Title {
   font-family: CamphorStd-Bold;
@@ -481,6 +615,7 @@ video {
 
 .p4Menu {
   margin-top: 4.1rem;
+  padding-bottom: 40rem;
   display: flex;
   position: relative; }
   .p4Menu li {
@@ -634,18 +769,47 @@ video {
 
 .p5bodyContainer {
   background: #FFF;
-  padding: 0 17rem 0 19.5rem; }
+  padding-top: 4.2rem; }
 
 .p5Title {
   font-family: CamphorStd-Bold;
-  font-size: 2.2rem;
+  font-size: 2.2em;
   color: #2170B0;
-  letter-spacing: 0.058rem;
-  padding-top: 4.4rem; }
+  letter-spacing: 0.026em;
+  width: 13em; }
 
 .p5MonialSection {
   display: flex;
-  justify-content: space-between; }
+  justify-content: center;
+  font-size: 10px; }
+  @media screen and (max-width: 1120px) {
+    .p5MonialSection {
+      font-size: 9.5px; } }
+  @media screen and (max-width: 1020px) {
+    .p5MonialSection {
+      font-size: 9px; } }
+  @media screen and (max-width: 860px) {
+    .p5MonialSection {
+      font-size: 10px; } }
+  .p5MonialSection .p5Monial {
+    background: #FFFFFF;
+    box-shadow: 0 2px 22px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    width: 28.6em;
+    height: 35.5em;
+    transition: all 0.3s; }
+    .p5MonialSection .p5Monial:hover {
+      transform: translateY(-0.5px);
+      box-shadow: 0 2px 42px 0 rgba(0, 0, 0, 0.2);
+      cursor: pointer; }
+  .p5MonialSection .p5MiddleMonial {
+    margin: 0 2.2rem; }
+    @media screen and (max-width: 860px) {
+      .p5MonialSection .p5MiddleMonial {
+        margin: 0 0 0 3rem; } }
+  @media screen and (max-width: 860px) {
+    .p5MonialSection .p5TBD {
+      display: none; } }
 
 .p5MS1 {
   margin-top: 4.2rem; }
@@ -654,40 +818,33 @@ video {
   margin-top: 2.8rem;
   margin-bottom: 5.1rem; }
 
-.p5Monial {
-  background: #FFFFFF;
-  box-shadow: 0 2px 22px 0 rgba(0, 0, 0, 0.2);
-  border-radius: 4px;
-  width: 28.6rem;
-  height: 36.7rem;
-  transition: all 0.3s; }
-  .p5Monial:hover {
-    transform: translateY(-0.5px);
-    box-shadow: 0 2px 42px 0 rgba(0, 0, 0, 0.2);
-    cursor: pointer; }
-  .p5Monial .p5Img {
-    width: 100%; }
-  .p5Monial .p5TextSection {
-    padding: 2.1rem 2rem 1.7rem 1.7rem; }
-    .p5Monial .p5TextSection .p5Words {
-      font-family: CamphorStd-Medium;
-      font-size: 1.6rem;
-      color: #333132;
-      line-height: 1.9rem; }
-    .p5Monial .p5TextSection .p5Name {
-      font-family: CamphorStd-Bold;
-      font-size: 1.6rem;
-      color: #333132;
-      margin-top: 4.5rem; }
-    .p5Monial .p5TextSection .p5SchoolName {
-      font-family: CamphorStd-Italic;
-      font-size: 1.5rem;
-      color: #333132;
-      margin-top: .93rem; }
+.p5Img {
+  width: 100%; }
+
+.p5TextSection {
+  padding: 2.1em 2em 1.7em 1.7em; }
+  .p5TextSection .p5Words {
+    font-family: CamphorStd-Medium;
+    font-size: 1.6em;
+    color: #333132;
+    line-height: 1.2em; }
+  .p5TextSection .p5Name {
+    font-family: CamphorStd-Bold;
+    font-size: 1.6em;
+    color: #333132;
+    margin-top: 2.2em; }
+  .p5TextSection .p5SchoolName {
+    font-family: CamphorStd-Italic;
+    font-size: 1.5em;
+    color: #333132;
+    margin-top: .63em; }
 
 .p6bodyContainer {
   background: #F8F9FB;
   padding: 0 8.3rem; }
+  @media screen and (max-width: 1050px) {
+    .p6bodyContainer {
+      padding: 0 5.5rem; } }
 
 .p6Title {
   font-family: CamphorStd-Medium;
@@ -701,20 +858,46 @@ video {
   color: #525F7F;
   line-height: 3.6rem;
   padding-top: 2.6rem;
-  width: 82rem; }
+  width: 100rem; }
+
+.blogImg1 {
+  background-image: url("https://s3.eu-west-2.amazonaws.com/maximizeyp/blog/MaxBlog1a.jpg"); }
+
+.blogImg2 {
+  background-image: url("https://s3.eu-west-2.amazonaws.com/maximizeyp/blog/MaxBlog2a.jpg"); }
+  @media screen and (max-width: 870px) {
+    .blogImg2 {
+      display: none; } }
+
+.blogImg3 {
+  background-image: url("https://s3.eu-west-2.amazonaws.com/maximizeyp/blog/MaxBlog3a.jpg"); }
+
+.blogImg4 {
+  background-image: url("https://s3.eu-west-2.amazonaws.com/maximizeyp/blog/MaxBlog4a.jpg"); }
 
 .p6BlogSection {
   display: flex;
   justify-content: space-between;
   padding: 4.4rem 0 8rem 0; }
   .p6BlogSection .p6Blog {
-    width: 34.8rem;
-    height: 54.6rem;
+    width: 27.7vw;
+    height: 42.6vw;
     padding: 0 2.6rem 3.3rem 2.6rem;
-    background-image: url("https://s3.eu-west-2.amazonaws.com/maximizeyp/blog2a.jpg");
     position: relative;
     cursor: pointer;
-    transition: all .5s; }
+    transition: all .5s;
+    background-size: cover; }
+    @media screen and (max-width: 1210px) {
+      .p6BlogSection .p6Blog {
+        width: 27.1vw;
+        height: 41.7vw; } }
+    @media screen and (max-width: 1050px) {
+      .p6BlogSection .p6Blog {
+        width: 28.2vw;
+        height: 43.5vw; } }
+    @media screen and (max-width: 870px) {
+      .p6BlogSection .p6Blog {
+        width: 43vw; } }
     .p6BlogSection .p6Blog .p6BlogOverlay {
       position: absolute;
       top: 0;
@@ -733,7 +916,7 @@ video {
         line-height: 2.8rem;
         width: 23rem; }
       .p6BlogSection .p6Blog .p6BlogTitleNameSection .p6BlogName {
-        font-family: CamphorStd-Bold;
+        font-family: CamphorStd-Heavy;
         font-size: 1.2rem;
         color: #B2B2B2;
         letter-spacing: 0.04rem;
@@ -814,3 +997,123 @@ video {
   cursor: pointer; }
   .footerUpArrow:hover {
     transform: translateY(-0.6rem); }
+
+.blogBodyContainer {
+  background: #fefefe; }
+
+.blogblogPadding {
+  padding: 0 8.3rem; }
+
+.blogHeader {
+  background-image: url("https://s3.eu-west-2.amazonaws.com/maximizeyp/blog/MaxBlog1b.jpg");
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 49rem;
+  padding: 4.8rem 8.3rem 4.8rem 8.3rem; }
+
+.blogTitleContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 10rem; }
+
+.blogTitle {
+  font-family: Freight-Bold;
+  font-size: 6.2rem;
+  color: #FFF;
+  width: 55rem;
+  text-align: center;
+  line-height: 6.5rem;
+  margin: 0 15rem;
+  font-weight: 700; }
+
+.blogSubtitle {
+  font-size: 1.7rem;
+  font-family: CamphorStd-Heavy;
+  color: #FFF;
+  margin-top: 3.3rem; }
+
+.blogBodyWrapper {
+  padding: 8rem 25rem 0 25rem; }
+  .blogBodyWrapper p {
+    margin-top: 2rem; }
+  .blogBodyWrapper .ender {
+    margin-top: 4.5rem; }
+  .blogBodyWrapper .shortShift {
+    margin-top: 1rem !important; }
+
+.pBlogBody {
+  font-size: 20px;
+  color: #8a8989;
+  font-family: CamphorStd-Regular;
+  line-height: 2.7rem; }
+
+.pBlogBiggerBody {
+  font-size: 2.5rem;
+  color: #333132;
+  font-family: CamphorStd-Bold;
+  line-height: 2.7rem; }
+
+.pBlogQuote {
+  font-size: 3.3rem;
+  color: #333132;
+  line-height: 4rem;
+  font-family: Freight-Bold;
+  font-weight: 700; }
+
+.blogContactOuterSection {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin-top: 7rem; }
+  .blogContactOuterSection:before {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    background: #dfdfdf;
+    content: '';
+    width: 100%;
+    height: 1px; }
+
+.blogContactInnerSection {
+  padding: 0 4rem;
+  background: #fefefe;
+  z-index: 6;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .blogContactInnerSection .marr {
+    margin-right: 30px; }
+
+.blogContact {
+  font-size: 1.5rem;
+  font-family: CamphorStd-Bold;
+  color: #0a0a0a;
+  letter-spacing: 0.1rem;
+  margin-right: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.blogContactEmail {
+  width: 12.8rem;
+  height: 4rem;
+  background: rgba(178, 178, 178, 0.2);
+  border-radius: 100px;
+  color: gray;
+  cursor: pointer;
+  transition: all 0.3s; }
+  .blogContactEmail:hover {
+    color: #fff;
+    background: #333132; }
+
+.blogAlsoLike {
+  font-size: 3.8rem;
+  font-family: Freight-Bold;
+  font-weight: 700;
+  color: #333132;
+  margin-top: 7rem; }
