@@ -1,8 +1,16 @@
 .p1Wrapper
-  height: 94vh
   width: 100vw
   position: relative
   padding: 0 8rem
+  overflow-x: hidden
+  @media screen and (max-width: 1270px)
+    padding: 0 5rem
+  @media screen and (max-width: 1160px)
+    padding: 0 4rem 0 5rem
+  @media screen and (max-width: 1050px)
+    padding: 0 3.8rem 0 3.8rem
+  @media screen and (max-width: 955px)
+    padding: 0 3rem 0 3rem
 
 .p1WrapperBackground
   height: 100%
@@ -17,9 +25,11 @@
 // bodyContainer
 
 .p1BodyContainer
-  width: 60rem
+  width: 100%
   position: relative
-  top: 4.2rem
+  margin: 4.2rem 0 12rem 0
+  display: flex
+  justify-content: space-between
 
 .p1NewBodyText
   width: 33.8rem
@@ -55,7 +65,7 @@
   font-size: 1.7rem
   color: #E4E3FF
   line-height: 2.6rem
-  width: 38.4rem
+  width: 38.8rem
   margin-top: 2.7rem
   text-shadow: 0 1px 2px rgba(0,0,0,0.20)
   
@@ -93,23 +103,34 @@ video
   box-shadow: 0px 0px 20px 0 rgba(0,0,0,0.30)
   border-radius: 1rem
   position: absolute
-  bottom: 14.3rem
-  right: 13.8rem
+  bottom: 0
+  right: 0 
   &:hover
     +hover
+  @media screen and (max-width: 1100px)
+    width: 40rem
+    height: 22.6rem
+  @media screen and (max-width: 955px)
+    width: 38rem
+    height: 21.5rem
+  @media screen and (max-width: 785px)
+    width: 35.7rem
+    height: 20.2rem
+  @media screen and (max-width: 760px)
+    display: none
 
 // SVG
 .bottomSVG
-  width: 1269px
-  height: 150px
+  width: 126.9rem
+  height: 15rem
   position: absolute
   bottom: 0
   left: 0
   z-index: -1
 
 .topRightSVG
-  width: 379px
-  height: 369px
+  width: 37.9rem
+  height: 36.9rem
   position: absolute
   top: 0
   right: 0

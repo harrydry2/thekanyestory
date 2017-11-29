@@ -1,0 +1,122 @@
+.blogBodyContainer
+  background: #fefefe
+
+.blogblogPadding
+  padding: 0 8.3rem
+
+// Header Section
+.blogHeader
+  background-image: url("https://s3.eu-west-2.amazonaws.com/maximizeyp/blog/MaxBlog1b.jpg")
+  background-size: cover
+  background-position: center
+  width: 100%
+  height: 49rem
+  padding: 4.8rem 8.3rem 4.8rem 8.3rem
+
+.blogTitleContainer
+  width: 100%
+  display: flex
+  justify-content: center
+  flex-wrap: wrap
+  margin-top: 10rem
+
+.blogTitle
+  font-family: Freight-Bold
+  font-size: 6.2rem
+  color: #FFF
+  width: 55rem
+  text-align: center
+  line-height: 6.5rem
+  margin: 0 15rem 
+  font-weight: 700
+
+.blogSubtitle
+  font-size: 1.7rem
+  font-family: CamphorStd-Heavy
+  color: #FFF
+  margin-top: 3.3rem
+  
+// Blog Body Section
+
+.blogBodyWrapper
+  padding: 8rem 25rem 0 25rem
+  p
+    margin-top: 2rem
+  .ender
+    margin-top: 4.5rem
+  .shortShift
+    margin-top: 1rem !important
+
+// 3 tiers of Blog
+.pBlogBody
+  font-size: 20px
+  color: #8a8989
+  font-family: CamphorStd-Regular
+  line-height: 2.7rem
+
+.pBlogBiggerBody
+  font-size: 2.5rem
+  color: #333132
+  font-family: CamphorStd-Bold
+  line-height: 2.7rem
+
+.pBlogQuote
+  font-size: 3.3rem
+  color: #333132
+  line-height: 4rem
+  font-family: Freight-Bold
+  font-weight: 700
+
+// Pre Below
+.blogContactOuterSection
+  display: flex
+  align-items: center
+  justify-content: center
+  position: relative
+  margin-top: 7rem
+  &:before
+    position: absolute
+    top: 50%
+    left: 0
+    transform: translateY(-50%)
+    background: #dfdfdf
+    content: ''
+    width: 100%
+    height: 1px
+
+.blogContactInnerSection
+  padding: 0 4rem
+  background: #fefefe
+  z-index: 6
+  +flexed
+  .marr
+    margin-right: 30px
+
+.blogContact
+  font-size: 1.5rem
+  font-family: CamphorStd-Bold
+  color: #0a0a0a
+  letter-spacing: 0.1rem
+  margin-right: 10px 
+  +flexed
+
+.blogContactEmail
+  width: 12.8rem
+  height: 4rem
+  background: rgba(178, 178, 178, 0.2)
+  border-radius: 100px
+  color: rgb(128, 128, 128)
+  cursor: pointer
+  transition: all 0.3s 
+  &:hover
+    color: #fff
+    background: #333132
+  
+// Below Blog
+
+.blogAlsoLike
+  font-size: 3.8rem
+  font-family: Freight-Bold
+  font-weight: 700  
+  color: #333132
+  margin-top: 7rem

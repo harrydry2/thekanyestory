@@ -1,5 +1,14 @@
 .p3bodyContainer
   background: #EFF3F5
+  font-size: 10px
+  @media screen and (max-width: 1120px)
+    font-size: 9.5px
+  @media screen and (max-width: 1020px)
+    font-size: 9px
+  @media screen and (max-width: 830px)
+    font-size: 10px
+  @media screen and (max-width: 770px)
+    font-size: 9px
 
 .p3tsWrapper
   display: flex
@@ -8,45 +17,58 @@
 
 .p3Title
   font-family: CamphorStd-Medium
-  font-size: 3.6rem
+  font-size: 3.6em
   color: #2170B0
   letter-spacing: 0.5px
-  padding-top: 5rem
+  padding-top: 1.38em
+  margin: 0 2.77em
 
 .p3Subtitle
+  text-align: center
   font-family: CamphorStd-Regular
-  font-size: 2.4rem
+  font-size: 2.4em
   color: #525F7F
-  line-height: 3.6rem
-  margin-top: 2.6rem
-  width: 67rem
+  line-height: 1.5em
+  margin-top: 1.08em
+  width: 31.6em
 
 .p3Power6
-  margin-top: 9rem
-  padding-bottom: 4.6rem  
+  margin-top: 9em
+  padding-bottom: 4.6em  
   .p3Section
     display: flex
     justify-content: space-between
-    padding: 0 13rem 0 16rem
+    padding: 0 13em 0 16em
+    @media screen and (max-width: 1250px)
+      padding: 0 6em 0 10em
+    @media screen and (max-width: 950px)
+      padding: 0 2em 0 8em
+    @media screen and (max-width: 870px)
+      padding: 0 0.5em 0 6em
+    @media screen and (max-width: 830px)
+      padding: 0 9em 0 11.2em
     .p3Box
-      position: relative
+      position: relative        
       .p3Icon
         position: absolute
-        top: -0.5rem
-        left: -3.7rem
+        top: -0.5em
+        left: -3.7em
       .p3Power6Title
         font-family: CamphorStd-Bold
-        font-size: 1.7rem
+        font-size: 1.7em
         color: #32325D
-        letter-spacing: 0.1rem
+        letter-spacing: 0.059em
       .p3Power6Body
         font-family: CamphorStd-Regular
-        font-size: 1.7rem
+        font-size: 1.7em
         color: #6B7C93
-        line-height: 2.4rem
-        width: 26.2rem
-        margin-top: 1.8rem
-
+        line-height: 1.4em
+        width: 15.4em
+        margin-top: 1.06em
 
 .p3S2
-  margin-top: 5.5rem
+  margin-top: 5.5em
+
+.p3TBD
+  @media screen and (max-width: 830px)
+    display: none

@@ -1,5 +1,11 @@
 html
   font-size: 10px
+  @media screen and (max-width: 1120px)
+    font-size: 9.5px
+  @media screen and (max-width: 1020px)
+    font-size: 9px
+  // @media screen and (max-width: 840px)
+  //   font-size: 10px
 
 $black: #333132
 
@@ -26,6 +32,14 @@ $black: #333132
 @font-face 
   font-family: CamphorStd-Thin
   src: url("/fonts/CamphorStd-Thin.woff2") format("woff")
+
+@font-face 
+  font-family: CamphorStd-Heavy
+  src: url("/fonts/CamphorStd-Heavy.woff2") format("woff")
+
+@font-face 
+  font-family: Freight-Bold
+  src: url("/fonts/FreightBold.ttf") format("ttf")
 
 
 body, html

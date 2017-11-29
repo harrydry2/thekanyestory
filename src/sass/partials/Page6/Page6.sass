@@ -1,7 +1,8 @@
 .p6bodyContainer
   background: #F8F9FB
   padding: 0 8.3rem
-  // box-shadow: inset  0 -3px 3px -3px rgba(0,0,0,0.10)
+  @media screen and (max-width: 1050px)
+    padding: 0 5.5rem
 
 .p6Title
   font-family: CamphorStd-Medium
@@ -15,20 +16,42 @@
   color: #525F7F
   line-height: 3.6rem
   padding-top: 2.6rem
-  width: 82rem
+  width: 100rem
+
+.blogImg1
+  background-image: url("https://s3.eu-west-2.amazonaws.com/maximizeyp/blog/MaxBlog1a.jpg")
+
+.blogImg2
+  background-image: url("https://s3.eu-west-2.amazonaws.com/maximizeyp/blog/MaxBlog2a.jpg")
+  @media screen and (max-width: 870px)
+      display: none 
+
+.blogImg3
+  background-image: url("https://s3.eu-west-2.amazonaws.com/maximizeyp/blog/MaxBlog3a.jpg")
+
+.blogImg4
+  background-image: url("https://s3.eu-west-2.amazonaws.com/maximizeyp/blog/MaxBlog4a.jpg")
 
 .p6BlogSection
   display: flex
   justify-content: space-between
   padding: 4.4rem 0 8rem 0
   .p6Blog
-    width: 34.8rem
-    height: 54.6rem
+    width: 27.7vw    
+    height: 42.6vw
     padding: 0 2.6rem 3.3rem 2.6rem
-    background-image: url("https://s3.eu-west-2.amazonaws.com/maximizeyp/blog2a.jpg")
     position: relative
     cursor: pointer
     transition: all .5s
+    background-size: cover
+    @media screen and (max-width: 1210px)
+      width: 27.1vw
+      height: 41.7vw  
+    @media screen and (max-width: 1050px)
+      width: 28.2vw
+      height: 43.5vw
+    @media screen and (max-width: 870px)
+      width: 43vw     
     .p6BlogOverlay
       position: absolute
       top: 0
@@ -47,7 +70,7 @@
         line-height: 2.8rem
         width: 23rem
       .p6BlogName
-        font-family: CamphorStd-Bold
+        font-family: CamphorStd-Heavy
         font-size: 1.2rem
         color: #B2B2B2
         letter-spacing: 0.04rem

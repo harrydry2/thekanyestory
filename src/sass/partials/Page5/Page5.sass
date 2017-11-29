@@ -1,18 +1,47 @@
 .p5bodyContainer
   background: #FFF
-  padding: 0 17rem 0 19.5rem
+  padding-top: 4.2rem
 
-
+// Hack to Emulate the Layout of Monial Section
 .p5Title
   font-family: CamphorStd-Bold
-  font-size: 2.2rem
+  font-size: 2.2em
   color: #2170B0
-  letter-spacing: 0.058rem
-  padding-top: 4.4rem
+  letter-spacing: 0.026em
+  width: 13em
 
+
+// Using fz 10px on p5Monial. Everything else just following that.
+// So use em fz on inner elements.  
 .p5MonialSection
   display: flex
-  justify-content: space-between
+  justify-content: center
+  font-size: 10px
+  @media screen and (max-width: 1120px)
+    font-size: 9.5px
+  @media screen and (max-width: 1020px)
+    font-size: 9px
+  @media screen and (max-width: 860px)
+    font-size: 10px
+  .p5Monial
+    background: #FFFFFF
+    box-shadow: 0 2px 22px 0 rgba(0,0,0,0.20)
+    border-radius: 4px
+    width: 28.6em
+    height: 35.5em
+    transition: all 0.3s
+    &:hover
+      transform: translateY(-0.5px)
+      box-shadow: 0 2px 42px 0 rgba(0,0,0,0.20)
+      cursor: pointer
+      
+  .p5MiddleMonial
+    margin: 0 2.2rem
+    @media screen and (max-width: 860px)
+      margin: 0 0 0 3rem
+  .p5TBD
+    @media screen and (max-width: 860px)
+      display: none
 
 .p5MS1
   margin-top: 4.2rem
@@ -21,35 +50,23 @@
   margin-top: 2.8rem
   margin-bottom: 5.1rem
 
-.p5Monial
-  background: #FFFFFF
-  box-shadow: 0 2px 22px 0 rgba(0,0,0,0.20)
-  border-radius: 4px
-  width: 28.6rem
-  height: 36.7rem
-  transition: all 0.3s
-  &:hover
-    transform: translateY(-0.5px)
-    box-shadow: 0 2px 42px 0 rgba(0,0,0,0.20)
-    cursor: pointer
-
-  .p5Img
-    width: 100%
-  .p5TextSection
-    padding: 2.1rem 2rem 1.7rem 1.7rem
-    .p5Words
-      font-family: CamphorStd-Medium
-      font-size: 1.6rem
-      color: #333132
-      line-height: 1.9rem
-    .p5Name
-      font-family: CamphorStd-Bold
-      font-size: 1.6rem
-      color: #333132
-      margin-top: 4.5rem
-    .p5SchoolName
-      font-family: CamphorStd-Italic
-      font-size: 1.5rem
-      color: #333132
-      margin-top: .93rem      
+.p5Img
+  width: 100%
+.p5TextSection
+  padding: 2.1em 2em 1.7em 1.7em
+  .p5Words
+    font-family: CamphorStd-Medium
+    font-size: 1.6em
+    color: #333132
+    line-height: 1.2em
+  .p5Name
+    font-family: CamphorStd-Bold
+    font-size: 1.6em
+    color: #333132
+    margin-top: 2.2em
+  .p5SchoolName
+    font-family: CamphorStd-Italic
+    font-size: 1.5em
+    color: #333132
+    margin-top: .63em    
 

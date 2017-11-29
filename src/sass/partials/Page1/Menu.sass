@@ -4,6 +4,7 @@
   display: flex
   align-items: center
   justify-content: space-between
+  color: white  
 
 .logoWrapper
   display: flex
@@ -23,17 +24,29 @@
   display: flex
 
 .centerMenu div
-  color: white
   font-family: CamphorStd-Medium
   font-size: 1.6rem
   padding-right: 3rem
   &:hover
     +menuHover
+  @media screen and (max-width: 900px)
+    padding-right: 2.3rem
+  @media screen and (max-width: 840px)
+    display: none
+
+// right
+.rightSection
+  +flexed
+  transform: translateY(1px)
+
+.phoneNumber
+  font-family: CamphorStd-Medium
+  font-size: 1.6rem
+  margin-right: 3rem  
 
 .twitterSVG
   width: 2.2rem
   height: 1.8rem
-  transform: translateY(0.2rem)
   & *
     &:hover
       +menuHover
