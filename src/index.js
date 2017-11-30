@@ -15,8 +15,16 @@ if ($("body").classList.contains("Index")) {
   videoPlay();
   blogHover();
   zenscrollFunction();
-  scrollerFunction();
   programHover();
+  if (window.innerWidth > 700) {
+    scrollerFunction();
+    console.log("banter");
+  }
+}
+
+if (window.innerWidth <= 710) {
+  $(".blogImg1").style.backgroundImage =
+    "url('https://s3.eu-west-2.amazonaws.com/maximizeyp/blog/MaxBlog1b.jpg')";
 }
 
 if ($("body").classList.contains("Blog")) {

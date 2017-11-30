@@ -42,11 +42,16 @@
 .phoneNumber
   font-family: CamphorStd-Medium
   font-size: 1.6rem
-  margin-right: 3rem  
+  margin-right: 3rem
+  @media screen and (max-width: 414px)
+    display: none      
 
 .twitterSVG
   width: 2.2rem
   height: 1.8rem
+  transform: translateY(-2px)
+  // @media screen and (max-width: 414px)
+  //   display: none   
   & *
     &:hover
       +menuHover

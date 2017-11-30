@@ -505,8 +505,15 @@ if ((0, _bling.$)("body").classList.contains("Index")) {
   (0, _video2.default)();
   (0, _blogHover2.default)();
   (0, _zenscroll2.default)();
-  (0, _scroller2.default)();
   (0, _programHover2.default)();
+  if (window.innerWidth > 700) {
+    (0, _scroller2.default)();
+    console.log("banter");
+  }
+}
+
+if (window.innerWidth <= 710) {
+  (0, _bling.$)(".blogImg1").style.backgroundImage = "url('https://s3.eu-west-2.amazonaws.com/maximizeyp/blog/MaxBlog1b.jpg')";
 }
 
 if ((0, _bling.$)("body").classList.contains("Blog")) {

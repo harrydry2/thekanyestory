@@ -9,11 +9,18 @@
     font-size: 10px
   @media screen and (max-width: 770px)
     font-size: 9px
+  @media screen and (max-width: 700px)
+    padding: 0 1.5rem 0 4rem
+  @media screen and (max-width: 414px)
+    padding: 0 1.5rem 0 1.5rem
 
 .p3tsWrapper
   display: flex
   justify-content: center
   flex-wrap: wrap
+  @media screen and (max-width: 700px)
+    justify-content: flex-start
+  
 
 .p3Title
   font-family: CamphorStd-Medium
@@ -22,6 +29,12 @@
   letter-spacing: 0.5px
   padding-top: 1.38em
   margin: 0 2.77em
+  @media screen and (max-width: 700px)
+    margin: 0
+  @media screen and (max-width: 419px)
+    font-size: 3em
+  @media screen and (max-width: 340px)
+    font-size: 2.8em
 
 .p3Subtitle
   text-align: center
@@ -31,10 +44,21 @@
   line-height: 1.5em
   margin-top: 1.08em
   width: 31.6em
+  @media screen and (max-width: 700px)
+    width: 85vw
+    text-align: left
+  @media screen and (max-width: 419px)
+    font-size: 1.9em    
+  @media screen and (max-width: 340px)
+    font-size: 1.8em
+    
 
 .p3Power6
   margin-top: 9em
-  padding-bottom: 4.6em  
+  padding-bottom: 4.6em
+  @media screen and (max-width: 580px)
+    margin-top: 4.6em
+    padding-bottom: 4.6em  
   .p3Section
     display: flex
     justify-content: space-between
@@ -47,17 +71,35 @@
       padding: 0 0.5em 0 6em
     @media screen and (max-width: 830px)
       padding: 0 9em 0 11.2em
+    @media screen and (max-width: 700px)
+      padding: 0 4em 0 4em
+    @media screen and (max-width: 625px)
+      padding: 0 0em 0 4em
+    @media screen and (max-width: 580px)
+      padding: 0 0em 0 0em
+      display: block
+    
     .p3Box
-      position: relative        
+      position: relative       
+      @media screen and (max-width: 580px)
+        margin-bottom: 3.6em 
       .p3Icon
         position: absolute
         top: -0.5em
         left: -3.7em
+        @media screen and (max-width: 580px)
+          position: static
+          margin-bottom: 1.3em
       .p3Power6Title
         font-family: CamphorStd-Bold
         font-size: 1.7em
         color: #32325D
         letter-spacing: 0.059em
+        text-transform: uppercase
+        @media screen and (max-width: 580px)
+          text-transform: none
+          font-size: 2em
+          letter-spacing: normal          
       .p3Power6Body
         font-family: CamphorStd-Regular
         font-size: 1.7em
@@ -65,10 +107,18 @@
         line-height: 1.4em
         width: 15.4em
         margin-top: 1.06em
+        @media screen and (max-width: 580px)
+          font-size: 1.93em
+          width: 85vw
+          margin-top: 0.5em
 
 .p3S2
   margin-top: 5.5em
+  @media screen and (max-width: 580px)
+    display: none !important
 
 .p3TBD
   @media screen and (max-width: 830px)
     display: none
+  @media screen and (max-width: 580px)
+    display: block

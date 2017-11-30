@@ -9,6 +9,8 @@
   color: #2170B0
   letter-spacing: 0.026em
   width: 13em
+  @media screen and (max-width: 650px)
+    text-align: center
 
 // Using fz 10px on p5Monial. Everything else just following that.
 // So use em fz on inner elements.  
@@ -38,12 +40,21 @@
     margin: 0 2.2rem
     @media screen and (max-width: 860px)
       margin: 0 0 0 3rem
+    @media screen and (max-width: 650px)
+      margin: 4rem 0
   .p5TBD
     @media screen and (max-width: 860px)
       display: none
+    @media screen and (max-width: 650px)
+      display: block
 
 .p5MS1
   margin-top: 4.2rem
+  @media screen and (max-width: 650px)
+    flex-direction: column
+    align-items: center
+    margin-bottom: 4rem
+
 
 .p5MS2
   margin-top: 2.8rem
@@ -67,5 +78,14 @@
     font-family: CamphorStd-Italic
     font-size: 1.5em
     color: #333132
-    margin-top: .63em    
+    margin-top: .63em
+
+.p5TBD2
+  @media screen and (max-width: 650px)
+    display: none !important
+
+.removeTitleHack
+  @media screen and (max-width: 650px)
+    display: none !important
+
 
