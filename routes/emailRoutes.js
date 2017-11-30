@@ -2,7 +2,7 @@ var nodemailer = require("nodemailer");
 
 module.exports = app => {
   app.post("/contact", (req, res) => {
-    const message = req.body.emailMessage;
+    const { firstName, lastName, School, Phone, Email, Message } = req.body;
     // nodemailer Stuff
     const transporter = nodemailer.createTransport({
       service: "gmail",
@@ -12,10 +12,16 @@ module.exports = app => {
       }
     });
     const mailOptions = {
-      from: "140 Canvas <team@140canvas.com>", // sender address
-      to: "harrydry1996@gmail.com", // list of receivers
+      from: `${firstName} ${lastName}<harrydry1996@gmail.com>`, // sender address
+      to: "info@maximizeyourpotential.co.uk", // list of receivers
       subject: "Enquiry from our Brand New Website!", // Subject line
-      html: `${message}`
+      html: `
+        Name: ${firstName} ${lastName} <br><br>
+        School: ${School} <br><br>
+        Email: ${Email} <br><br>
+        Phone: ${Phone} <br><br>
+        Message: ${Message}
+      `
     };
     transporter.sendMail(mailOptions, function(err, info) {
       if (err) console.log(err);

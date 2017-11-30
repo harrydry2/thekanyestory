@@ -5,7 +5,7 @@ const formInputs = $$(".p8FormInput");
 function formSubmit() {
   formInputs.forEach(input => {
     input.on("keypress", function(e) {
-      if (e.keyCode === 14) {
+      if (e.keyCode === 13) {
         e.preventDefault();
       }
     });

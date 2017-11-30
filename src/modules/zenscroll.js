@@ -6,6 +6,7 @@ const menuAbout = $(".menuAbout");
 const menuProgrammes = $(".menuProgrammes");
 const menuSchools = $(".menuSchools");
 const menuBlog = $(".menuBlog");
+const menuContact = $(".menuContact");
 
 // Buttons
 const enquireNow = $(".enquireNow");
@@ -18,6 +19,7 @@ const aboutSection = $(".p3bodyContainer");
 const programmesSection = $(".p4bodyContainer");
 const schoolsSection = $(".p5bodyContainer");
 const blogSection = $(".p6bodyContainer");
+const contactSection = $(".p8bodyContainer");
 
 //Menu Clicks
 
@@ -38,9 +40,13 @@ function zenscrollFunction() {
     zenscroll.to(blogSection);
   });
 
+  menuContact.on("click", function() {
+    zenscroll.to(contactSection);
+  });
+
   // Button Clicks
   enquireNow.on("click", function() {
-    zenscroll.to(schoolsSection);
+    zenscroll.to(contactSection);
   });
 
   learnMore.on("click", function() {

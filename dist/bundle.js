@@ -580,6 +580,7 @@ var menuAbout = (0, _bling.$)(".menuAbout");
 var menuProgrammes = (0, _bling.$)(".menuProgrammes");
 var menuSchools = (0, _bling.$)(".menuSchools");
 var menuBlog = (0, _bling.$)(".menuBlog");
+var menuContact = (0, _bling.$)(".menuContact");
 
 // Buttons
 var enquireNow = (0, _bling.$)(".enquireNow");
@@ -592,6 +593,7 @@ var aboutSection = (0, _bling.$)(".p3bodyContainer");
 var programmesSection = (0, _bling.$)(".p4bodyContainer");
 var schoolsSection = (0, _bling.$)(".p5bodyContainer");
 var blogSection = (0, _bling.$)(".p6bodyContainer");
+var contactSection = (0, _bling.$)(".p8bodyContainer");
 
 //Menu Clicks
 
@@ -612,9 +614,13 @@ function zenscrollFunction() {
     zenscroll.to(blogSection);
   });
 
+  menuContact.on("click", function () {
+    zenscroll.to(contactSection);
+  });
+
   // Button Clicks
   enquireNow.on("click", function () {
-    zenscroll.to(schoolsSection);
+    zenscroll.to(contactSection);
   });
 
   learnMore.on("click", function () {
@@ -800,7 +806,7 @@ var formInputs = (0, _bling.$$)(".p8FormInput");
 function formSubmit() {
   formInputs.forEach(function (input) {
     input.on("keypress", function (e) {
-      if (e.keyCode === 14) {
+      if (e.keyCode === 13) {
         e.preventDefault();
       }
     });
