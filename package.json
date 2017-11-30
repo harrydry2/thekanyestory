@@ -6,7 +6,8 @@
   "scripts": {
     "build": "webpack --config webpack.config.js",
     "server": "webpack-dev-server --open",
-    "start": "node server.js"
+    "start": "nodemon server.js",
+    "dev": "npm run build && npm start"
   },
   "author": "",
   "license": "ISC",
@@ -26,6 +27,7 @@
     "file-loader": "^1.1.5",
     "html-webpack-plugin": "^2.30.1",
     "node-sass": "^4.5.3",
+    "nodemon": "^1.12.1",
     "sass-loader": "^6.0.6",
     "style-loader": "^0.18.2",
     "uglifyjs-webpack-plugin": "^1.0.0-rc.0",
@@ -34,8 +36,10 @@
     "webpack-node-externals": "^1.6.0"
   },
   "dependencies": {
+    "body-parser": "^1.18.2",
     "express": "^4.16.2",
     "express-static-gzip": "^0.3.0",
+    "nodemailer": "^4.4.0",
     "zenscroll": "^4.0.0"
   }
 }

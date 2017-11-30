@@ -44,6 +44,10 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
+a {
+  color: inherit;
+  text-decoration: none; }
+
 .p3I1 {
   width: 2rem;
   height: 2rem; }
@@ -1186,6 +1190,87 @@ video {
 .twitter-tweet-rendered:nth-child(n+12) {
   align-self: flex-start;
   transform: translateX(20px) !important; }
+
+.p8bodyContainer {
+  background: #FFF;
+  font-size: 10px; }
+
+.p8Title {
+  padding-top: 1.6em;
+  padding-bottom: 1.4em;
+  font-family: CamphorStd-Medium;
+  font-size: 3.6em;
+  color: #333132;
+  text-align: center; }
+
+.p8OuterSection {
+  color: #b2b2b2;
+  display: flex;
+  justify-content: center;
+  font-family: CamphorStd-Medium;
+  cursor: pointer; }
+  .p8OuterSection .p8InnerSection {
+    display: flex;
+    align-items: center; }
+    .p8OuterSection .p8InnerSection:first-child {
+      margin-right: 6em; }
+  .p8OuterSection .p8InnerFont {
+    font-size: 1.7em;
+    font-family: CamphorStd-Medium; }
+  .p8OuterSection .p8Icon {
+    width: 2.5em;
+    height: 2.5em;
+    margin-right: 1.5em;
+    transform: translateY(-2px); }
+    .p8OuterSection .p8Icon * {
+      transition: all 0.3s; }
+
+.p8SectionHover .p8Icon * {
+  fill: #333333; }
+
+form {
+  margin: 8rem 15rem 4rem 15rem;
+  display: flex;
+  flex-wrap: wrap;
+  font-family: CamphorStd-Medium; }
+  form .formSection {
+    width: 100%;
+    display: flex; }
+    form .formSection:nth-child(2) {
+      margin-top: 2em; }
+    form .formSection:nth-child(3) {
+      margin-top: 2em; }
+    form .formSection .p8FormInput {
+      border: none;
+      background: #f5f5f5;
+      padding: 1.4em 1.12em;
+      color: #333132;
+      font-size: 1.7em;
+      flex: 1 1 auto;
+      border-radius: 0.3em; }
+      form .formSection .p8FormInput::-webkit-input-placeholder {
+        color: #b2b2b2; }
+      form .formSection .p8FormInput:-moz-placeholder {
+        color: #b2b2b2; }
+      form .formSection .p8FormInput::-moz-placeholder {
+        color: #b2b2b2; }
+      form .formSection .p8FormInput:-ms-input-placeholder {
+        color: #b2b2b2; }
+
+.submitSection {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end; }
+  .submitSection .submitForm {
+    border: none;
+    background: #333132;
+    color: #FFE;
+    padding: 0.8em 1.7em;
+    margin-top: 2.1em;
+    font-size: 1.7em; }
+
+.inputMargin {
+  margin-right: 1.5em; }
 
 .footerContainer {
   box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.18);

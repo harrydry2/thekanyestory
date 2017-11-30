@@ -1,0 +1,85 @@
+.p8bodyContainer
+  background: #FFF
+  font-size: 10px
+
+.p8Title
+  padding-top: 1.6em
+  padding-bottom: 1.4em
+  font-family: CamphorStd-Medium
+  font-size: 3.6em
+  color: #333132
+  text-align: center
+
+.p8OuterSection
+  color: #b2b2b2
+  display: flex
+  justify-content: center
+  font-family: CamphorStd-Medium  
+  cursor: pointer
+  .p8InnerSection
+    display: flex
+    align-items: center
+    &:first-child
+      margin-right: 6em
+  .p8InnerFont
+    font-size: 1.7em
+    font-family: CamphorStd-Medium
+  .p8Icon
+    width: 2.5em
+    height: 2.5em
+    margin-right: 1.5em
+    transform: translateY(-2px)
+    & *
+      transition: all 0.3s
+
+// Javascript Hover Class
+.p8SectionHover
+  .p8Icon
+    & *
+      fill: #333333
+
+// Actual Contact Form
+
+form
+  margin: 8rem 15rem 4rem 15rem
+  display: flex
+  flex-wrap: wrap
+  font-family: CamphorStd-Medium
+  .formSection
+    width: 100%
+    display: flex
+    &:nth-child(2)
+      margin-top: 2em 
+    &:nth-child(3)
+      margin-top: 2em
+    .p8FormInput
+      border: none
+      background: #f5f5f5
+      padding: 1.4em 1.12em
+      color: $black
+      font-size: 1.7em
+      flex: 1 1 auto
+      border-radius: 0.3em
+      +placeholder
+        color: #b2b2b2
+      
+
+
+// Submit Button
+.submitSection
+  width: 100%
+  display: flex
+  justify-content: flex-end
+  .submitForm
+    border: none
+    background: $black
+    color: #FFE
+    padding: 0.8em 1.7em
+    margin-top: 2.1em
+    font-size: 1.7em
+    
+
+
+
+.inputMargin
+  margin-right: 1.5em

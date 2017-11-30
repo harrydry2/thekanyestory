@@ -5,6 +5,8 @@ import videoPlay from "./modules/video";
 import zenscrollFunction from "./modules/zenscroll";
 import scrollerFunction from "./modules/scroller";
 import programHover from "./modules/programHover";
+import contactHoverIcons from "./modules/contactHoverIcons";
+import formSubmit from "./modules/formSubmit";
 
 // Blog
 import blogHover from "./modules/blogHover";
@@ -16,9 +18,10 @@ if ($("body").classList.contains("Index")) {
   blogHover();
   zenscrollFunction();
   programHover();
+  contactHoverIcons();
+  formSubmit();
   if (window.innerWidth > 700) {
     scrollerFunction();
-    console.log("banter");
   }
 }
 

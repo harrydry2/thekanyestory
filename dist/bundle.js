@@ -486,11 +486,19 @@ var _programHover = __webpack_require__(8);
 
 var _programHover2 = _interopRequireDefault(_programHover);
 
-var _blogHover = __webpack_require__(9);
+var _contactHoverIcons = __webpack_require__(9);
+
+var _contactHoverIcons2 = _interopRequireDefault(_contactHoverIcons);
+
+var _formSubmit = __webpack_require__(10);
+
+var _formSubmit2 = _interopRequireDefault(_formSubmit);
+
+var _blogHover = __webpack_require__(11);
 
 var _blogHover2 = _interopRequireDefault(_blogHover);
 
-var _zenscrollBlog = __webpack_require__(10);
+var _zenscrollBlog = __webpack_require__(12);
 
 var _zenscrollBlog2 = _interopRequireDefault(_zenscrollBlog);
 
@@ -506,9 +514,10 @@ if ((0, _bling.$)("body").classList.contains("Index")) {
   (0, _blogHover2.default)();
   (0, _zenscroll2.default)();
   (0, _programHover2.default)();
+  (0, _contactHoverIcons2.default)();
+  (0, _formSubmit2.default)();
   if (window.innerWidth > 700) {
     (0, _scroller2.default)();
-    console.log("banter");
   }
 }
 
@@ -753,6 +762,66 @@ Object.defineProperty(exports, "__esModule", {
 
 var _bling = __webpack_require__(0);
 
+function contactHoverIcons() {
+  // add class
+  (0, _bling.$)(".p8ISE").on("mouseover", function () {
+    (0, _bling.$)(".p8ISE").classList.add("p8SectionHover");
+  });
+  (0, _bling.$)(".p8ISP").on("mouseover", function () {
+    (0, _bling.$)(".p8ISP").classList.add("p8SectionHover");
+  });
+
+  // removeclass
+  (0, _bling.$)(".p8ISE").on("mouseleave", function () {
+    (0, _bling.$)(".p8ISE").classList.remove("p8SectionHover");
+  });
+  (0, _bling.$)(".p8ISP").on("mouseleave", function () {
+    (0, _bling.$)(".p8ISP").classList.remove("p8SectionHover");
+  });
+}
+
+exports.default = contactHoverIcons;
+
+/***/ }),
+/* 10 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _bling = __webpack_require__(0);
+
+var formInputs = (0, _bling.$$)(".p8FormInput");
+
+function formSubmit() {
+  formInputs.forEach(function (input) {
+    input.on("keypress", function (e) {
+      if (e.keyCode === 14) {
+        e.preventDefault();
+      }
+    });
+  });
+}
+
+exports.default = formSubmit;
+
+/***/ }),
+/* 11 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _bling = __webpack_require__(0);
+
 var blogs = Array.from((0, _bling.$$)(".p6Blog"));
 
 function blogHover() {
@@ -785,7 +854,7 @@ function blogHover() {
 exports.default = blogHover;
 
 /***/ }),
-/* 10 */
+/* 12 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";

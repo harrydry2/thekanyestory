@@ -14,4 +14,16 @@
   justify-content: center
   align-items: center
 
+// Placeholder Mixin
+
+=placeholder
+  &::-webkit-input-placeholder
+    @content
+  &:-moz-placeholder
+    @content
+  &::-moz-placeholder
+    @content
+  &:-ms-input-placeholder
+    @content
+
 // CSS for Media Queries
