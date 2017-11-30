@@ -13,7 +13,7 @@ module.exports = app => {
     });
     const mailOptions = {
       from: `${firstName} ${lastName}<harrydry1996@gmail.com>`, // sender address
-      to: "info@maximizeyourpotential.co.uk", // list of receivers
+      to: "harrydry1996@gmail.com", // list of receivers
       subject: "Enquiry from our Brand New Website!", // Subject line
       html: `
         Name: ${firstName} ${lastName} <br><br>
