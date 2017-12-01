@@ -1,5 +1,7 @@
 .p7bodyContainer
-  background: #FFFEFC	
+  background: #fffefc
+  @media screen and (max-width: 891px)
+    display: none
 
 .p7Title
   font-family: CamphorStd-Medium
@@ -10,27 +12,27 @@
   padding-bottom: 6rem
 
 .p7OuterTweetContainer
-	width: 100%
-	display: flex
-	justify-content: center
-	overflow-x: hidden
+  width: 100%
+  display: flex
+  justify-content: center
+  overflow-x: hidden
 
 .p7InnerTweetContainer
-	min-width: 1680px
-	display: flex
-	justify-content: center
-	flex-wrap: wrap
+  min-width: 1680px
+  display: flex
+  justify-content: center
+  flex-wrap: wrap
 
 // Specific to Embedded Tweet
 .twitter-tweet-rendered
-	transform: scale(1) !important
-	margin: 10px 5px !important
-	width: calc(260px) !important
+  transform: scale(1) !important
+  margin: 10px 5px !important
+  width: calc(260px) !important
 
 .twitter-tweet-rendered:nth-child(-n+11)
-	align-self: flex-end
-	transform: translateX(-20px) !important
+  align-self: flex-end
+  transform: translateX(-20px) !important
 
 .twitter-tweet-rendered:nth-child(n+12)
-	align-self: flex-start
-	transform: translateX(20px) !important
+  align-self: flex-start
+  transform: translateX(20px) !important

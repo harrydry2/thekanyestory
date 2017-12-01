@@ -1,6 +1,10 @@
 .p8bodyContainer
   background: #FFF
   font-size: 10px
+  @media screen and (max-width: 891px)
+    font-size: 9px
+  @media screen and (max-width: 700px)
+    font-size: 8px
 
 .p8Title
   padding-top: 1.6em
@@ -9,6 +13,11 @@
   font-size: 3.6em
   color: #333132
   text-align: center
+  @media screen and (max-width: 891px)
+    font-size: 3.8em
+  @media screen and (max-width: 700px)
+    padding-bottom: 1em
+    
 
 .p8OuterSection
   color: #b2b2b2
@@ -16,14 +25,22 @@
   justify-content: center
   font-family: CamphorStd-Medium  
   cursor: pointer
+  @media screen and (max-width: 550px)
+    display: block
   .p8InnerSection
     display: flex
     align-items: center
+    @media screen and (max-width: 550px)
+      justify-content: center
     &:first-child
       margin-right: 6em
+      @media screen and (max-width: 550px)
+        margin: 0 0 2em 0
   .p8InnerFont
     font-size: 1.7em
     font-family: CamphorStd-Medium
+    @media screen and (max-width: 891px)
+      font-size: 1.9em
   .p8Icon
     width: 2.5em
     height: 2.5em
@@ -45,9 +62,25 @@ form
   display: flex
   flex-wrap: wrap
   font-family: CamphorStd-Medium
+  @media screen and (max-width: 1000px)
+    margin: 8rem 9rem 4rem 9rem
+  @media screen and (max-width: 812px)
+    display: block !important
+    margin: 6rem 7rem 4rem 7rem
+  @media screen and (max-width: 700px)
+    margin: 4rem 7rem 4rem 7rem
+  @media screen and (max-width: 470px)
+    margin: 3rem 
+  @media screen and (max-width: 340px)
+    margin: 3rem 2rem          
+
+  
   .formSection
     width: 100%
     display: flex
+    @media screen and (max-width: 812px)
+      display: block !important
+      margin: 0 !important
     &:nth-child(2)
       margin-top: 2em 
     &:nth-child(3)
@@ -60,16 +93,22 @@ form
       font-size: 1.7em
       flex: 1 1 auto
       border-radius: 0.3em
+      @media screen and (max-width: 812px)
+        display: block !important
+        width: 100%
+        margin-top: 0.6em
       +placeholder
         color: #b2b2b2
-      
-
+      @media screen and (max-width: 700px)
+        padding: 1em  
 
 // Submit Button
 .submitSection
   width: 100%
   display: flex
   justify-content: flex-end
+  @media screen and (max-width: 812px)
+    justify-content: center
   .submitForm
     border: none
     background: $black
@@ -78,12 +117,11 @@ form
     margin-top: 2.1em
     font-size: 1.7em
     cursor: pointer
+    @media screen and (max-width: 812px)
+      padding: 0.8em 2.3em      
     &:hover
       transform: translateY(-1px)
       box-shadow: 0 2px 4px rgba(0,0,0,0.18)
-    
-
-
 
 .inputMargin
   margin-right: 1.5em
