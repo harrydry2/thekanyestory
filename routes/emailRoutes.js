@@ -27,6 +27,6 @@ module.exports = app => {
       if (err) console.log(err);
       else console.log(info);
     });
-    res.render("/");
+    res.redirect(`/`);
   });
 };
