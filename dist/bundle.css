@@ -248,6 +248,10 @@ body, html {
   margin: 4.2rem 0 12rem 0;
   display: flex;
   justify-content: space-between; }
+  @media screen and (min-width: 1450px) {
+    .p1BodyContainer {
+      border: 10px solid green;
+      max-width: 1450px; } }
 
 .p1NewBodyText {
   width: 33.8rem;
