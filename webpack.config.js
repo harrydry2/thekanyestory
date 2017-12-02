@@ -48,6 +48,14 @@ module.exports = {
       filename: "./blog1.html",
       template: "./blog1.html"
     }),
+    new HtmlWebpackPlugin({
+      filename: "./blog2.html",
+      template: "./blog2.html"
+    }),
+    new HtmlWebpackPlugin({
+      filename: "./blog3.html",
+      template: "./blog3.html"
+    }),
     new ExtractTextPlugin("bundle.css"),
     // minify
     new webpack.DefinePlugin({
