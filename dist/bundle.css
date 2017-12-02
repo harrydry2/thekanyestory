@@ -134,8 +134,20 @@ html {
   src: url("/fonts/CamphorStd-HeavyItalic.woff2") format("woff"), url("/fonts/CamphorStd-HeavyItalic.woff") format("woff"); }
 
 @font-face {
-  font-family: Freight-Bold;
-  src: url("/fonts/FreightBold.ttf") format("ttf"); }
+  font-family: DroidSans-Regular;
+  src: url("/fonts/DroidSans-Regualar.woff") format("woff"); }
+
+@font-face {
+  font-family: DroidSans-Bold;
+  src: url("/fonts/DroidSans-Bold.woff") format("woff"); }
+
+@font-face {
+  font-family: DroidSansMono-Regular;
+  src: url("/fonts/DroidSansMono-Regular.woff") format("woff"); }
+
+@font-face {
+  font-family: DroidSansMono-Bold;
+  src: url("/fonts/DroidSansMono-Bold.woff") format("woff"); }
 
 body, html {
   box-sizing: border-box;
@@ -1431,7 +1443,7 @@ form {
   margin-top: 7rem; }
 
 .blogTitle {
-  font-family: Freight-Bold;
+  font-family: DroidSans-Regular;
   font-size: 6.2rem;
   color: #FFF;
   width: 65rem;
@@ -1526,7 +1538,7 @@ form {
 
 .blogAlsoLike {
   font-size: 3.8rem;
-  font-family: Freight-Bold;
+  font-family: DroidSansMono-Bold;
   font-weight: 700;
   color: #333132;
   margin-top: 7rem; }
