@@ -1105,9 +1105,9 @@ video {
   @media screen and (max-width: 1050px) {
     .p6bodyContainer {
       padding: 0 5.5rem; } }
-  @media screen and (max-width: 940px) {
+  @media screen and (max-width: 550px) {
     .p6bodyContainer {
-      display: none; } }
+      padding: 0 2rem; } }
 
 .p6Title {
   font-family: CamphorStd-Medium;
@@ -1125,6 +1125,15 @@ video {
   @media screen and (max-width: 840px) {
     .p6Subtitle {
       width: 55rem; } }
+  @media screen and (max-width: 550px) {
+    .p6Subtitle {
+      width: 100%;
+      font-size: 1.68rem;
+      line-height: 2.5rem;
+      padding-top: 1.82rem; } }
+  @media screen and (max-width: 340px) {
+    .p6Subtitle {
+      font-size: 1.5rem; } }
 
 .blogImg1 {
   background-image: url("https://s3.eu-west-2.amazonaws.com/maximizeyp/newBlog/NewBlogImg2Small.jpg"); }
@@ -1148,6 +1157,9 @@ video {
   display: flex;
   justify-content: space-between;
   padding: 4.4rem 0 8rem 0; }
+  @media screen and (max-width: 550px) {
+    .p6BlogSection {
+      padding: 2.2rem 0 4rem 0; } }
   .p6BlogSection .p6Blog {
     width: 27.7vw;
     height: 42.6vw;
@@ -1193,15 +1205,26 @@ video {
         color: #FFFFFF;
         line-height: 2.8rem;
         width: 88%; }
+        @media screen and (max-width: 550px) {
+          .p6BlogSection .p6Blog .p6BlogTitleNameSection .p6BlogTitle {
+            font-size: 1.9rem;
+            line-height: 2.2rem; } }
       .p6BlogSection .p6Blog .p6BlogTitleNameSection .p6BlogName {
         font-family: CamphorStd-Heavy;
         font-size: 1.2rem;
         color: #B2B2B2;
         letter-spacing: 0.04rem;
         padding-top: 1.35rem; }
+        @media screen and (max-width: 550px) {
+          .p6BlogSection .p6Blog .p6BlogTitleNameSection .p6BlogName {
+            font-size: .9rem;
+            padding-top: 1.08rem; } }
       .p6BlogSection .p6Blog .p6BlogTitleNameSection .p6ReadSection {
         margin-top: 4.5rem;
         display: flex; }
+        @media screen and (max-width: 550px) {
+          .p6BlogSection .p6Blog .p6BlogTitleNameSection .p6ReadSection {
+            margin-top: 3.6rem; } }
         .p6BlogSection .p6Blog .p6BlogTitleNameSection .p6ReadSection .p6Read {
           font-family: CamphorStd-Bold;
           font-size: 1.3rem;

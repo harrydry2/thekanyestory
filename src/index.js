@@ -27,7 +27,7 @@ if ($("body").classList.contains("Index")) {
 
 if (window.innerWidth <= 710) {
   $(".blogImg1").style.backgroundImage =
-    "url('https://s3.eu-west-2.amazonaws.com/maximizeyp/blog/MaxBlog1b.jpg')";
+    "url('https://s3.eu-west-2.amazonaws.com/maximizeyp/newBlog/NewBlogImg2Wide.jpg')";
 }
 
 if ($("body").classList.contains("Blog")) {
