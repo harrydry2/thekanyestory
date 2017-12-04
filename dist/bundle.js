@@ -904,14 +904,12 @@ if ((0, _bling.$)("body").classList.contains("Index")) {
   if (window.innerWidth > 700) {
     (0, _scroller2.default)();
   }
-}
-
-if (window.innerWidth <= 710) {
-  (0, _bling.$)(".blogImg1").style.backgroundImage = "url('https://s3.eu-west-2.amazonaws.com/maximizeyp/newBlog/NewBlogImg2Wide.jpg')";
+  if (window.innerWidth <= 710) {
+    (0, _bling.$)(".blogImg1").style.backgroundImage = "url('https://s3.eu-west-2.amazonaws.com/maximizeyp/newBlog/NewBlogImg2Wide.jpg')";
+  }
 }
 
 if ((0, _bling.$)("body").classList.contains("Blog")) {
-  (0, _blogHover2.default)();
   (0, _zenscrollBlog2.default)();
 }
 

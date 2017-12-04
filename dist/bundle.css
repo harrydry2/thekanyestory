@@ -134,20 +134,8 @@ html {
   src: url("/fonts/CamphorStd-HeavyItalic.woff2") format("woff"), url("/fonts/CamphorStd-HeavyItalic.woff") format("woff"); }
 
 @font-face {
-  font-family: DroidSans-Regular;
-  src: url("/fonts/DroidSans-Regular.woff") format("woff"); }
-
-@font-face {
-  font-family: DroidSans-Bold;
-  src: url("/fonts/DroidSans-Bold.woff") format("woff"); }
-
-@font-face {
-  font-family: DroidSansMono-Regular;
-  src: url("/fonts/DroidSansMono-Regular.woff") format("woff"); }
-
-@font-face {
-  font-family: DroidSansMono-Bold;
-  src: url("/fonts/DroidSansMono-Bold.woff") format("woff"); }
+  font-family: FreightBold;
+  src: url("/fonts/FreightBold.ttf") format("ttf"); }
 
 body, html {
   box-sizing: border-box;
@@ -1447,15 +1435,142 @@ form {
     transform: translateY(-0.6rem); }
 
 .blogBodyContainer {
-  background: #fefefe; }
-
-.blogblogPadding {
-  padding: 0 8.3rem; }
+  background: #fefefe;
+  font-size: 10px; }
+  @media screen and (max-width: 1120px) {
+    .blogBodyContainer {
+      font-size: 9.5px; } }
+  @media screen and (max-width: 525px) {
+    .blogBodyContainer {
+      font-size: 8.5px; } }
 
 .blogHeader {
-  height: 49rem;
-  padding: 4.8rem 8.3rem 4.8rem 8.3rem;
+  height: 49em;
+  padding: 4.8em 8.3em 4.8em 8.3em;
   position: relative; }
+  @media screen and (max-width: 1120px) {
+    .blogHeader {
+      padding: 4.8em 4.3em; } }
+  @media screen and (max-width: 525px) {
+    .blogHeader {
+      padding: 4.8em 0em; } }
+
+@media screen and (max-width: 525px) {
+  .adjustment525 {
+    padding-left: 3em !important; } }
+
+.blogTitleContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  background: radial-gradient(rgba(52, 50, 51, 0.7) 0%, transparent 90%);
+  padding: 2em 0; }
+
+.blogNormaliserB1 {
+  margin-top: 10em; }
+
+.blogNormaliserB2 {
+  margin-top: 7em; }
+
+.blogTitle {
+  font-family: FreightBold;
+  font-size: 6.2em;
+  color: #FFF;
+  width: 65rem;
+  text-align: center;
+  line-height: 1.05em;
+  margin: 0 2.42em;
+  font-weight: 700; }
+  @media screen and (max-width: 950px) {
+    .blogTitle {
+      margin: 0 1em; } }
+  @media screen and (max-width: 700px) {
+    .blogTitle {
+      font-size: 4.4em; } }
+  @media screen and (max-width: 500px) {
+    .blogTitle {
+      margin: 0em; } }
+
+.blogSubtitle {
+  font-size: 1.7em;
+  font-family: CamphorStd-Heavy;
+  color: #FFF;
+  margin-top: 1.94em; }
+  @media screen and (max-width: 700px) {
+    .blogSubtitle {
+      font-size: 1.6em; } }
+
+.blogBodyWrapper {
+  padding: 8rem 25rem 0 25rem; }
+  @media screen and (max-width: 960px) {
+    .blogBodyWrapper {
+      padding: 6rem 4.3rem 0 4.3rem; } }
+  @media screen and (max-width: 654px) {
+    .blogBodyWrapper {
+      padding: 4rem 3rem 0 3rem; } }
+  .blogBodyWrapper .ender {
+    margin-top: 1.8em; }
+  .blogBodyWrapper .shortShift {
+    margin-top: 0.5em !important; }
+
+.pBlogBody {
+  font-size: 2em;
+  color: #8a8989;
+  font-family: CamphorStd-Regular;
+  line-height: 1.35em;
+  margin-top: 1em; }
+  .pBlogBody img {
+    width: 100%; }
+
+.pBlogBiggerBody {
+  font-size: 2.5em;
+  color: #333132;
+  font-family: CamphorStd-Bold;
+  line-height: 1.08em;
+  margin-top: 0.8em; }
+
+.blogContactInnerSection {
+  padding: 8em 4em;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .blogContactInnerSection .marr {
+    margin-right: 3em; }
+    @media screen and (max-width: 500px) {
+      .blogContactInnerSection .marr {
+        margin-right: 1.5em; } }
+
+.blogContact {
+  font-size: 1.5em;
+  font-family: CamphorStd-Bold;
+  color: #0a0a0a;
+  letter-spacing: 0.1rem;
+  margin-right: 0.66em;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.blogContactEmail {
+  width: 8.53em;
+  height: 2.66em;
+  background: rgba(178, 178, 178, 0.2);
+  border-radius: 6.66em;
+  color: gray;
+  cursor: pointer;
+  transition: all 0.3s; }
+  .blogContactEmail:hover {
+    color: #fff;
+    background: #333132; }
+
+p a {
+  color: #2170B0; }
+
+ol, ul {
+  padding-left: 5rem !important; }
+
+.blogBoldened {
+  font-family: CamphorStd-HeavyItalic; }
 
 .blogHeader1 {
   background: url("https://s3.eu-west-2.amazonaws.com/maximizeyp/newBlog/NewBlogImg2Wide.jpg");
@@ -1474,127 +1589,3 @@ form {
   background-size: cover;
   background-position: center;
   width: 100%; }
-
-.blogTitleContainer {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  background: radial-gradient(rgba(52, 50, 51, 0.7) 0%, transparent 90%);
-  padding: 2rem 0; }
-
-.blogNormaliserB1 {
-  margin-top: 10rem; }
-
-.blogNormaliserB2 {
-  margin-top: 7rem; }
-
-.blogTitle {
-  font-family: DroidSans-Regular;
-  font-size: 6.2rem;
-  color: #FFF;
-  width: 65rem;
-  text-align: center;
-  line-height: 6.5rem;
-  margin: 0 15rem;
-  font-weight: 700; }
-
-.blogSubtitle {
-  font-size: 1.7rem;
-  font-family: CamphorStd-Heavy;
-  color: #FFF;
-  margin-top: 3.3rem; }
-
-.blogBodyWrapper {
-  padding: 8rem 25rem 0 25rem; }
-  .blogBodyWrapper p {
-    margin-top: 2rem; }
-  .blogBodyWrapper .ender {
-    margin-top: 4.5rem; }
-  .blogBodyWrapper .shortShift {
-    margin-top: 1rem !important; }
-
-.pBlogBody {
-  font-size: 20px;
-  color: #8a8989;
-  font-family: CamphorStd-Regular;
-  line-height: 2.7rem; }
-  .pBlogBody img {
-    width: 100%; }
-
-.pBlogBiggerBody {
-  font-size: 2.5rem;
-  color: #333132;
-  font-family: CamphorStd-Bold;
-  line-height: 2.7rem; }
-
-.pBlogQuote {
-  font-size: 3.3rem;
-  color: #333132;
-  line-height: 4rem;
-  font-family: Freight-Bold;
-  font-weight: 700; }
-
-.blogContactOuterSection {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  margin-top: 7rem; }
-  .blogContactOuterSection:before {
-    position: absolute;
-    top: 50%;
-    left: 0;
-    transform: translateY(-50%);
-    background: #dfdfdf;
-    content: '';
-    width: 100%;
-    height: 1px; }
-
-.blogContactInnerSection {
-  padding: 0 4rem;
-  background: #fefefe;
-  z-index: 6;
-  display: flex;
-  justify-content: center;
-  align-items: center; }
-  .blogContactInnerSection .marr {
-    margin-right: 30px; }
-
-.blogContact {
-  font-size: 1.5rem;
-  font-family: CamphorStd-Bold;
-  color: #0a0a0a;
-  letter-spacing: 0.1rem;
-  margin-right: 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center; }
-
-.blogContactEmail {
-  width: 12.8rem;
-  height: 4rem;
-  background: rgba(178, 178, 178, 0.2);
-  border-radius: 100px;
-  color: gray;
-  cursor: pointer;
-  transition: all 0.3s; }
-  .blogContactEmail:hover {
-    color: #fff;
-    background: #333132; }
-
-.blogAlsoLike {
-  font-size: 3.8rem;
-  font-family: DroidSansMono-Bold;
-  font-weight: 700;
-  color: #333132;
-  margin-top: 7rem; }
-
-p a {
-  color: #2170B0; }
-
-ol, ul {
-  padding-left: 5rem !important; }
-
-.blogBoldened {
-  font-family: CamphorStd-HeavyItalic; }
