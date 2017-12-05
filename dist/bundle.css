@@ -264,7 +264,8 @@ body, html {
   justify-content: space-between; }
   @media screen and (min-width: 1420px) {
     .p1BodyContainer {
-      max-width: 1420px; } }
+      max-width: 1420px;
+      border: 2px solid blue; } }
 
 .p1NewBodyText {
   width: 33.8rem;
@@ -1485,7 +1486,7 @@ form {
   @media screen and (max-width: 950px) {
     .blogTitle {
       margin: 0 1em; } }
-  @media screen and (max-width: 700px) {
+  @media screen and (max-width: 760px) {
     .blogTitle {
       font-size: 4.4em; } }
   @media screen and (max-width: 500px) {
@@ -1497,7 +1498,7 @@ form {
   font-family: CamphorStd-Heavy;
   color: #FFF;
   margin-top: 1.94em; }
-  @media screen and (max-width: 700px) {
+  @media screen and (max-width: 760px) {
     .blogSubtitle {
       font-size: 1.6em; } }
 
