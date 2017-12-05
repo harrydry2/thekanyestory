@@ -458,14 +458,16 @@ video {
     z-index: 2;
     position: relative; }
 
-@media screen and (min-width: 1420px) {
-  .p2BSCC {
-    max-width: 1420px;
-    display: flex;
-    justify-content: space-between;
-    position: relative;
-    border: 5px solid red;
-    overflow: hidden; } }
+.p2BSCC {
+  display: none; }
+  @media screen and (min-width: 1420px) {
+    .p2BSCC {
+      max-width: 1420px;
+      display: flex;
+      justify-content: space-between;
+      position: relative;
+      border: 5px solid red;
+      overflow: hidden; } }
 
 @media screen and (max-width: 700px) {
   .p2SectionMarginBottom {
