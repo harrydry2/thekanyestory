@@ -1044,9 +1044,9 @@ video {
   @media screen and (max-width: 860px) {
     .p5MonialSection {
       font-size: 10px; } }
-  @media screen and (min-width: 1350px) {
+  @media screen and (min-width: 1380px) {
     .p5MonialSection {
-      font-size: 11px; } }
+      font-size: 12px; } }
   .p5MonialSection .p5Monial {
     background: #FFFFFF;
     box-shadow: 0 2px 22px 0 rgba(0, 0, 0, 0.2);
@@ -1060,6 +1060,9 @@ video {
       cursor: pointer; }
   .p5MonialSection .p5MiddleMonial {
     margin: 0 2.2rem; }
+    @media screen and (max-width: 1380px) {
+      .p5MonialSection .p5MiddleMonial {
+        margin: 0 4rem; } }
     @media screen and (max-width: 860px) {
       .p5MonialSection .p5MiddleMonial {
         margin: 0 0 0 3rem; } }
