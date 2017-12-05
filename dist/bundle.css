@@ -1178,6 +1178,9 @@ video {
   display: flex;
   justify-content: space-between;
   padding: 4.4rem 0 8rem 0; }
+  @media screen and (min-width: 1420px) {
+    .p6BlogSection {
+      border: 2px solid green; } }
   @media screen and (max-width: 550px) {
     .p6BlogSection {
       padding: 2.2rem 0 4rem 0; } }
@@ -1189,6 +1192,10 @@ video {
     cursor: pointer;
     transition: all .5s;
     background-size: cover; }
+    @media screen and (min-width: 1420px) {
+      .p6BlogSection .p6Blog {
+        width: 39rem;
+        height: 60.5rem; } }
     @media screen and (max-width: 1210px) {
       .p6BlogSection .p6Blog {
         width: 27.1vw;
