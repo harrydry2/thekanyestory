@@ -777,7 +777,6 @@ video {
         display: block; } }
     @media screen and (min-width: 1420px) {
       .p3Power6 .p3Section {
-        padding: 0;
         width: 1420px; } }
     .p3Power6 .p3Section .p3Box {
       position: relative; }
