@@ -1133,6 +1133,7 @@ video {
     .p6bodyContainer {
       padding: 0;
       display: flex;
+      flex-wrap: wrap;
       justify-content: center; } }
 
 .p6Title {
@@ -1140,6 +1141,9 @@ video {
   font-size: 3.6rem;
   color: #333132;
   padding-top: 4.4rem; }
+  @media screen and (min-width: 1510px) {
+    .p6Title {
+      margin: 0 200px; } }
 
 .p6Subtitle {
   font-family: CamphorStd-Regular;
