@@ -1164,7 +1164,7 @@ video {
   @media screen and (max-width: 870px) {
     .blogImg2 {
       display: none; } }
-  @media screen and (max-width: 1510px) {
+  @media screen and (min-width: 1510px) {
     .blogImg2 {
       margin: 0 30px; } }
 
