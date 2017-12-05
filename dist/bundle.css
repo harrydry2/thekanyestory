@@ -688,7 +688,8 @@ video {
   @media screen and (min-width: 1420px) {
     .p3bodyContainer {
       display: flex;
-      justify-content: center; } }
+      justify-content: center;
+      flex-wrap: wrap; } }
 
 .p3tsWrapper {
   display: flex;
