@@ -1078,9 +1078,6 @@ video {
 
 .p5MS1 {
   margin-top: 4.2rem; }
-  @media screen and (max-width: 860px) {
-    .p5MS1 {
-      margin-top: 7rem; } }
   @media screen and (max-width: 650px) {
     .p5MS1 {
       flex-direction: column;
@@ -1090,6 +1087,9 @@ video {
 .p5MS2 {
   margin-top: 2.8rem;
   margin-bottom: 5.1rem; }
+  @media screen and (min-width: 1380px) {
+    .p5MS2 {
+      margin-top: 4rem; } }
 
 .p5Img {
   width: 100%; }
