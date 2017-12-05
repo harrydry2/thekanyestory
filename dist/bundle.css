@@ -1196,7 +1196,7 @@ video {
     cursor: pointer;
     transition: all .5s;
     background-size: cover; }
-    @media screen and (min-width: 1420px) {
+    @media screen and (min-width: 1510px) {
       .p6BlogSection .p6Blog {
         width: 39rem;
         height: 60.5rem; } }
