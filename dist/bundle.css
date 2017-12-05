@@ -1311,6 +1311,9 @@ video {
   display: flex;
   justify-content: center;
   flex-wrap: wrap; }
+  @media screen and (min-width: 1860px) {
+    .p7InnerTweetContainer {
+      margin: 0 200px; } }
 
 .twitter-tweet-rendered {
   transform: scale(1) !important;
