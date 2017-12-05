@@ -685,6 +685,10 @@ video {
   @media screen and (min-width: 1350px) {
     .p3bodyContainer {
       font-size: 11px; } }
+  @media screen and (min-width: 1420px) {
+    .p3bodyContainer {
+      display: flex;
+      justify-content: center; } }
 
 .p3tsWrapper {
   display: flex;
@@ -736,6 +740,9 @@ video {
 .p3Power6 {
   margin-top: 9em;
   padding-bottom: 4.6em; }
+  @media screen and (min-width: 1420px) {
+    .p3Power6 {
+      max-width: 1420px; } }
   @media screen and (max-width: 580px) {
     .p3Power6 {
       margin-top: 4.6em;
