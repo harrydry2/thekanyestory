@@ -688,7 +688,7 @@ video {
   @media screen and (min-width: 1420px) {
     .p3bodyContainer {
       display: flex;
-      justify-content: flex-start;
+      justify-content: center;
       flex-wrap: wrap; } }
 
 .p3tsWrapper {
@@ -775,8 +775,7 @@ video {
       .p3Power6 .p3Section {
         max-width: 1420px;
         border: 4px solid gold;
-        display: flex;
-        justify-content: space-between; } }
+        padding: 0; } }
     .p3Power6 .p3Section .p3Box {
       position: relative; }
       @media screen and (max-width: 580px) {
