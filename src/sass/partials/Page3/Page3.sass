@@ -62,6 +62,9 @@
 .p3Power6
   margin-top: 9em
   padding-bottom: 4.6em
+  @media screen and (min-width: 1420px)
+    max-width: 1420px
+    border: 4px solid gold
   @media screen and (max-width: 580px)
     margin-top: 4.6em
     padding-bottom: 4.6em  
@@ -69,6 +72,7 @@
     display: flex
     justify-content: space-between
     padding: 0 13em 0 16em
+    border: 2px solid red
     @media screen and (max-width: 1250px)
       padding: 0 6em 0 10em
     @media screen and (max-width: 950px)
@@ -84,10 +88,10 @@
     @media screen and (max-width: 580px)
       padding: 0 0em 0 0em
       display: block
-    @media screen and (min-width: 1420px)
-      max-width: 1420px
-      border: 4px solid gold
-      padding: 0
+    // @media screen and (min-width: 1420px)
+    //   max-width: 1420px
+    //   border: 4px solid gold
+    //   padding: 0
     
     .p3Box
       position: relative       
