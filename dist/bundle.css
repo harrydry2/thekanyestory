@@ -1129,9 +1129,11 @@ video {
   @media screen and (max-width: 550px) {
     .p6bodyContainer {
       padding: 0 2rem; } }
-  @media screen and (max-width: 1510px) {
+  @media screen and (min-width: 1510px) {
     .p6bodyContainer {
-      padding: 0 2rem; } }
+      padding: 0;
+      display: flex;
+      justify-content: center; } }
 
 .p6Title {
   font-family: CamphorStd-Medium;
