@@ -841,7 +841,9 @@ video {
   @media screen and (min-width: 1420px) {
     .p4bodyContainer {
       padding: 0;
-      border: 2em solid gold; } }
+      border: 1em solid gold;
+      display: flex;
+      justify-content: center; } }
 
 .p4Title {
   font-family: CamphorStd-Bold;
