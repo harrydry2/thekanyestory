@@ -710,6 +710,9 @@ video {
   @media screen and (max-width: 340px) {
     .p3Title {
       font-size: 2.8em; } }
+  @media screen and (min-width: 1430px) {
+    .p3Title {
+      margin: 0 10em; } }
 
 .p3Subtitle {
   text-align: center;
