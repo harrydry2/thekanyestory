@@ -841,7 +841,6 @@ video {
   @media screen and (min-width: 1420px) {
     .p4bodyContainer {
       padding: 0;
-      border: 1em solid gold;
       display: flex;
       justify-content: center;
       flex-wrap: wrap; } }
