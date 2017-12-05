@@ -774,7 +774,9 @@ video {
     @media screen and (min-width: 1420px) {
       .p3Power6 .p3Section {
         max-width: 1420px;
-        border: 4px solid gold; } }
+        border: 4px solid gold;
+        display: flex;
+        justify-content: space-between; } }
     .p3Power6 .p3Section .p3Box {
       position: relative; }
       @media screen and (max-width: 580px) {
