@@ -742,7 +742,7 @@ video {
   padding-bottom: 4.6em; }
   @media screen and (min-width: 1420px) {
     .p3Power6 {
-      max-width: 1420px;
+      width: 1420px;
       border: 4px solid gold; } }
   @media screen and (max-width: 580px) {
     .p3Power6 {
@@ -777,7 +777,8 @@ video {
         display: block; } }
     @media screen and (min-width: 1420px) {
       .p3Power6 .p3Section {
-        padding: 0; } }
+        padding: 0;
+        width: 1420px; } }
     .p3Power6 .p3Section .p3Box {
       position: relative; }
       @media screen and (max-width: 580px) {
