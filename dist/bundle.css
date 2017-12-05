@@ -454,6 +454,14 @@ video {
     z-index: 2;
     position: relative; }
 
+@media screen and (min-width: 1420px) {
+  .p2BSCC {
+    max-width: 1420px;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    border: 2px solid blue; } }
+
 @media screen and (max-width: 700px) {
   .p2SectionMarginBottom {
     margin-bottom: 6.4rem; } }
