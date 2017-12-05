@@ -1164,6 +1164,9 @@ video {
   @media screen and (max-width: 870px) {
     .blogImg2 {
       display: none; } }
+  @media screen and (max-width: 1510px) {
+    .blogImg2 {
+      margin: 0 30px; } }
 
 .blogImg3 {
   background-image: url("https://s3.eu-west-2.amazonaws.com/maximizeyp/newBlog/MaxBlog1SmallTravis.jpg"); }
@@ -1178,9 +1181,10 @@ video {
   display: flex;
   justify-content: space-between;
   padding: 4.4rem 0 8rem 0; }
-  @media screen and (min-width: 1420px) {
+  @media screen and (min-width: 1510px) {
     .p6BlogSection {
-      border: 2px solid green; } }
+      border: 2px solid green;
+      justify-content: center; } }
   @media screen and (max-width: 550px) {
     .p6BlogSection {
       padding: 2.2rem 0 4rem 0; } }
