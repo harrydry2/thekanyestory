@@ -459,13 +459,12 @@ video {
     position: relative; }
 
 .p2BSCC {
-  display: none; }
+  position: relative;
+  display: flex;
+  justify-content: space-between; }
   @media screen and (min-width: 1420px) {
     .p2BSCC {
       max-width: 1420px;
-      display: flex;
-      justify-content: space-between;
-      position: relative;
       border: 5px solid red;
       overflow: hidden; } }
 
