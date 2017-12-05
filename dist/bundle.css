@@ -1152,6 +1152,10 @@ video {
   line-height: 3.6rem;
   padding-top: 2.6rem;
   width: 100rem; }
+  @media screen and (min-width: 1510px) {
+    .p6Subtitle {
+      display: flex;
+      justify-content: center; } }
   @media screen and (max-width: 840px) {
     .p6Subtitle {
       width: 55rem; } }
