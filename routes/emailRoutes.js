@@ -4,14 +4,7 @@ var nodemailer = require("nodemailer");
 
 module.exports = app => {
   app.post("/contact", (req, res) => {
-    const {
-      firstName,
-      lastName,
-      School,
-      Phone,
-      EmailAddress,
-      Message
-    } = req.body;
+    const { EmailAddress } = req.body;
     const email = new Email(req.body).save();
     // nodemailer Stuff
     const transporter = nodemailer.createTransport({
@@ -22,15 +15,13 @@ module.exports = app => {
       }
     });
     const mailOptions = {
-      from: `${firstName} ${lastName}<harrydryofficial@gmail.com>`, // sender address
-      to: "harrydryofficial@gmail.com, info@maximizeyourpotential.co.uk", // list of receivers
-      subject: "Enquiry from our Brand New Website!", // Subject line
+      from: `<harrydryofficial@gmail.com>`, // sender address
+      to: "harrydry1996@gmail.com ", // list of receivers
+      subject: "New Mail List Sign Up", // Subject line
       html: `
-        Name: ${firstName} ${lastName} <br><br>
-        School: ${School} <br><br>
-        Email: ${EmailAddress} <br><br>
-        Phone: ${Phone} <br><br>
-        Message: ${Message}
+      The following Email Address has just signed up to your Mail List<br><br>
+      Email: ${EmailAddress} <br><br>
+      Don't worry if you lose this email. Once a month I'll provide a full breakdown of site analytics, including a list of all your mail list subscribers
       `
     };
     transporter.sendMail(mailOptions, function(err, info) {

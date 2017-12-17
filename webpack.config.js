@@ -1,6 +1,5 @@
 const webpack = require("webpack");
 const path = require("path");
-const HtmlWebpackPlugin = require("html-webpack-plugin");
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 // minify build
 const CompressionPlugin = require("compression-webpack-plugin");
@@ -8,10 +7,10 @@ const CompressionPlugin = require("compression-webpack-plugin");
 
 module.exports = {
   entry: {
-    bundle: ["./src/index.js"]
+    bundle: ["./public/src/index.js"]
   },
   output: {
-    path: path.join(__dirname, "dist"),
+    path: path.resolve(__dirname, "public", "dist"),
     filename: "bundle.js"
   },
   module: {
@@ -41,21 +40,6 @@ module.exports = {
     ]
   },
   plugins: [
-    new HtmlWebpackPlugin({
-      template: "./index.html"
-    }),
-    new HtmlWebpackPlugin({
-      filename: "./blog1.html",
-      template: "./blog1.html"
-    }),
-    new HtmlWebpackPlugin({
-      filename: "./blog2.html",
-      template: "./blog2.html"
-    }),
-    new HtmlWebpackPlugin({
-      filename: "./blog3.html",
-      template: "./blog3.html"
-    }),
     new ExtractTextPlugin("bundle.css"),
     // minify
     new webpack.DefinePlugin({

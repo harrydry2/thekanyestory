@@ -1,6 +1,5 @@
 module.exports = {
-  parser: "babel-eslint",
-  extends: "airbnb",
+  extends: "airbnb-base",
   plugins: ["prettier", "import"],
   rules: {
     "no-use-before-define": 0,
