@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "assets": "webpack --config webpack.config.js",
+    "build": "webpack --config webpack.config.js",
+    "assets": "webpack --config webpack.config.js -w",
     "watch": "nodemon ./server.js --ignore public/",
     "dev": "concurrently \"npm run watch\" \"npm run assets\"",
     "start": "node server.js"

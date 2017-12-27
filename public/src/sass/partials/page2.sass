@@ -4,28 +4,82 @@
   display: flex
   align-items: center
   flex-direction: column
+  font-size: 10px
+  @media screen and (max-width: 1200px)
+    font-size: 9px
+  @media screen and (max-width: 1050px)
+    font-size: 8px
+  @media screen and (max-width: 750px)
+    font-size: 7px
 
 .demoArtist
   transform: translateY(-2.23rem)
-  margin-bottom: 16rem
+  margin-bottom: 2.1em
+  @media screen and (max-width: 800px)
+    margin-bottom: 1.6em
+  @media screen and (max-width: 500px)
+    visibility: hidden
+
+.rappyS
+  width: 74.4em
+  height: 44.5em
+  @media screen and (max-width: 925px)
+    width: 67em
+    height: 40em
+  @media screen and (max-width: 880px)
+    width: 53.3vw
+    height: 37vw
+  @media screen and (max-width: 700px)
+    width: 340px
+    height: 240px
+  @media screen and (max-width: 400px)
+    width: 302px
+    height: 213px
+  @media screen and (max-width: 340px)
+    width: 278px
+    height: 196px        
 
 .p2Section
   text-align: center
   &:nth-child(3)
-    margin-top: 16rem
-    margin-bottom: 16rem
+    margin-top: 11em
+    margin-bottom: 11em
+    @media screen and (max-width: 800px)
+      margin-top: 9.2em
+      margin-bottom: 9.2em
+    @media screen and (max-width: 570px)
+      margin-top: 8em
+      margin-bottom: 8em
 
 .soundcloudAlbum
   display: flex
+  @media screen and (max-width: 900px)
+    flex-direction: column
+    align-items: center
 
 .saCover
-  margin-right: 4.2rem
-  width: 43rem
-  height: 43rem
+  margin-right: 4.2em
+  width: 41em
+  height: 41em
+  @media screen and (max-width: 900px)
+    margin: 0 0 8em 0
+    width: 43.2em
+    height: 43.2em
+  @media screen and (max-width: 340px)
+    margin: 0 0 6em 0
+    width: 40em
+    height: 40em
 
 .saAlbum
-  height: 43rem
-  width: 100%
+  height: 41em
+  width: 32em
+  @media screen and (max-width: 900px)
+    height: 55.4em
+    width: 43.2em
+  @media screen and (max-width: 340px)
+    width: 51em
+    height: 40em    
+
 
 
 

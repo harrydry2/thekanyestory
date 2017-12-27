@@ -3,18 +3,31 @@
   z-index: 11
   position: sticky
   width: 100%
+  font-size: 10px
+  @media screen and (max-width: 1200px)
+    font-size: 9px
+  @media screen and (max-width: 1050px)
+    font-size: 8px
+  @media screen and (max-width: 750px)
+    font-size: 7px
 
 .borderTop
   background: linear-gradient(90deg,#569FEE 50%,#FE6562 0)
-  height: 10px
+  height: 1em
 
 .menu
   display: flex
   justify-content: space-between
   align-items: center
   width: 100%
-  padding: 4rem 5rem 0rem 4rem
+  padding: 4em 5em 0em 4em
+  opacity: 0.90
+  color: #585858
+  @media screen and (max-width: 1100px)
+    padding: 4em 3.5em 0em 3em    
 
 .icons
   & *
-    margin-left: 1.5rem
+    margin-left: 1.3em
+    opacity: 0.85
+    
