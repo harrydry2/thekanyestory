@@ -3,7 +3,7 @@ const path = require("path");
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 // minify build
 const CompressionPlugin = require("compression-webpack-plugin");
-// const UglifyJSPlugin = require("uglifyjs-webpack-plugin");
+const UglifyJSPlugin = require("uglifyjs-webpack-plugin");
 
 module.exports = {
   entry: {
@@ -47,7 +47,7 @@ module.exports = {
         NODE_ENV: JSON.stringify("production")
       }
     }),
-    // new UglifyJSPlugin(),
+    new UglifyJSPlugin(),
     new CompressionPlugin({
       asset: "[path].gz[query]",
       algorithm: "gzip",
