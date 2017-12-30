@@ -5,28 +5,26 @@ const p1Container = $(".p1Container");
 const fixedSection = $(".fixedSection");
 const p2Container = $(".p2Container");
 const footerSection = $(".footerSection");
+const wrapper = $(".wrapper");
 
 // iframe width and Height
 iframe.style.width = `${window.innerWidth}px`;
-iframe.style.height = `${window.innerHeight}px`;
-fixedSection.style.top = `-${window.innerHeight}px`;
+iframe.style.height = `${window.innerWidth * 0.5625}px`;
 
-// iframeResize
-window.on("resize", adjustHeight);
-function adjustHeight() {
-  iframe.style.width = `${window.innerWidth}px`;
-  iframe.style.height = `${window.innerHeight}px`;
-}
+p1Container.style.height = `${window.innerWidth * 0.5625}px`;
+p1Container.style.top = `-${window.innerWidth * 0.5625}px`;
+fixedSection.style.top = `-${window.innerWidth * 0.5625}px`;
 
 // CSS Transition
-p1Container.style.top = `-${window.innerHeight}px`;
 window.on("load", animateiframeDown);
 function animateiframeDown() {
   setTimeout(() => {
-    p1Container.style.transform = `translateY(${window.innerHeight}px)`;
-    fixedSection.style.transform = `translateY(${window.innerHeight}px)`;
-    p2Container.style.transform = `translateY(${window.innerHeight}px)`;
-    footerSection.style.transform = `translateY(${window.innerHeight}px)`;
+    p1Container.style.transform = `translateY(${window.innerWidth * 0.5625}px)`;
+    fixedSection.style.transform = `translateY(${window.innerWidth *
+      0.5625}px)`;
+    p2Container.style.transform = `translateY(${window.innerWidth * 0.5625}px)`;
+    footerSection.style.transform = `translateY(${window.innerWidth *
+      0.5625}px)`;
     iframe.src += "&autoplay=1";
   }, 300);
   setTimeout(() => {
@@ -36,3 +34,17 @@ function animateiframeDown() {
 
 // iframe play/pause
 iframe.on("click", () => (iframe.paused ? iframe.play() : iframe.pause()));
+
+// iframeResize
+window.on("resize", adjustHeight);
+function adjustHeight() {
+  iframe.style.width = `${window.innerWidth}px`;
+  iframe.style.height = `${window.innerWidth * 0.5625}px`;
+  p1Container.style.height = `${window.innerWidth * 0.5625}px`;
+  p1Container.style.top = `-${window.innerWidth * 0.5625}px`;
+  fixedSection.style.top = `-${window.innerWidth * 0.5625}px`;
+  p1Container.style.transform = `translateY(${window.innerWidth * 0.5625}px)`;
+  fixedSection.style.transform = `translateY(${window.innerWidth * 0.5625}px)`;
+  p2Container.style.transform = `translateY(${window.innerWidth * 0.5625}px)`;
+  footerSection.style.transform = `translateY(${window.innerWidth * 0.5625}px)`;
+}

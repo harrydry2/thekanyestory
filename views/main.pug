@@ -15,15 +15,16 @@ html(lang='en')
     link(rel='stylesheet', href='/dist/bundle.css')
     title Ted Addic
   body
-    +initialVideo('tzTrYlv9tfA')
-    +fixedSection('https://twitter.com/TedAddic_CL', 'twitter', 'https://itunes.apple.com/au/artist/ted-addic/id1109506158', 'apple', 'https://soundcloud.com/tedaddic', 'soundcloud')
-    .p2Container
-      h1.demoArtist Ted Addic      
-      +soundcloudSingle('357090824', 'Rappy', 'Mongo')
-      +soundcloudAlbum('https://i1.sndcdn.com/artworks-000232112711-owimsi-t500x500.jpg','335567573', 'Rappy', 'Mongo')    
-      +iTunesAlbum('https://tools.applemusic.com/embed/v1/album/1260474721?country=us', 'Rappy', 'Mongo')
-      +youTubeVideo('UGBJIGxNr2k', 'Rappy', 'Mongo')
-    +footer('Ted Addic', 'TedAddic@gmail.com')          
+    .wrapper
+      +initialVideo('tzTrYlv9tfA')
+      +fixedSection('https://twitter.com/TedAddic_CL', 'twitter', 'https://itunes.apple.com/au/artist/ted-addic/id1109506158', 'apple', 'https://soundcloud.com/tedaddic', 'soundcloud')
+      .p2Container
+        h1.demoArtist Ted Addic      
+        +soundcloudSingle('357090824', 'Rappy', 'Mongo')
+        +soundcloudAlbum('https://i1.sndcdn.com/artworks-000232112711-owimsi-t500x500.jpg','335567573', 'Rappy', 'Mongo')    
+        +iTunesAlbum('https://tools.applemusic.com/embed/v1/album/1260474721?country=us', 'Rappy', 'Mongo')
+        +youTubeVideo('UGBJIGxNr2k', 'Rappy', 'Mongo')
+      +footer('Ted Addic', 'TedAddic@gmail.com')          
     block scripts
       script(src="/dist/bundle.js")
 
