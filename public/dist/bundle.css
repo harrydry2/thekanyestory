@@ -87,9 +87,148 @@ body, html {
 html {
   font-size: 10px; }
 
+.twitter {
+  width: 2.0em; }
+  .twitter:hover * {
+    transition: all 0.1s ease;
+    opacity: 0.7; }
+
+.instagram {
+  width: 1.8em;
+  height: 1.8em; }
+  .instagram:hover * {
+    transition: all 0.1s ease;
+    opacity: 0.7; }
+
+.soundcloud {
+  width: 3.3em;
+  height: 1.5em; }
+  .soundcloud:hover * {
+    transition: all 0.1s ease;
+    opacity: 0.7; }
+
+.spotify {
+  width: 1.8em;
+  height: 1.8em; }
+  .spotify:hover * {
+    transition: all 0.1s ease;
+    opacity: 0.7; }
+
+.apple {
+  width: 1.9em;
+  height: 1.9em; }
+  .apple:hover * {
+    transition: all 0.1s ease;
+    opacity: 0.7; }
+
+.facebook {
+  width: 1.1em;
+  height: 2.2em; }
+  .facebook:hover * {
+    transition: all 0.1s ease;
+    opacity: 0.7; }
+
+.p1Container {
+  background: black;
+  transition: all 1.2s;
+  position: absolute;
+  width: 100%;
+  height: 100%; }
+
+.scrollDownVideo {
+  opacity: 0;
+  transition: all 1.2s; }
+
+.fixedSection {
+  transition: all 1.2s;
+  z-index: 11;
+  position: sticky;
+  width: 100%;
+  font-size: 10px; }
+  @media screen and (max-width: 724px) {
+    .fixedSection {
+      font-size: 8.5px; } }
+  @media screen and (max-width: 414px) {
+    .fixedSection {
+      font-size: 7.5px; } }
+
+.borderTop {
+  background: linear-gradient(90deg, #569FEE 50%, #FE6562 0);
+  height: 1em; }
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 4em 4em 0em 4em;
+  opacity: 0.90;
+  color: #585858; }
+  @media screen and (max-width: 1150px) {
+    .menu {
+      padding: 4em 2.5em 0em 2.5em; } }
+
+.icons * {
+  margin-left: 1.3em;
+  opacity: 0.85; }
+  @media screen and (max-width: 1150px) {
+    .icons * {
+      margin-left: 1em; } }
+
+.p2Container {
+  transition: all 1.2s;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  font-size: 10px; }
+  @media screen and (max-width: 724px) {
+    .p2Container {
+      font-size: 8.5px; } }
+
 h1 {
   font-size: 2.3em;
   font-family: hnBold; }
+
+.demoArtist {
+  transform: translateY(-2.23rem);
+  margin-bottom: 2.1em; }
+  @media screen and (max-width: 724px) {
+    .demoArtist {
+      transform: translateY(-2rem); } }
+  @media screen and (max-width: 500px) {
+    .demoArtist {
+      visibility: hidden; } }
+
+.p2Section {
+  text-align: center;
+  font-size: 10px; }
+  @media screen and (max-width: 1150px) {
+    .p2Section {
+      font-size: 9px; } }
+  @media screen and (max-width: 1024px) {
+    .p2Section {
+      font-size: 8.4px; } }
+  @media screen and (max-width: 950px) {
+    .p2Section {
+      font-size: 7.8px; } }
+  @media screen and (max-width: 680px) {
+    .p2Section {
+      font-size: 7px; } }
+  @media screen and (max-width: 414px) {
+    .p2Section {
+      font-size: 7.8px; } }
+  @media screen and (max-width: 375px) {
+    .p2Section {
+      font-size: 7.2px; } }
+  @media screen and (max-width: 360px) {
+    .p2Section {
+      font-size: 7px; } }
+  @media screen and (max-width: 320px) {
+    .p2Section {
+      font-size: 6.5px; } }
+  .p2Section:nth-child(n+2) {
+    margin-bottom: 11em; }
 
 h2 {
   font-size: 2.9em;
@@ -100,6 +239,75 @@ h3 {
   font-size: 2.4em;
   font-family: hnItalic;
   margin-top: 0.8em; }
+
+.soundcloudSingle {
+  width: 77.2em;
+  height: 46.1em; }
+  @media screen and (max-width: 620px) {
+    .soundcloudSingle {
+      width: 72em;
+      height: 43.1em; } }
+  @media screen and (max-width: 570px) {
+    .soundcloudSingle {
+      width: 64.8em;
+      height: 38.8em; } }
+  @media screen and (max-width: 500px) {
+    .soundcloudSingle {
+      width: 56.4em;
+      height: 33.8em; } }
+  @media screen and (max-width: 414px) {
+    .soundcloudSingle {
+      width: 45em;
+      height: 26.9em; } }
+
+.soundcloudContainer {
+  display: flex; }
+  @media screen and (max-width: 1024px) {
+    .soundcloudContainer {
+      flex-direction: column;
+      align-items: center; } }
+
+.saCover {
+  margin-right: 4.2em;
+  width: 41em;
+  height: 41em; }
+  @media screen and (max-width: 1024px) {
+    .saCover {
+      margin: 0 0 8em 0;
+      width: 45.1em;
+      height: 45.1em; } }
+
+.saAlbum {
+  height: 41em;
+  width: 32em; }
+  @media screen and (max-width: 1024px) {
+    .saAlbum {
+      height: 55em;
+      width: 45.1em; } }
+
+.itAlbum {
+  height: 540px;
+  width: 45.1em; }
+
+.youtubeVideo {
+  width: 77.2em;
+  height: 43.9em; }
+  @media screen and (max-width: 620px) {
+    .youtubeVideo {
+      width: 72em;
+      height: 41em; } }
+  @media screen and (max-width: 570px) {
+    .youtubeVideo {
+      width: 64.8em;
+      height: 37em; } }
+  @media screen and (max-width: 500px) {
+    .youtubeVideo {
+      width: 56.4em;
+      height: 32em; } }
+  @media screen and (max-width: 414px) {
+    .youtubeVideo {
+      width: 45em;
+      height: 25.5em; } }
 
 .footerMedium {
   font-family: hnMedium;
@@ -130,187 +338,6 @@ h3 {
     @media screen and (max-width: 1100px) {
       .footerRegular:nth-child(1) {
         margin-right: 1.5em; } }
-
-.twitter {
-  width: 2.0em;
-  height: 1.7em; }
-  .twitter:hover * {
-    transition: all 0.1s ease;
-    opacity: 0.7; }
-
-.instagram {
-  width: 1.8em;
-  height: 1.8em; }
-  .instagram:hover * {
-    transition: all 0.1s ease;
-    opacity: 0.7; }
-
-.soundcloud {
-  width: 3.3em;
-  height: 1.5em; }
-  .soundcloud:hover * {
-    transition: all 0.1s ease;
-    opacity: 0.7; }
-
-.spotify {
-  width: 1.8em;
-  height: 1.8em; }
-  .spotify:hover * {
-    transition: all 0.1s ease;
-    opacity: 0.7; }
-
-.facebook {
-  width: 1.1em;
-  height: 2.2em; }
-  .facebook:hover * {
-    transition: all 0.1s ease;
-    opacity: 0.7; }
-
-.p1Container {
-  background: black;
-  transition: all 1.2s;
-  position: absolute;
-  width: 100%;
-  height: 100%; }
-
-.scrollDownVideo {
-  opacity: 0;
-  transition: all 1.2s; }
-
-.fixedSection {
-  transition: all 1.2s;
-  z-index: 11;
-  position: sticky;
-  width: 100%;
-  font-size: 10px; }
-  @media screen and (max-width: 1200px) {
-    .fixedSection {
-      font-size: 9px; } }
-  @media screen and (max-width: 1050px) {
-    .fixedSection {
-      font-size: 8px; } }
-  @media screen and (max-width: 750px) {
-    .fixedSection {
-      font-size: 7px; } }
-
-.borderTop {
-  background: linear-gradient(90deg, #569FEE 50%, #FE6562 0);
-  height: 1em; }
-
-.menu {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  padding: 4em 5em 0em 4em;
-  opacity: 0.90;
-  color: #585858; }
-  @media screen and (max-width: 1100px) {
-    .menu {
-      padding: 4em 3.5em 0em 3em; } }
-
-.icons * {
-  margin-left: 1.3em;
-  opacity: 0.85; }
-
-.p2Container {
-  transition: all 1.2s;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  font-size: 10px; }
-  @media screen and (max-width: 1200px) {
-    .p2Container {
-      font-size: 9px; } }
-  @media screen and (max-width: 1050px) {
-    .p2Container {
-      font-size: 8px; } }
-  @media screen and (max-width: 750px) {
-    .p2Container {
-      font-size: 7px; } }
-
-.demoArtist {
-  transform: translateY(-2.23rem);
-  margin-bottom: 2.1em; }
-  @media screen and (max-width: 800px) {
-    .demoArtist {
-      margin-bottom: 1.6em; } }
-  @media screen and (max-width: 500px) {
-    .demoArtist {
-      visibility: hidden; } }
-
-.rappyS {
-  width: 74.4em;
-  height: 44.5em; }
-  @media screen and (max-width: 925px) {
-    .rappyS {
-      width: 67em;
-      height: 40em; } }
-  @media screen and (max-width: 880px) {
-    .rappyS {
-      width: 53.3vw;
-      height: 37vw; } }
-  @media screen and (max-width: 700px) {
-    .rappyS {
-      width: 340px;
-      height: 240px; } }
-  @media screen and (max-width: 400px) {
-    .rappyS {
-      width: 302px;
-      height: 213px; } }
-  @media screen and (max-width: 340px) {
-    .rappyS {
-      width: 278px;
-      height: 196px; } }
-
-.p2Section {
-  text-align: center; }
-  .p2Section:nth-child(3) {
-    margin-top: 11em;
-    margin-bottom: 11em; }
-    @media screen and (max-width: 800px) {
-      .p2Section:nth-child(3) {
-        margin-top: 9.2em;
-        margin-bottom: 9.2em; } }
-    @media screen and (max-width: 570px) {
-      .p2Section:nth-child(3) {
-        margin-top: 8em;
-        margin-bottom: 8em; } }
-
-.soundcloudAlbum {
-  display: flex; }
-  @media screen and (max-width: 900px) {
-    .soundcloudAlbum {
-      flex-direction: column;
-      align-items: center; } }
-
-.saCover {
-  margin-right: 4.2em;
-  width: 41em;
-  height: 41em; }
-  @media screen and (max-width: 900px) {
-    .saCover {
-      margin: 0 0 8em 0;
-      width: 43.2em;
-      height: 43.2em; } }
-  @media screen and (max-width: 340px) {
-    .saCover {
-      margin: 0 0 6em 0;
-      width: 40em;
-      height: 40em; } }
-
-.saAlbum {
-  height: 41em;
-  width: 32em; }
-  @media screen and (max-width: 900px) {
-    .saAlbum {
-      height: 55.4em;
-      width: 43.2em; } }
-  @media screen and (max-width: 340px) {
-    .saAlbum {
-      width: 40em;
-      height: 51em; } }
 
 .footerSection {
   background: #FAFAFA;
