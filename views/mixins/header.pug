@@ -1,0 +1,11 @@
+mixin header()
+  header
+    .mainHeader
+      a(href="/" class="logo") mvp list
+      if (!user)
+        a(href="/auth/twitter") Log In with Twitter
+      else
+        .addIdea +
+        img.twitterImg(src=`${user.profileImg}` alt="Image Title")
+    .subHeader
+      h2 Discuss your ideas before building them

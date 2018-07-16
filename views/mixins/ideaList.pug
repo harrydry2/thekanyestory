@@ -1,0 +1,31 @@
+mixin ideaList()
+  .section2
+    .container2
+      if ideas
+        each idea in ideas
+          .innerContainer
+            .iHeader
+              h3.iTitle= idea.title
+              form.upVoteButton(method="POST" action=`/api/ideas/${idea._id}/heart`)
+                if (!user)
+                  - var votedClass = ''
+                else
+                  - var ideasVotedByUser = user.voted.toString()
+                  - var votedClass = ideasVotedByUser.includes(idea._id.toString()) ? 'votedTrue' : ''
+                button.votingButton(type="submit")
+                  .iUpVoteIcon(class=votedClass)!= icon(`upVote`)
+              .iUpVoteScore #{idea.upVotes && idea.upVotes.length}
+            .iDesc= idea.desc
+            .iFooter
+              .iFooterA
+                img.iAuthorImg(src=`${idea.author.profileImg}` alt="Author")
+                .iAuthor= idea.author.username
+                .iDot!= icon('oval')
+                .iTimeAgo= `${diwtn(idea.created)} ago`
+                .iDot!= icon('oval')
+                - let noocomments = idea.comments.length === 1 ? `${idea.comments.length} Comment` : `${idea.comments.length} Comments`
+                .iComments= noocomments
+              a(class="enterDiscussion" href=`/ideas/${idea._id}`) 
+                | Enter Discussion
+                .iChevronDown!= icon('chevronDown')
+              

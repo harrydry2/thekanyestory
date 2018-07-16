@@ -1,0 +1,10 @@
+extends main
+
+//- Page1
+include mixins/addIdea
+include mixins/ideaList
+
+block content
+  .bodyContainer
+    +addIdea()
+    +ideaList()
