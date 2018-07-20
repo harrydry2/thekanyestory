@@ -1,4 +1,6 @@
 const mongoose = require("mongoose");
+const URLSlugs = require('mongoose-url-slugs')
+const sanitizerPlugin = require('mongoose-sanitizer');
 
 mongoose.Promise = global.Promise;
 
@@ -76,5 +78,8 @@ function autopopulate(next) {
 
 ideaSchema.pre("find", autopopulate);
 ideaSchema.pre("findOne", autopopulate);
+
+ideaSchema.plugin(URLSlugs('title'));
+ideaSchema.plugin(sanitizerPlugin);
 
 module.exports = mongoose.model("Ideas", ideaSchema);
