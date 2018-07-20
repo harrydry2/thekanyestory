@@ -3,6 +3,18 @@ extends main
 include mixins/leaderboard
 include mixins/specific
 
+block head
+  title Ideas Are Worthless | Post your idea. Get feedback
+  meta(property='og:title', content=`Ideas Are Worthless - ${idea.title}`)
+  meta(property='og:description', content=`${idea.desc}`)
+  meta(property='og:url', content=`https://ideasareworthless.io/${idea._id}`)
+  meta(name="twitter:card", content="summary_large_image")
+  meta(name="twitter:description", content=`${idea.desc}`)
+  meta(name="twitter:site", content="@ideasworthless")
+  meta(name="twitter:title", content=`Ideas Are Worthless - ${idea.title}`)
+  meta(property="og:image", content="https://ideasareworthless.io/images/twitter-card.png")
+  meta(name="twitter:creator", content=`@${idea.author.username}`)
+    
 block content
   .bodyContainer
     .ideaListWrapper
@@ -16,6 +28,6 @@ block content
           .right__text-subtitle Built by
             a(href="https://www.twitter.com/harrydry" target="_blank")  @harrydry
             |  at
-            a(href="https://www.crowdform.co.uk/blog/building-venture-studio/" target="_blank")  Ourselves
+            a(href="https://www.crowdform.co.uk/blog/building-venture-studio/?utm_source=Referral&utm_medium=link&utm_campaign=ideas-are-worthless" target="_blank")  Ourselves
         .bigscreenleaderboard
           +leaderboard()

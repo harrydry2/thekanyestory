@@ -18,6 +18,9 @@ const userSchema = new mongoose.Schema({
     type: Number,
     default: 0
   },
+  email: {
+    type: String
+  },
   voted: [
     {
       type: mongoose.Schema.ObjectId,
@@ -30,6 +33,14 @@ const userSchema = new mongoose.Schema({
       ref: "Comments"
     }
   ]
+});
+
+userSchema.set('toJSON', {
+    virtuals: true,
+    versionKey:false,
+    transform: function (doc, ret) {
+      delete ret.email;
+    }
 });
 
 module.exports = mongoose.model("Users", userSchema);
