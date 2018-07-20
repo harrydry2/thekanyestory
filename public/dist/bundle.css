@@ -633,6 +633,11 @@ input:-webkit-autofill {
     display: flex;
     align-items: center; }
 
+.loggedout {
+  display: flex;
+  justify-content: center;
+  width: 100%; }
+
 .right {
   margin-top: 90px;
   background: #f2f2fa;
