@@ -1,17 +1,14 @@
 require('dotenv').config()
 const mongoose = require("mongoose");
-
 const expressStaticGzip = require("express-static-gzip");
 const express = require("express");
 const path = require("path");
 const passport = require("passport");
 const bodyParser = require("body-parser");
 const cookieSession = require("cookie-session");
-const routes = require("./routes/index");
-const helpers = require("./helpers");
+
 const fs = require("fs");
 const app = express();
-
 
 mongoose.connect(process.env.MONGO_URL, { useMongoClient: true });
 mongoose.Promise = global.Promise;
@@ -22,6 +19,8 @@ require("./models/Comments");
 
 app.locals.diwtn = require("date-fns/distance_in_words_to_now");
 const passportConfig = require("./config/passportConfig");
+const routes = require("./routes/index");
+const helpers = require("./helpers");
 
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "pug");
