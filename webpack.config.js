@@ -4,6 +4,7 @@ const ExtractTextPlugin = require("extract-text-webpack-plugin");
 // minify build
 const CompressionPlugin = require("compression-webpack-plugin");
 // const UglifyJSPlugin = require("uglifyjs-webpack-plugin");
+const AssetsPlugin = require('assets-webpack-plugin')
 
 module.exports = {
   entry: {
@@ -12,6 +13,11 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, "public", "dist"),
     filename: "bundle.js"
+  },
+  resolve: {
+    alias: {
+     models: path.join(__dirname, './public/fonts')
+    }
   },
   module: {
     rules: [
@@ -36,6 +42,13 @@ module.exports = {
         use: {
           loader: "babel-loader"
         }
+      },
+      {
+         test: /\.(woff|woff2|ttf|eot)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+         loader: 'base64-font-loader',
+         include: [
+          path.resolve(__dirname, './public'),
+        ]
       }
     ]
   },
