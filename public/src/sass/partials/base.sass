@@ -30,6 +30,49 @@
   font-family: CamphorStd-HeavyItalic
   src: url("/dist/fonts/CamphorStd-HeavyItalic.woff2") format("woff"), url("/dist/fonts/CamphorStd-HeavyItalic.woff") format("woff")
 
+
+@font-face
+  font-family: 'Px Grotesk'
+  src: url('/dist/fonts/hinted-PxGrotesk-BoldItalic.woff2') format('woff2'), url('/dist/fonts/hinted-PxGrotesk-BoldItalic.woff') format('woff')
+  font-weight: bold
+  font-style: italic
+
+
+@font-face
+  font-family: 'Px Grotesk'
+  src: url('/dist/fonts/hinted-PxGrotesk-LightItalic.woff2') format('woff2'), url('/dist/fonts/hinted-PxGrotesk-LightItalic.woff') format('woff')
+  font-weight: 300
+  font-style: italic
+
+
+@font-face
+  font-family: 'Px Grotesk'
+  src: url('/dist/fonts/hinted-PxGroteskRegular.woff2') format('woff2'), url('/dist/fonts/hinted-PxGroteskRegular.woff') format('woff')
+  font-weight: normal
+  font-style: normal
+
+
+@font-face
+  font-family: 'Px Grotesk'
+  src: url('/dist/fonts/hinted-PxGrotesk-Bold.woff2') format('woff2'), url('/dist/fonts/hinted-PxGrotesk-Bold.woff') format('woff')
+  font-weight: bold
+  font-style: normal
+
+
+@font-face
+  font-family: 'Px Grotesk'
+  src: url('/dist/fonts/hinted-PxGrotesk-RegularItalic.woff2') format('woff2'), url('/dist/fonts/hinted-PxGrotesk-RegularItalic.woff') format('woff')
+  font-weight: normal
+  font-style: italic
+
+
+@font-face
+  font-family: 'Px Grotesk'
+  src: url('/dist/fonts/hinted-PxGrotesk-Light.woff2') format('woff2'), url('/dist/fonts/hinted-PxGrotesk-Light.woff') format('woff')
+  font-weight: 300
+  font-style: normal
+
+
 $blue: #172bff
 $black: #333333
 $grey: #666666
@@ -37,6 +80,8 @@ $bg: #fcfdfd
 $ib: #EFF3F5
 $pink: #FF177B
 $mellow: #f2f2fa
+
+$hh: 90px
 
 body, html
   box-sizing: border-box
@@ -47,9 +92,12 @@ body, html
   box-sizing: inherit
   outline: none !important
 
+html, body
+  font-family: 'Px Grotesk'
+  font-weight: normal
+
 body
   background: $bg
-  font-family: CamphorStd-Medium
 
 html
   font-size: 10px
@@ -58,3 +106,7 @@ html
 
 .modalNoScroll
   overflow: hidden
+
+.logo
+  @media screen and (max-width: 600px)
+    // transform: scale(0.8)

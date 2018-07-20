@@ -7,6 +7,7 @@ const twitterController = require("../controllers/twitterController");
 
 router.get("/", mainController.home);
 router.post("/", mainController.addIdea);
+// router.get("/leaderboard", mainController.leaderboard);
 
 // auth with twitter
 router.get(
