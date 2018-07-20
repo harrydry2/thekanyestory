@@ -8,5 +8,15 @@ include mixins/leaderboard
 block content
   .p1
   .bodyContainer
-    +ideaList()
-    +leaderboard()
+    .ideaListWrapper
+      +ideaList()
+    .right
+      .right__text
+        .right__text-title Post your idea
+        .right__text-title Eat shit
+        .right__text-title Improve
+        .right__text-subtitle Built by
+          a(href="https://www.twitter.com/harrydry" target="_blank")  @harrydry
+          |  at
+          a(href="https://www.crowdform.co.uk/blog/building-venture-studio/" target="_blank")  Ourselves
+      +leaderboard()

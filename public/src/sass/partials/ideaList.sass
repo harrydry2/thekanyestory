@@ -2,26 +2,34 @@
   display: flex
   justify-content: space-between
   margin: 0 auto
-  // margin: 12.6rem auto 5rem auto
-  max-width: 1200px
-  @media screen and (max-width: 800px)
+  heightL 100%
+  @media screen and (max-width: 880px)
     flex-direction: column-reverse
     // justify-content: center
-  @media screen and (max-width: 500px)
+  @media screen and (max-width: 600px)
     margin: 0 auto 6.4rem auto
+
+.ideaListWrapper
+  width: 100%
+  display: flex
+  justify-content: center
+
 
 .ideaList
   background: white
   border-radius: 2px
   width: 53.1rem
-  height: 100%
-  @media screen and (max-width: 500px)
+  margin: 140px 0 40px 0
+  @media screen and (max-width: 880px)
     width: 100%
+    margin-top: 0
+  @media screen and (max-width: 880px)
+    margin: 0
   &__inner
     padding: 2.7rem 2.3rem 3.2rem 2.3rem
     transition: all 0.2s
     display: block
-    @media screen and (max-width: 500px)
+    @media screen and (max-width: 600px)
       padding: 2rem
     &-top
       display: grid
@@ -30,7 +38,8 @@
       align-items: center
       color: #333333
       &-title
-        font-family: CamphorStd-Bold
+        font-weight: bold
+        // font-family: CamphorStd-Bold
         font-size: 1.8rem
 
 .votedTrue
@@ -42,23 +51,21 @@
   cursor: pointer
 
 .iUpVoteScore
-  font-family: CamphorStd-Bold
+  font-weight: bold
   font-size: 1.4rem
   margin-left: 0.6rem
 
 .iDesc
-  font-family: CamphorStd-Medium
   font-size: 1.4rem
   color: #666666
   line-height: 2.1rem
   margin: 0.6rem 13.1rem 0 0
   word-wrap: break-word
-  @media screen and (max-width: 500px)
+  @media screen and (max-width: 600px)
     margin: 0.6rem 3.6rem 0 0
 
 
 .iFooter
-  font-family: CamphorStd-Regular
   font-size: 1.3rem
   color: rgba(51,51,51,0.70)
   display: grid
@@ -70,7 +77,6 @@
   display: flex
   align-items: center
   & > *
-    font-family: CamphorStd-Medium
 
 .iAuthorImg
   width: 2rem
@@ -97,10 +103,10 @@
   border: none
   fill: #F1F3F5
   padding: 0.4rem 0.5rem 0.3rem 0.4rem
-  font-family: CamphorStd-Medium
+  // font-family: CamphorStd-Medium
   font-size: 1.1rem
   color: rgba(31,54,77,0.70)
-  @media screen and (max-width: 500px)
+  @media screen and (max-width: 600px)
     display: none
   .iChevronDown
     margin-left: 0.5rem

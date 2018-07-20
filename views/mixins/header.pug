@@ -1,7 +1,7 @@
 mixin header()
   header
     .header__inner
-      a(href="/" class="logo") Ideas are Worthless
+      a(href="/" class="logo")!= icon('logo1')
       .header__right
         if (!user)
           a(href="/auth/twitter").header__right-button Log in with Twitter
@@ -11,3 +11,6 @@ mixin header()
           .leaderboard__user-pill.header__pill
             span 🔥
             .leaderboard__user-pill-votes=user.upvotes
+      .header__rightmob
+        a(href="/")!= icon('crown')
+        .header__rightmob-title LEADERBOARD

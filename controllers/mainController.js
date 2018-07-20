@@ -13,6 +13,12 @@ exports.home = async (req, res) => {
   res.render("page1", { ideas, user: req.user, users });
 };
 
+// exports.leaderboard = async (req, res) => {
+//   const users = await Users.find();
+//   users.sort((a, b) => (a.upvotes > b.upvotes ? -1 : 1));
+//   res.render("leaderboard", { user: req.user, users });
+// };
+
 // save idea to database and redirect to / (which kicks off the home method in main controller)
 exports.addIdea = async (req, res) => {
   req.body.author = req.user._id;
