@@ -52,5 +52,10 @@ app.use((req, res, next) => {
 
 app.use("/", routes);
 
+// 404 page
+app.use(function(req, res) {
+  res.render("404");
+});
+
 const PORT = process.env.PORT || 8000;
 app.listen(PORT, () => console.log(`Listening on port ${PORT}`));
