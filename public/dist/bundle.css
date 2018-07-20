@@ -114,7 +114,7 @@ header {
       position: static; } }
 
 .header__inner {
-  max-width: 1000px;
+  max-width: 1200px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -131,7 +131,7 @@ header {
   color: #333333; }
   @media screen and (max-width: 500px) {
     .logo {
-      color: #172bff; } }
+      color: #FF177B; } }
 
 .header__right {
   display: flex;
@@ -215,7 +215,7 @@ header {
   height: 80px; }
 
 .aiIdeaSubmit {
-  background: #172bff;
+  background: #FF177B;
   border-radius: 2px;
   padding: 1rem 3rem;
   height: 40px;
@@ -237,8 +237,8 @@ input:-webkit-autofill {
 .bodyContainer {
   display: flex;
   justify-content: space-between;
-  margin: 12.6rem auto 5rem auto;
-  max-width: 1000px; }
+  margin: 0 auto;
+  max-width: 1200px; }
   @media screen and (max-width: 800px) {
     .bodyContainer {
       flex-direction: column-reverse; } }
@@ -272,7 +272,7 @@ input:-webkit-autofill {
         font-size: 1.8rem; }
 
 .votedTrue > * {
-  fill: #172bff; }
+  fill: #FF177B; }
 
 .votingButton {
   background: transparent;
@@ -316,7 +316,7 @@ input:-webkit-autofill {
 
 .iAuthor {
   margin-left: .8rem;
-  color: #172bff; }
+  color: #FF177B; }
 
 .iDot {
   margin-left: .6rem;
@@ -372,7 +372,7 @@ input:-webkit-autofill {
   margin: 2.5rem 0 !important; }
 
 .pfOverride {
-  background: #172bff;
+  background: #FF177B;
   border-radius: 2px;
   padding: 1rem 2.6rem;
   font-family: CamphorStd-Medium;
@@ -404,7 +404,7 @@ input:-webkit-autofill {
 
 .iAuthorSI {
   margin: 0 .4rem 0 .8rem;
-  color: #172bff; }
+  color: #FF177B; }
 
 .commentContainer {
   position: relative;
@@ -449,7 +449,8 @@ input:-webkit-autofill {
 .leaderboard {
   padding: 2.7rem 0rem;
   background: #ffffff;
-  height: 100%; }
+  height: 100%;
+  border: 2px solid blue; }
   @media screen and (max-width: 800px) {
     .leaderboard {
       width: 100%; } }
@@ -536,7 +537,7 @@ input:-webkit-autofill {
         transform: translateY(1px); }
       .leaderboard__user-pill-votes {
         font-family: CamphorStd-Bold;
-        color: #172bff;
+        color: #FF177B;
         font-size: 1.4rem;
         margin-left: 0.3rem;
         transform: translateY(1px); }
