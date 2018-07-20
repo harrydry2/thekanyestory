@@ -3,6 +3,7 @@ const router = express.Router();
 const passport = require("passport");
 const mainController = require("../controllers/mainController");
 const userController = require("../controllers/userController");
+const twitterController = require("../controllers/twitterController");
 
 router.get("/", mainController.home);
 router.post("/", mainController.addIdea);
@@ -34,5 +35,7 @@ router.post("/api/specificIdea/:id/vote", mainController.upvoteComment);
 
 // Post Comment
 router.post("/comment/:id", mainController.postComment);
+
+router.get("/tweet", twitterController.twitter)
 
 module.exports = router;

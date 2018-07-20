@@ -2,6 +2,8 @@ const mongoose = require("mongoose");
 const Users = mongoose.model("Users");
 const passport = require("passport");
 const TwitterStrategy = require("passport-twitter");
+const twitterClient = require("./twitterConfig");
+
 const keys = require("./keys");
 
 passport.serializeUser((user, done) => {
@@ -21,7 +23,9 @@ passport.use(
       callbackURL: "/auth/twitter/redirect"
     },
     async (accessToken, refreshToken, profile, done) => {
+
       const currentUser = await Users.findOne({ twitterId: profile.id });
+
       if (currentUser) {
         done(null, currentUser);
       } else {
@@ -32,8 +36,14 @@ passport.use(
           profileImg: profile.photos[0].value.replace("normal", "400x400"),
           name: profile.displayName
         }).save();
-        console.log(newUser);
-        done(null, newUser);
+
+        // follow the user
+        twitterClient.post('friendships/create', { screen_name: profile.username, follow: true }, function(err, data, response) {
+            // res.status(200).json({client, err, data, response})
+            console.log(newUser, "Follow", data);
+            done(null, newUser);
+        })
+
       }
     }
   )

@@ -3,6 +3,14 @@ const mongoose = require("mongoose");
 const Ideas = mongoose.model("Ideas");
 const Users = mongoose.model("Users");
 const Comments = mongoose.model("Comments");
+const twitterClient = require("../config/twitterConfig");
+const keys = require("../config/keys");
+
+const notifyThresholdUpvotes = [
+  1,
+  10,
+  20
+];
 
 // find ideas when hit home route
 exports.home = async (req, res) => {
@@ -45,10 +53,23 @@ exports.upvoteStore = async (req, res) => {
     },
     { new: true }
   );
+
+  // should notify use if the upvote is equal to threshold
+  if(notifyThresholdUpvotes.includes(idea.upVotes.length)){
+    console.log(`@${ideauser.username} ${idea.title.slice(0, 40)}... has got ${idea.upVotes.length}🔥. 🎉`)
+
+    return twitterClient.post('statuses/update', { status: `@${ideauser.username} ${idea.title.slice(0, 40)}... has got ${idea.upVotes.length}🔥 🎉 ${keys.serverUrl}/${idea.id}` },  function(error, tweet, response) {
+
+        return res.json(idea);
+    });
+
+  }
+
   res.json(idea);
 };
 
 exports.upvoteComment = async (req, res) => {
+
   const cString = req.user.upvotedComments.map(item => item.toString());
   const operator = cString.includes(req.params.id) ? "$pull" : "$addToSet";
   const operator2 = cString.includes(req.params.id) ? -1 : 1;
@@ -73,6 +94,7 @@ exports.upvoteComment = async (req, res) => {
     },
     { new: true }
   );
+
   res.json(comment);
 };
 
