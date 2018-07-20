@@ -1,5 +1,16 @@
 extends main
 
+block head
+  title Ideas Are Worthless | Post your idea. Get feedback
+  meta(property='og:title', content=`${idea.title} | Worthless?`)
+  meta(property='og:description', content=`${idea.title}`)
+  meta(property='og:url', content=`https://ideasareworthless.io/${idea._id}`)
+  meta(name="twitter:card", content="summary_large_image")
+  meta(name="twitter:description", content="As a way of saying thank you for all the great feedback that I've received from this community I want to give you guys my Instagram ebook 'Read this if...")
+  meta(name="twitter:site", content="@ideasworthless")
+  meta(name="twitter:title", content=`${idea.title}`)
+
+
 block content
   .bodyContainer
     .ideaList
