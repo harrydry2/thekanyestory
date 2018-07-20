@@ -11,6 +11,11 @@ mixin header()
           .leaderboard__user-pill.header__pill
             span 🔥
             .leaderboard__user-pill-votes=user.upvotes
-      .header__rightmob
-        a(href="/")!= icon('crown')
-        .header__rightmob-title LEADERBOARD
+      if (!leaderboard)
+        a(href="/leaderboard").header__rightmob
+          != icon('crown')
+          .header__rightmob-title LEADERBOARD
+      else
+        a(href="/").header__rightmob
+          != icon('idea')
+          .header__rightmob-title TO IDEAS

@@ -19,7 +19,8 @@ mixin ideaList()
               img.iAuthorImg(src=`${idea.author.profileImg}` alt="Author")
               .iAuthor= idea.author.username
               .iDot!= icon('oval')
-              .iTimeAgo= `${diwtn(idea.created)} ago`
+              - const diw = `${diwtn(idea.created)}`.replace("about", "").replace("less than", "")
+              .iTimeAgo= `${diw} ago`
               .iDot!= icon('oval')
               - let noocomments = idea.comments.length === 1 ? `${idea.comments.length} Comment` : `${idea.comments.length} Comments`
               .iComments= noocomments

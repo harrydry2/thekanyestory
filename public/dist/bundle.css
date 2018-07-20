@@ -131,9 +131,6 @@ body {
 
 html {
   font-size: 10px; }
-  @media screen and (max-width: 1100px) {
-    html {
-      font-size: 9px; } }
 
 .modalNoScroll {
   overflow: hidden; }
@@ -146,35 +143,35 @@ header {
   z-index: 0;
   background: #FF177B;
   z-index: 4; }
-  @media screen and (max-width: 1300px) {
+  @media screen and (max-width: 1600px) {
     header {
+      padding: 0 4rem; } }
+  @media screen and (max-width: 880px) {
+    header {
+      position: static;
       padding: 0 2rem; } }
-  @media screen and (max-width: 600px) {
-    header {
-      position: static; } }
 
 .header__inner {
-  max-width: 1200px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin: 0 auto;
   height: 90px; }
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 880px) {
     .header__inner {
       height: 70px; } }
 
 .logo {
   font-size: 2rem;
   color: #333333; }
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 880px) {
     .logo {
       color: #FF177B; } }
 
 .header__right {
   display: flex;
   align-items: center; }
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 880px) {
     .header__right {
       display: none; } }
   .header__right-button {
@@ -190,7 +187,7 @@ header {
     transition: all 0.2s;
     height: 40px;
     font-weight: bold; }
-    @media screen and (max-width: 600px) {
+    @media screen and (max-width: 880px) {
       .header__right-button {
         background: #FF177B;
         color: white; } }
@@ -205,7 +202,7 @@ header {
   height: 4rem;
   border-radius: 100px;
   margin-left: 3rem; }
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 880px) {
     .twitterImg {
       margin-left: 0; } }
 
@@ -214,9 +211,10 @@ header {
   .header__rightmob-title {
     color: white;
     font-weight: bold;
-    font-size: 1.3rem;
-    margin-top: 0.4rem; }
-  @media screen and (max-width: 600px) {
+    font-size: 1.4rem;
+    letter-spacing: -1;
+    margin-top: 0.8rem; }
+  @media screen and (max-width: 880px) {
     .header__rightmob {
       display: flex;
       flex-direction: column;
@@ -230,7 +228,7 @@ header {
   width: 52.1rem;
   padding: 2.3rem 2.3rem 2.5rem 2.3rem;
   transition: all 0.2s; }
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 880px) {
     .addidea {
       margin-bottom: 64px;
       width: 100%;
@@ -296,7 +294,7 @@ input:-webkit-autofill {
   @media screen and (max-width: 880px) {
     .bodyContainer {
       flex-direction: column-reverse; } }
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 880px) {
     .bodyContainer {
       margin: 0 auto 6.4rem auto; } }
 
@@ -310,18 +308,18 @@ input:-webkit-autofill {
   border-radius: 2px;
   width: 53.1rem;
   margin: 140px 0 40px 0; }
-  @media screen and (max-width: 880px) {
+  @media screen and (max-width: 1480px) {
     .ideaList {
       width: 100%;
-      margin-top: 0; } }
+      margin-top: 90px; } }
   @media screen and (max-width: 880px) {
     .ideaList {
       margin: 0; } }
   .ideaList__inner {
-    padding: 2.7rem 2.3rem 3.2rem 2.3rem;
+    padding: 2.7rem 2.6rem 3.2rem 4rem;
     transition: all 0.2s;
     display: block; }
-    @media screen and (max-width: 600px) {
+    @media screen and (max-width: 880px) {
       .ideaList__inner {
         padding: 2rem; } }
     .ideaList__inner-top {
@@ -352,7 +350,7 @@ input:-webkit-autofill {
   line-height: 2.1rem;
   margin: 0.6rem 13.1rem 0 0;
   word-wrap: break-word; }
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 880px) {
     .iDesc {
       margin: 0.6rem 3.6rem 0 0; } }
 
@@ -396,7 +394,7 @@ input:-webkit-autofill {
   padding: 0.4rem 0.5rem 0.3rem 0.4rem;
   font-size: 1.1rem;
   color: rgba(31, 54, 77, 0.7); }
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 880px) {
     .enterDiscussion {
       display: none; } }
   .enterDiscussion .iChevronDown {
@@ -407,6 +405,10 @@ input:-webkit-autofill {
   .cursorOverride:hover {
     background-color: rgba(230, 243, 255, 0.3);
     transition: all 0.2s; }
+
+@media screen and (max-width: 880px) {
+  .bigscreenspec {
+    display: none; } }
 
 .iaiSI {
   width: 2rem !important;
@@ -422,11 +424,17 @@ input:-webkit-autofill {
   border-top: 2px solid #F1F3F5;
   border-bottom: 2px solid #F1F3F5;
   align-items: center; }
+  @media screen and (max-width: 1100px) {
+    .postComment {
+      flex-direction: column; } }
 
 .aisSI {
   width: 66% !important;
   height: 9rem;
   margin: 2.5rem 0 !important; }
+  @media screen and (max-width: 600px) {
+    .aisSI {
+      width: 100% !important; } }
 
 .pfOverride {
   background: #FF177B;
@@ -439,6 +447,9 @@ input:-webkit-autofill {
   text-align: center;
   cursor: pointer;
   transition: all 0.2s; }
+  @media screen and (max-width: 1100px) {
+    .pfOverride {
+      margin-bottom: 2.5rem; } }
   .pfOverride:hover {
     opacity: 0.8;
     transition: all 0.2s; }
@@ -481,7 +492,8 @@ input:-webkit-autofill {
   margin-top: .3rem; }
 
 .specificVotingButton {
-  border: none; }
+  border: none;
+  background: none; }
 
 .outerContainer {
   display: none;
@@ -497,9 +509,13 @@ input:-webkit-autofill {
   top: 0;
   left: 0;
   right: 0; }
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 880px) {
     .outerContainer {
       align-items: flex-end; } }
+
+@media screen and (max-width: 880px) {
+  .bigscreenleaderboard {
+    display: none; } }
 
 .leaderboard {
   padding: 2.7rem 0rem;
@@ -508,11 +524,11 @@ input:-webkit-autofill {
   @media screen and (max-width: 880px) {
     .leaderboard {
       width: 100%;
-      display: none; } }
+      padding: 2.7rem 0 0 0;
+      margin-top: 0; } }
   .leaderboard__title {
     font-size: 1.8rem;
     font-style: bold;
-    font-weight: 600;
     display: flex;
     justify-content: center;
     align-items: center; }
@@ -522,12 +538,12 @@ input:-webkit-autofill {
       font-size: 1.6rem; }
   .leaderboard__user {
     display: flex;
-    padding: 1rem 2.3rem;
+    padding: 1.1rem 2.5rem;
     cursor: pointer;
     transition: all 0.2s;
     align-items: center;
     justify-content: space-between;
-    width: 32rem; }
+    width: 38rem; }
     @media screen and (max-width: 880px) {
       .leaderboard__user {
         width: 100%; } }
@@ -544,7 +560,6 @@ input:-webkit-autofill {
       align-items: center; }
     @media screen and (max-width: 880px) {
       .leaderboard__user-sb {
-        display: flex;
         overflow-x: scroll;
         margin-top: 1.4rem; } }
     .leaderboard__user-img {
@@ -560,9 +575,6 @@ input:-webkit-autofill {
       display: flex;
       flex-direction: column;
       justify-content: center; }
-      @media screen and (max-width: 880px) {
-        .leaderboard__user-details {
-          display: none; } }
       .leaderboard__user-details-h1 {
         font-weight: bold;
         font-size: 1.6rem;
@@ -614,7 +626,7 @@ input:-webkit-autofill {
   color: #14233c;
   z-index: 10;
   background: #fafafa; }
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 880px) {
     .nav {
       display: flex; } }
   .nav__left {
@@ -624,9 +636,12 @@ input:-webkit-autofill {
 .right {
   margin-top: 90px;
   background: #f2f2fa;
-  padding: 5.6rem;
+  padding: 7.5rem;
   position: relative; }
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 1100px) {
+    .right {
+      padding: 5.6rem; } }
+  @media screen and (max-width: 880px) {
     .right {
       margin-top: 0;
       padding: 2rem; } }
@@ -638,12 +653,24 @@ input:-webkit-autofill {
       color: #FF177B;
       font-size: 2.6rem;
       font-weight: bold;
-      margin-top: 1.2rem; }
+      position: static; }
+      @media screen and (max-width: 880px) {
+        .right__text-title {
+          font-size: 2.4rem; } }
+      .right__text-title:not(:first-child) {
+        margin-top: 1.2rem; }
+        @media screen and (max-width: 880px) {
+          .right__text-title:not(:first-child) {
+            margin-top: 0.8rem; } }
     .right__text-subtitle {
       color: #666666;
       font-size: 1.6rem;
       font-weight: bold;
       margin-top: 2rem; }
+      @media screen and (max-width: 880px) {
+        .right__text-subtitle {
+          margin-top: 1.6rem;
+          font-size: 1.4rem; } }
       .right__text-subtitle a {
         color: #FF177B;
         transition: all 0.2s; }
