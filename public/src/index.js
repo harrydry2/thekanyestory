@@ -14,7 +14,7 @@ upVoteCommentForms.on("submit", ajaxCommentVote);
 
 if (document.querySelector(".p1")) {
   $$(".ideaList__inner").on("click", function(e) {
-    const url = `${process.env.SERVER_URL}/${this.dataset.location}`;
+    const url = `/${this.dataset.location}`;
     window.location.href = url;
     return false;
   });
