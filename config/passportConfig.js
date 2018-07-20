@@ -25,11 +25,14 @@ passport.use(
       if (currentUser) {
         done(null, currentUser);
       } else {
+        console.log(profile.displayName);
         const newUser = await new Users({
           twitterId: profile.id,
           username: profile.username,
-          profileImg: profile.photos[0].value.replace("normal", "400x400")
+          profileImg: profile.photos[0].value.replace("normal", "400x400"),
+          name: profile.displayName
         }).save();
+        console.log(newUser);
         done(null, newUser);
       }
     }

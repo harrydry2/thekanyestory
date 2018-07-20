@@ -11,6 +11,13 @@ const userSchema = new mongoose.Schema({
   profileImg: {
     type: String
   },
+  name: {
+    type: String
+  },
+  upvotes: {
+    type: Number,
+    default: 0
+  },
   voted: [
     {
       type: mongoose.Schema.ObjectId,

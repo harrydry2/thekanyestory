@@ -1,45 +1,60 @@
-.section2
-  padding-right: 10rem
+.bodyContainer
+  display: flex
+  justify-content: space-between
+  margin: 12.6rem auto 5rem auto
+  max-width: 1000px
+  @media screen and (max-width: 800px)
+    flex-direction: column-reverse
+    // justify-content: center
+  @media screen and (max-width: 500px)
+    margin: 0 auto 6.4rem auto
 
-.container2
-  margin-top: 2.7rem 
+.ideaList
   background: white
-  border-radius: 6px
+  border-radius: 2px
   width: 53.1rem
-  .innerContainer
-    border-bottom: 2px solid #F1F3F5
-    padding: 2.3rem 2.3rem 2.5rem 2.3rem
-    .iHeader
+  height: 100%
+  @media screen and (max-width: 500px)
+    width: 100%
+  &__inner
+    padding: 2.7rem 2.3rem 3.2rem 2.3rem
+    transition: all 0.2s
+    display: block
+    @media screen and (max-width: 500px)
+      padding: 2rem
+    &-top
       display: grid
       grid-template-columns: 1fr
       grid-auto-flow: column
       align-items: center
       color: #333333
-      .iTitle
-        font-family: CamphorStd-Medium
+      &-title
+        font-family: CamphorStd-Bold
         font-size: 1.8rem
-      .iUpVoteIcon
-        margin-right: 0.6rem
-        
+
 .votedTrue
   & > *
-    fill: #3ECF8E
+    fill: $blue
 
 .votingButton
-  border: none
-  width: 3.4rem
+  background: transparent
+  cursor: pointer
 
 .iUpVoteScore
   font-family: CamphorStd-Bold
   font-size: 1.4rem
+  margin-left: 0.6rem
 
 .iDesc
-  font-family: CamphorStd-Regular
+  font-family: CamphorStd-Medium
   font-size: 1.4rem
   color: #666666
   line-height: 2.1rem
   margin: 0.6rem 13.1rem 0 0
   word-wrap: break-word
+  @media screen and (max-width: 500px)
+    margin: 0.6rem 3.6rem 0 0
+
 
 .iFooter
   font-family: CamphorStd-Regular
@@ -53,15 +68,17 @@
 .iFooterA
   display: flex
   align-items: center
+  & > *
+    font-family: CamphorStd-Medium
 
 .iAuthorImg
-  width: 1.5rem
-  height: 1.5rem
+  width: 2rem
+  height: 2rem
   border-radius: 100px
 
 .iAuthor
   margin-left: .8rem
-  color: #3ECF8E
+  color: $blue
 
 .iDot
   margin-left: .6rem
@@ -82,7 +99,17 @@
   font-family: CamphorStd-Medium
   font-size: 1.1rem
   color: rgba(31,54,77,0.70)
+  @media screen and (max-width: 500px)
+    display: none
   .iChevronDown
     margin-left: 0.5rem
 
 
+
+// adjustments to ideaList.sass
+
+.cursorOverride
+  cursor: pointer
+  &:hover
+    background-color: rgba(230, 243, 255, 0.3)
+    transition: all 0.2s

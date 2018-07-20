@@ -1,11 +1,13 @@
 mixin header()
   header
-    .mainHeader
-      a(href="/" class="logo") mvp list
-      if (!user)
-        a(href="/auth/twitter") Log In with Twitter
-      else
-        .addIdea +
-        img.twitterImg(src=`${user.profileImg}` alt="Image Title")
-    .subHeader
-      h2 Discuss your ideas before building them
+    .header__inner
+      a(href="/" class="logo") Ideas are Worthless
+      .header__right
+        if (!user)
+          a(href="/auth/twitter").header__right-button Log in with Twitter
+        else
+          .header__right-button.hrb__active ADD YOUR IDEA
+          img.twitterImg(src=`${user.profileImg}` alt="Image Title")
+          .leaderboard__user-pill.header__pill
+            span 🔥
+            .leaderboard__user-pill-votes=user.upvotes

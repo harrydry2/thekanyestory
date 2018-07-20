@@ -1,19 +1,18 @@
 extends main
 
 block content
-  .alignContainer
-    .container2
-      .innerContainer
-        .iHeader
-          h3.iTitle= idea.title
-          form.upVoteButton(method="POST" action=`/api/ideas/${idea._id}/heart`)
+  .bodyContainer
+    .ideaList
+      .ideaList__inner
+        .ideaList__inner-top
+          h3.ideaList__inner-top-title= idea.title
             if (!user)
               - var votedClass = ''
             else
               - var ideasVotedByUser = user.voted.toString()
               - var votedClass = ideasVotedByUser.includes(idea._id.toString()) ? 'votedTrue' : ''
-            button.votingButton(type="submit")
-              .iUpVoteIcon(class=votedClass)!= icon(`upVote`)
+          .votingButton(data-upvote=`/api/ideas/${idea._id}/heart`)
+            .iUpVoteIcon(class=votedClass)!= icon(`upVote`)
           .iUpVoteScore #{idea.upVotes && idea.upVotes.length}
         .iDesc= idea.desc
         .iFooter
@@ -21,8 +20,8 @@ block content
             img.iAuthorImg.iaiSI(src=`${idea.author.profileImg}` alt="Author")
             .iAuthor.aiSI= idea.author.username
         form.postComment(action=`/comment/${idea._id}` method="POST")
-          textarea.aiShared.aiDescInput.aisSI(name="comment" placeholder="Enter your feedback here")
-          input.pfOverride(type="submit" value="Post Feedback")
+          textarea.aiShared.aiDescInput.aisSI(name="comment" placeholder="Roast my Idea below")
+          input.pfOverride(type="submit" value="Roast Away")
         if idea.comments
           each comment in idea.comments
             .commentContainer
@@ -30,7 +29,7 @@ block content
                 form(method="POST" action=`/api/specificIdea/${comment._id}/vote` class="commentButton")
                   if (!user)
                     - var votedClass = ''
-                  else 
+                  else
                     - var commentsVBU = user.upvotedComments.toString()
                     - var votedClass = commentsVBU.includes(comment._id.toString()) ? 'votedTrue' : ''
                   button.specificVotingButton(type="submit")
@@ -40,4 +39,5 @@ block content
               .scFooter
                 img.iAuthorImg(src=`${comment.author.profileImg}` alt="Author")
                 .iAuthorSI= comment.author.username
-                .iTimeAgo= `${diwtn(comment.created)} ago`        
+                .iDot!= icon('oval')
+                .iTimeAgo= `${diwtn(comment.created)} ago`

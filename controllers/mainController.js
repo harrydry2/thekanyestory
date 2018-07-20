@@ -8,20 +8,22 @@ const Comments = mongoose.model("Comments");
 exports.home = async (req, res) => {
   const ideas = await Ideas.find();
   sortArray(ideas);
-  res.render("page1", { ideas, user: req.user });
+  const users = await Users.find();
+  users.sort((a, b) => (a.upvotes > b.upvotes ? -1 : 1));
+  res.render("page1", { ideas, user: req.user, users });
 };
 
 // save idea to database and redirect to / (which kicks off the home method in main controller)
 exports.addIdea = async (req, res) => {
   req.body.author = req.user._id;
   await new Ideas(req.body).save();
-  console.log("saved");
   res.redirect("/");
 };
 
 exports.upvoteStore = async (req, res) => {
   const ideasString = req.user.voted.map(item => item.toString());
   const operator = ideasString.includes(req.params.id) ? "$pull" : "$addToSet";
+  const operator2 = ideasString.includes(req.params.id) ? -1 : 1;
   const user = await Users.findByIdAndUpdate(
     req.user._id,
     {
@@ -36,12 +38,20 @@ exports.upvoteStore = async (req, res) => {
     },
     { new: true }
   );
+  const ideauser = await Users.findByIdAndUpdate(
+    idea.author,
+    {
+      $inc: { upvotes: operator2 }
+    },
+    { new: true }
+  );
   res.json(idea);
 };
 
 exports.upvoteComment = async (req, res) => {
   const cString = req.user.upvotedComments.map(item => item.toString());
   const operator = cString.includes(req.params.id) ? "$pull" : "$addToSet";
+  const operator2 = cString.includes(req.params.id) ? -1 : 1;
   const user = await Users.findByIdAndUpdate(
     req.user._id,
     {
@@ -53,6 +63,13 @@ exports.upvoteComment = async (req, res) => {
     req.params.id,
     {
       [operator]: { upVotes: req.user._id }
+    },
+    { new: true }
+  );
+  const commentuser = await Users.findByIdAndUpdate(
+    comment.author,
+    {
+      $inc: { upvotes: operator2 }
     },
     { new: true }
   );

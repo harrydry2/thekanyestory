@@ -1,0 +1,90 @@
+.leaderboard
+  padding: 2.7rem 0rem
+  background: #ffffff
+  height: 100%
+  @media screen and (max-width: 800px)
+    width: 100%
+    // display: flex
+  &__title
+    font-size: 1.8rem
+    font-family: CamphorStd-Medium
+    display: flex
+    justify-content: center
+    align-items: center
+    &-center
+      margin: 0 1rem
+    span
+      font-size: 1.6rem
+  &__user
+    display: flex
+    padding: 1rem 2.3rem
+    cursor: pointer
+    transition: all 0.2s
+    align-items: center
+    justify-content: space-between
+    width: 32rem
+    @media screen and (max-width: 800px)
+      width: 100%
+    &:nth-child(1)
+      margin-top: 2rem
+      @media screen and (max-width: 800px)
+        margin: 0
+    &:hover
+      background-color: rgba(230, 243, 255, 0.3)
+      transition: all 0.2s
+    &-left
+      display: flex
+      align-items: center
+    &-sb
+      @media screen and (max-width: 800px)
+        display: flex
+        overflow-x: scroll
+        margin-top: 1.4rem
+    &-img
+      width: 4rem
+      height: 4rem
+      border-radius: 100%
+    &-medal
+      font-size: 1.6rem
+      margin-left: 0.4rem
+      transform: translateY(2px)
+    &-details
+      margin-left: 1.3rem
+      display: flex
+      flex-direction: column
+      justify-content: center
+      @media screen and (max-width: 800px)
+        display: none
+      &-h1
+        font-family: CamphorStd-Medium
+        font-size: 1.6rem
+        color: $black
+        span
+          transform: translateY(10px)
+          display: inline-block
+          margin-left: 2px
+      &-h2
+        font-family: CamphorStd-Medium
+        font-size: 1.2rem
+        color: $grey
+        margin-top: 0.3rem
+    &-pill
+      width: 6rem
+      height: 2rem
+      background: rgba(230, 243, 255, 0.4)
+      border-radius: 30px
+      display: flex
+      justify-content: center
+      align-items: center
+      @media screen and (max-width: 800px)
+        margin-left: 0.4rem
+        width: 4rem
+      span
+        font-size: 0.9rem
+        transform: translateY(1px)
+      &-votes
+        font-family: CamphorStd-Bold
+        color: $blue
+        font-size: 1.4rem
+        margin-left: 0.3rem
+        transform: translateY(1px)
