@@ -9,4 +9,5 @@ mixin nav()
       .nav__right
         .header__right-button.hrb__active Add your idea
     else
-      a(href="/auth/twitter").header__right-button Log in with Twitter
+      .loggedout
+        a(href="/auth/twitter").header__right-button Log in with Twitter

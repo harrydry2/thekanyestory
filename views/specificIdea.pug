@@ -1,5 +1,8 @@
 extends main
 
+include mixins/leaderboard
+include mixins/specific
+
 block head
   title Ideas Are Worthless | Post your idea. Get feedback
   meta(property='og:title', content=`Ideas Are Worthless - ${idea.title}`)
@@ -11,44 +14,20 @@ block head
   meta(name="twitter:title", content=`Ideas Are Worthless - ${idea.title}`)
   meta(property="og:image", content="https://ideasareworthless.io/images/twitter-card.png")
   meta(name="twitter:creator", content=`@${idea.author.username}`)
+    
 block content
   .bodyContainer
-    .ideaList
-      .ideaList__inner
-        .ideaList__inner-top
-          h3.ideaList__inner-top-title= idea.title
-            if (!user)
-              - var votedClass = ''
-            else
-              - var ideasVotedByUser = user.voted.toString()
-              - var votedClass = ideasVotedByUser.includes(idea._id.toString()) ? 'votedTrue' : ''
-          .votingButton(data-upvote=`/api/ideas/${idea._id}/heart`)
-            .iUpVoteIcon(class=votedClass)!= icon(`upVote`)
-          .iUpVoteScore #{idea.upVotes && idea.upVotes.length}
-        .iDesc= idea.desc
-        .iFooter
-          .iFooterA
-            img.iAuthorImg.iaiSI(src=`${idea.author.profileImg}` alt="Author")
-            .iAuthor.aiSI= idea.author.username
-        form.postComment(action=`/comment/${idea._id}` method="POST")
-          textarea.aiShared.aiDescInput.aisSI(name="comment" placeholder="Roast my Idea below")
-          input.pfOverride(type="submit" value="Roast Away")
-        if idea.comments
-          each comment in idea.comments
-            .commentContainer
-              .upVoteCommentContainer
-                form(method="POST" action=`/api/specificIdea/${comment._id}/vote` class="commentButton")
-                  if (!user)
-                    - var votedClass = ''
-                  else
-                    - var commentsVBU = user.upvotedComments.toString()
-                    - var votedClass = commentsVBU.includes(comment._id.toString()) ? 'votedTrue' : ''
-                  button.specificVotingButton(type="submit")
-                    .uvcIcon(class=votedClass)!= icon(`upVoteComment`)
-                .upVoteCommentValue #{comment.upVotes && comment.upVotes.length}
-              .specificComment= comment.comment
-              .scFooter
-                img.iAuthorImg(src=`${comment.author.profileImg}` alt="Author")
-                .iAuthorSI= comment.author.username
-                .iDot!= icon('oval')
-                .iTimeAgo= `${diwtn(comment.created)} ago`
+    .ideaListWrapper
+      +specific()
+    .bigscreenspec
+      .right
+        .right__text
+          .right__text-title Post your idea
+          .right__text-title Eat shit
+          .right__text-title Improve
+          .right__text-subtitle Built by
+            a(href="https://www.twitter.com/harrydry" target="_blank")  @harrydry
+            |  at
+            a(href="https://www.crowdform.co.uk/blog/building-venture-studio/?utm_source=Referral&utm_medium=link&utm_campaign=ideas-are-worthless" target="_blank")  Ourselves
+        .bigscreenleaderboard
+          +leaderboard()

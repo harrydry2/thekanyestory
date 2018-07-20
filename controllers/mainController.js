@@ -18,14 +18,21 @@ exports.home = async (req, res) => {
   sortArray(ideas);
   const users = await Users.find();
   users.sort((a, b) => (a.upvotes > b.upvotes ? -1 : 1));
-  res.render("page1", { ideas, user: req.user, users });
+  res.render("page1", { ideas, user: req.user, users, leaderboard: false });
 };
 
-// exports.leaderboard = async (req, res) => {
-//   const users = await Users.find();
-//   users.sort((a, b) => (a.upvotes > b.upvotes ? -1 : 1));
-//   res.render("leaderboard", { user: req.user, users });
-// };
+exports.leaderboard = async (req, res) => {
+  const ideas = await Ideas.find();
+  sortArray(ideas);
+  const users = await Users.find();
+  users.sort((a, b) => (a.upvotes > b.upvotes ? -1 : 1));
+  res.render("leaderboard", {
+    ideas,
+    user: req.user,
+    users,
+    leaderboard: true
+  });
+};
 
 // save idea to database and redirect to / (which kicks off the home method in main controller)
 exports.addIdea = async (req, res) => {
@@ -108,8 +115,13 @@ exports.upvoteComment = async (req, res) => {
 // save idea to database and redirect to / (which kicks off the home method in main controller)
 exports.showIdea = async (req, res) => {
   // find the idea given the id
+
   const idea = await Ideas.findOne({ slug: req.params.id });
-  res.render("specificIdea", { idea, user: req.user });
+  // leaderboard
+  const users = await Users.find();
+  users.sort((a, b) => (a.upvotes > b.upvotes ? -1 : 1));
+  res.render("specificIdea", { idea, user: req.user, users });
+
 };
 
 // post comment to db

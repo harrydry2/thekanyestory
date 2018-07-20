@@ -6,31 +6,32 @@ header
   z-index: 0
   background: $pink
   z-index: 4
-  @media screen and (max-width: 1300px)
-    padding: 0 2rem
-  @media screen and (max-width: 600px)
+  @media screen and (max-width: 1600px)
+    padding: 0 4rem
+  @media screen and (max-width: 880px)
     position: static
+    padding: 0 2rem
 
 .header__inner
-  max-width: 1200px
+  // max-width: 1200px
   display: flex
   justify-content: space-between
   align-items: center
   margin: 0 auto
   height: 90px
-  @media screen and (max-width: 600px)
+  @media screen and (max-width: 880px)
     height: 70px
 
 
 .logo
   font-size: 2rem
   color: $black
-  @media screen and (max-width: 600px)
+  @media screen and (max-width: 880px)
     color: $pink
 .header__right
   display: flex
   align-items: center
-  @media screen and (max-width: 600px)
+  @media screen and (max-width: 880px)
     display: none
   &-button
     background: white
@@ -45,7 +46,7 @@ header
     transition: all 0.2s
     height: 40px
     font-weight: bold
-    @media screen and (max-width: 600px)
+    @media screen and (max-width: 880px)
       background: $pink
       color: white
     &:hover
@@ -58,7 +59,7 @@ header
   height: 4rem
   border-radius: 100px
   margin-left: 3rem
-  @media screen and (max-width: 600px)
+  @media screen and (max-width: 880px)
     margin-left: 0
 
 .header__rightmob
@@ -66,9 +67,10 @@ header
   &-title
     color: white
     font-weight: bold
-    font-size: 1.3rem
-    margin-top: 0.4rem
-  @media screen and (max-width: 600px)
+    font-size: 1.4rem
+    letter-spacing: -1
+    margin-top: 0.8rem
+  @media screen and (max-width: 880px)
     display: flex
     flex-direction: column
     align-items: center
