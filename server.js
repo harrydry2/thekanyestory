@@ -57,5 +57,11 @@ app.use(function(req, res) {
   res.render("404");
 });
 
+// 500 page
+app.use(function (err, req, res, next) {
+  console.error(err.stack)
+  res.status(500).render("404");
+})
+
 const PORT = process.env.PORT || 8000;
 app.listen(PORT, () => console.log(`Listening on port ${PORT}`));
