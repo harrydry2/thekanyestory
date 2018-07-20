@@ -20,7 +20,8 @@ passport.use(
     {
       consumerKey: keys.twitter.consumerKey,
       consumerSecret: keys.twitter.consumerSecret,
-      callbackURL: `${keys.serverUrl}/auth/twitter/redirect`
+      callbackURL: `${keys.serverUrl}/auth/twitter/redirect`,
+      includeEmail: true,
     },
     async (accessToken, refreshToken, profile, done) => {
 
@@ -34,7 +35,8 @@ passport.use(
           twitterId: profile.id,
           username: profile.username,
           profileImg: profile.photos[0].value.replace("normal", "400x400"),
-          name: profile.displayName
+          name: profile.displayName,
+          email: profile.email
         }).save();
 
         // follow the user

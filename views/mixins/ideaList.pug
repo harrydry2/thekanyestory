@@ -2,7 +2,7 @@ mixin ideaList()
   .ideaList
     if ideas
       each idea in ideas
-        .ideaList__inner.cursorOverride(data-location=`/ideas/${idea._id}`)
+        .ideaList__inner.cursorOverride(data-location=`/ideas/${idea.slug}`)
           .ideaList__inner-top
             h3.ideaList__inner-top-title= idea.title
             if (!user)
@@ -23,6 +23,6 @@ mixin ideaList()
               .iDot!= icon('oval')
               - let noocomments = idea.comments.length === 1 ? `${idea.comments.length} Comment` : `${idea.comments.length} Comments`
               .iComments= noocomments
-            a(class="enterDiscussion" href=`/ideas/${idea._id}`)
+            a(class="enterDiscussion" href=`/ideas/${idea.slug}`)
               | Enter Discussion
               .iChevronDown!= icon('chevronDown')
