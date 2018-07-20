@@ -20,7 +20,7 @@ passport.use(
     {
       consumerKey: keys.twitter.consumerKey,
       consumerSecret: keys.twitter.consumerSecret,
-      callbackURL: "/auth/twitter/redirect"
+      callbackURL: `${keys.serverUrl}"/auth/twitter/redirect"`
     },
     async (accessToken, refreshToken, profile, done) => {
 
