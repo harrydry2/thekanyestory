@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="500px" height="500px" viewBox="0 0 500 500" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.1 (57501) - http://www.bohemiancoding.com/sketch -->
+    <title>Artboard</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Artboard" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect fill="#FF177B" x="0" y="0" width="500" height="500"></rect>
+        <g id="mobile--loho" transform="translate(44.000000, 125.000000)" fill="#FFFFFF" fill-rule="nonzero">
+            <polygon id="Shape" points="43 4.66278338 96.2245934 3.91199622 137.519537 199.630353 138.955882 199.630353 173.667574 2.80557305 238.462731 1.89672544 278.680415 197.694112 280.11676 197.694112 316.74358 0.71127204 369.25 0 312.035557 248.154912 247.160603 249.063759 207.262107 55.7163098 205.027791 55.7163098 170.59539 250.130668 107.037086 251"></polygon>
+            <rect id="Rectangle-path" x="0" y="120" width="412.5" height="41.2089552"></rect>
+        </g>
+    </g>
+</svg>

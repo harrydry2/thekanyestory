@@ -9,8 +9,8 @@ block head
   meta(name="twitter:description", content=`${idea.desc}`)
   meta(name="twitter:site", content="@ideasworthless")
   meta(name="twitter:title", content=`Ideas Are Worthless - ${idea.title}`)
-
-
+  meta(property="og:image", content="https://ideasareworthless.io/images/twitter-card.png")
+  meta(name="twitter:creator", content=`@${idea.author.username}`)
 block content
   .bodyContainer
     .ideaList
