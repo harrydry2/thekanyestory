@@ -14,7 +14,7 @@ upVoteCommentForms.on("submit", ajaxCommentVote);
 
 if (document.querySelector(".p1")) {
   $$(".ideaList__inner").on("click", function(e) {
-    const url = `/${this.dataset.location}`;
+    const url = `https://ideasareworthless.io${this.dataset.location}`;
     window.location.href = url;
     return false;
   });
