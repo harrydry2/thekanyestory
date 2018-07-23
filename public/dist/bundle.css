@@ -295,7 +295,8 @@ input:-webkit-autofill {
   height: 100%; }
   @media screen and (max-width: 880px) {
     .bodyContainer {
-      flex-direction: column-reverse; } }
+      flex-direction: column-reverse;
+      height: auto; } }
   @media screen and (max-width: 880px) {
     .bodyContainer {
       margin: 0 auto 6.4rem auto; } }
@@ -653,7 +654,7 @@ input:-webkit-autofill {
   @media screen and (max-width: 880px) {
     .right {
       margin-top: 0;
-      padding: 2rem; } }
+      padding: 4rem 1.9rem; } }
   .right__text {
     display: flex;
     flex-direction: column;
@@ -662,10 +663,11 @@ input:-webkit-autofill {
       color: #FF177B;
       font-size: 2.6rem;
       font-weight: bold;
-      position: static; }
+      position: static;
+      margin-bottom: 1rem; }
       @media screen and (max-width: 880px) {
         .right__text-title {
-          font-size: 2.4rem; } }
+          font-size: 2.1rem; } }
       .right__text-title:not(:first-child) {
         margin-top: 1.2rem; }
         @media screen and (max-width: 880px) {
