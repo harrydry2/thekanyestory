@@ -143,10 +143,8 @@ header {
   right: 0;
   z-index: 0;
   background: #FF177B;
-  z-index: 4; }
-  @media screen and (max-width: 1600px) {
-    header {
-      padding: 0 4rem; } }
+  z-index: 4;
+  padding: 0 4rem; }
   @media screen and (max-width: 880px) {
     header {
       position: static;
@@ -280,7 +278,8 @@ header {
   border: none;
   text-align: center;
   transition: all 0.2s;
-  cursor: pointer; }
+  cursor: pointer;
+  -webkit-appearance: none; }
   .aiIdeaSubmit:hover {
     opacity: 0.8;
     transition: all 0.2s; }
