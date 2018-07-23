@@ -310,7 +310,7 @@ input:-webkit-autofill {
   background: white;
   border-radius: 2px;
   width: 53.1rem;
-  margin: 140px 0 40px 0;
+  margin: 140px 0 0 0;
   height: 100%; }
   @media screen and (max-width: 1480px) {
     .ideaList {
@@ -522,7 +522,7 @@ input:-webkit-autofill {
     display: none; } }
 
 .leaderboard {
-  padding: 2.7rem 0rem;
+  padding: 2.7rem 0.9rem;
   background: #ffffff;
   margin-top: 5rem; }
   @media screen and (max-width: 880px) {
