@@ -719,7 +719,12 @@ input:-webkit-autofill {
   justify-content: center;
   color: white;
   font-weight: bold;
-  transition: all 0.2s; }
+  transition: all 0.2s;
+  position: fixed;
+  z-index: 50; }
+  @media screen and (max-width: 800px) {
+    .ph {
+      position: static; } }
   .ph:hover {
     opacity: 0.8;
     transition: all 0.2s; }
