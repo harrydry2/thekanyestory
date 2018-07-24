@@ -144,11 +144,13 @@ header {
   z-index: 0;
   background: #FF177B;
   z-index: 4;
-  padding: 0 4rem; }
+  padding: 0 4rem;
+  margin-top: 6rem; }
   @media screen and (max-width: 880px) {
     header {
       position: static;
-      padding: 0 2rem; } }
+      padding: 0 2rem;
+      margin-top: 0rem; } }
 
 .header__inner {
   display: flex;
@@ -707,3 +709,27 @@ input:-webkit-autofill {
     font-weight: 400;
     color: #fff;
     font-size: 50px; }
+
+.ph {
+  height: 60px;
+  background-image: linear-gradient(-90deg, #4173E6 30%, #41AAE6 100%);
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+  transition: all 0.2s; }
+  .ph:hover {
+    opacity: 0.8;
+    transition: all 0.2s; }
+  .ph p {
+    margin: 0 1rem;
+    font-size: 20px; }
+    @media screen and (max-width: 800px) {
+      .ph p {
+        font-size: 15px; } }
+
+.confett {
+  width: 2rem;
+  height: 2rem; }

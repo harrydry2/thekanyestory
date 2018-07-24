@@ -1,6 +1,7 @@
 include mixins/header
 include mixins/addIdea
 include mixins/nav
+include mixins/ph
 
 doctype html
 html(lang='en')
@@ -21,7 +22,7 @@ html(lang='en')
       meta(property='og:title', content='Ideas Are Worthless. Execution is everything.')
       meta(name="description", content="Post your idea. Get feedback. See if it's worthless.")
       meta(property='og:description', content="Post your idea. Get feedback. See if it's worthless.")
-      meta(property='og:url', content='https://ideasareworthless.io/')  
+      meta(property='og:url', content='https://ideasareworthless.io/')
       meta(property="og:image", content="https://ideasareworthless.io/images/twitter-card.png")
       meta(name="twitter:creator", content="@harrydry")
     script.
@@ -33,6 +34,7 @@ html(lang='en')
     body
       noscript
         iframe(src="https://www.googletagmanager.com/ns.html?id=GTM-P9RB5ST", height="0", width="0", style="display:none;visibility:hidden")
+      +ph()
       +nav()
       .outerContainer
         +addIdea()
