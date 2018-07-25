@@ -4,6 +4,7 @@ extends main
 include mixins/addIdea
 include mixins/ideaList
 include mixins/leaderboard
+include mixins/newsletter
 
 block content
   .p1
@@ -19,5 +20,6 @@ block content
           a(href="https://www.twitter.com/harrydry" target="_blank")  @harrydry
           |  at
           a(href="https://www.crowdform.co.uk/blog/building-venture-studio/?utm_source=Referral&utm_medium=link&utm_campaign=ideas-are-worthless" target="_blank")  Ourselves
+      +mailchimp()
       .bigscreenleaderboard
         +leaderboard()
