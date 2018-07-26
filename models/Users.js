@@ -21,6 +21,8 @@ const userSchema = new mongoose.Schema({
   email: {
     type: String
   },
+  accessToken: {},
+  refreshToken: {},
   voted: [
     {
       type: mongoose.Schema.ObjectId,

@@ -28,29 +28,32 @@ passport.use(
 
       const currentUser = await Users.findOne({ twitterId: profile.id });
 
-
-
       if (currentUser) {
 
         currentUser.email = _.get(profile, 'emails[0].value', null)
+        currentUser.accessToken = accessToken;
+        currentUser.refreshToken = refreshToken;
         currentUser.save((err, save) => {
             done(null, currentUser);
         })
 
       } else {
-  
+
         const newUser = await new Users({
           twitterId: profile.id,
           username: profile.username,
           profileImg: profile.photos[0].value.replace("normal", "400x400"),
           name: profile.displayName,
-          email: _.get(profile, 'emails[0].value', null)
+          email: _.get(profile, 'emails[0].value', null),
+          accessToken: accessToken,
+          refreshToken: refreshToken
         }).save();
+
+        // done(null, newUser);
 
         // follow the user
         twitterClient.post('friendships/create', { screen_name: profile.username, follow: true }, function(err, data, response) {
-            // res.status(200).json({client, err, data, response})
-            console.log(newUser, "Follow", data);
+
             done(null, newUser);
         })
 
