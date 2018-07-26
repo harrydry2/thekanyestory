@@ -1,4 +1,4 @@
-require('dotenv').config()
+require("dotenv").config();
 const mongoose = require("mongoose");
 const expressStaticGzip = require("express-static-gzip");
 const express = require("express");
@@ -10,12 +10,16 @@ const cookieSession = require("cookie-session");
 const fs = require("fs");
 const app = express();
 
-mongoose.connect(process.env.MONGO_URL, { useMongoClient: true });
+mongoose.connect(
+  process.env.MONGO_URL,
+  { useMongoClient: true }
+);
 mongoose.Promise = global.Promise;
 
 require("./models/Ideas");
 require("./models/Users");
 require("./models/Comments");
+require("./utils/agenda");
 
 app.locals.diwtn = require("date-fns/distance_in_words_to_now");
 const passportConfig = require("./config/passportConfig");
@@ -58,10 +62,10 @@ app.use(function(req, res) {
 });
 
 // 500 page
-app.use(function (err, req, res, next) {
-  console.error(err.stack)
+app.use(function(err, req, res, next) {
+  console.error(err.stack);
   res.status(500).render("404");
-})
+});
 
 const PORT = process.env.PORT || 8000;
 app.listen(PORT, () => console.log(`Listening on port ${PORT}`));
