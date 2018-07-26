@@ -6,7 +6,7 @@ exports.twitter = async (req, res, next) => {
   //     res.status(200).json({client, err, data, response})
   // })
 
-  twitterClient.post('statuses/update', { status: '@harrydry have set this up now!' }, function(err, data, response) {
+  twitterClient.get('account/verify_credentials', { screen_name: 'harrydry', include_email: true }, function(err, data, response) {
       res.status(200).json({ err, data, response})
   })
 

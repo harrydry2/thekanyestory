@@ -29,7 +29,7 @@ app.use(express.static(path.join(__dirname, "public")));
 app.use(
   cookieSession({
     maxAge: 24 * 24 * 24 * 365 * 1000,
-    keys: ["-ideas-are-worthless"]
+    keys: ["--ideas-are-worthless"]
   })
 );
 

@@ -3,6 +3,7 @@ const Users = mongoose.model("Users");
 const passport = require("passport");
 const TwitterStrategy = require("passport-twitter");
 const twitterClient = require("./twitterConfig");
+const _ = require("lodash");
 
 const keys = require("./keys");
 
@@ -27,16 +28,23 @@ passport.use(
 
       const currentUser = await Users.findOne({ twitterId: profile.id });
 
+
+
       if (currentUser) {
-        done(null, currentUser);
+
+        currentUser.email = _.get(profile, 'emails[0].value', null)
+        currentUser.save((err, save) => {
+            done(null, currentUser);
+        })
+
       } else {
-        console.log(profile.displayName);
+  
         const newUser = await new Users({
           twitterId: profile.id,
           username: profile.username,
           profileImg: profile.photos[0].value.replace("normal", "400x400"),
           name: profile.displayName,
-          email: profile.email
+          email: _.get(profile, 'emails[0].value', null)
         }).save();
 
         // follow the user

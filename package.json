@@ -53,6 +53,7 @@
     "dotenv": "^6.0.0",
     "express": "^4.16.2",
     "express-static-gzip": "^0.3.0",
+    "lodash": "^4.17.10",
     "mongoose": "^4.13.7",
     "mongoose-sanitizer": "^1.0.0",
     "mongoose-url-slugs": "^1.0.2",
