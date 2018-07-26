@@ -29,7 +29,7 @@ function time2points(aTime) {
   } else if (aTime < 2880) {
     return 0;
   } else if (aTime > 2880) {
-    return -10;
+    return -15;
   } else {
     return 0;
   }
