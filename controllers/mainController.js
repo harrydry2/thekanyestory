@@ -6,6 +6,8 @@ const Comments = mongoose.model("Comments");
 const twitterClient = require("../config/twitterConfig");
 const keys = require("../config/keys");
 const agenda = require("../utils/agenda");
+const ObjectId = mongoose.Types.ObjectId;
+
 
 const notifyThresholdUpvotes = [2, 10, 15];
 
@@ -149,6 +151,32 @@ exports.showIdea = async (req, res) => {
 exports.postComment = async (req, res) => {
   req.body.author = req.user._id;
   req.body.idea = req.params.id;
-  await new Comments(req.body).save();
-  res.redirect("back");
+
+  const newComment = await new Comments(req.body).save();
+
+  const ideauser = Ideas.findById(req.params.id).populate('author').exec((err, idea) => {
+
+    // has email and not self commenting
+    if (idea.author.email && !(ObjectId(req.user._id).equals(idea.author._id))) {
+      const mailOptions = {
+        to: idea.author.email,
+        subject: `Your Idea Has A New Comment!`,
+        template: "comment",
+        context: {
+          upvotes: idea.upVotes.length,
+          link: idea.slug,
+          title: idea.title,
+          comment: newComment.comment,
+          commentAuthor: req.user.username
+        }
+      };
+      agenda.now("send_email", {
+        mailOptions
+      });
+    }
+
+    res.redirect("back");
+  });
+
+
 };
