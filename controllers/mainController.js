@@ -64,9 +64,9 @@ exports.upvoteStore = async (req, res) => {
     { new: true }
   );
 
-  if (notifyThresholdUpvotes.includes(idea.upVotes.length)) {
+  if (notifyThresholdUpvotes.includes(idea.upVotes.length) && ideauser.email) {
     const mailOptions = {
-      to: "harrydry1996@gmail.com",
+      to: ideauser.email,
       subject: `Your Idea Has ${idea.upVotes.length} Upvotes`,
       template: "upvotes",
       context: {
