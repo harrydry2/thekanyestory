@@ -26,8 +26,10 @@ function time2points(aTime) {
     return 8;
   } else if (aTime < 1400) {
     return 6;
-  } else if (aTime < 2000) {
-    return 4;
+  } else if (aTime < 2880) {
+    return 0;
+  } else if (aTime > 2880) {
+    return -10;
   } else {
     return 0;
   }
