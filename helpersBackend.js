@@ -1,4 +1,5 @@
 module.exports = sortArray = function(ideas) {
+  ideas.sort({ created:  -1 })
   ideas.sort((a, b) => {
     const aUV = a.upVotes.length;
     const bUV = b.upVotes.length;
@@ -10,6 +11,8 @@ module.exports = sortArray = function(ideas) {
     const bPoints = bScore + bUV;
     return aPoints > bPoints ? -1 : 1;
   });
+
+
 };
 
 function time2points(aTime) {
