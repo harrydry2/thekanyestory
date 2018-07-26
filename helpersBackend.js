@@ -13,16 +13,18 @@ module.exports = sortArray = function(ideas) {
 };
 
 function time2points(aTime) {
-  if (aTime < 1) {
-    return 10;
-  } else if (aTime < 10) {
-    return 8;
-  } else if (aTime < 60) {
-    return 6;
-  } else if (aTime < 240) {
-    return 4;
+  if (aTime < 60) {
+    return 25;
+  } else if (aTime < 180) {
+    return 15;
+  } else if (aTime < 500) {
+    return 12;
   } else if (aTime < 800) {
-    return 2;
+    return 8;
+  } else if (aTime < 1400) {
+    return 6;
+  } else if (aTime < 2000) {
+    return 4;
   } else {
     return 0;
   }

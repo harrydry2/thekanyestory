@@ -5,12 +5,9 @@ const Users = mongoose.model("Users");
 const Comments = mongoose.model("Comments");
 const twitterClient = require("../config/twitterConfig");
 const keys = require("../config/keys");
+const agenda = require("../utils/agenda");
 
-const notifyThresholdUpvotes = [
-  1,
-  10,
-  20
-];
+const notifyThresholdUpvotes = [2, 10, 15];
 
 // find ideas when hit home route
 exports.home = async (req, res) => {
@@ -67,23 +64,48 @@ exports.upvoteStore = async (req, res) => {
     { new: true }
   );
 
+  if (notifyThresholdUpvotes.includes(idea.upVotes.length) && ideauser.email) {
+    const mailOptions = {
+      to: ideauser.email,
+      subject: `Your Idea Has ${idea.upVotes.length} Upvotes`,
+      template: "upvotes",
+      context: {
+        upvotes: idea.upVotes.length,
+        link: idea.slug,
+        title: idea.title
+      }
+    };
+    agenda.now("send_email", {
+      mailOptions
+    });
+  }
+
   // should notify use if the upvote is equal to threshold
   // TODO: change to a sync function library not compatable
-  if(notifyThresholdUpvotes.includes(idea.upVotes.length)){
-    console.log(`@${ideauser.username} ${idea.title.slice(0, 40)}... has got ${idea.upVotes.length}🔥. 🎉`)
+  if (notifyThresholdUpvotes.includes(idea.upVotes.length)) {
+    console.log(
+      `@${ideauser.username} ${idea.title.slice(0, 40)}... has got ${
+        idea.upVotes.length
+      }🔥. 🎉`
+    );
 
-    return twitterClient.post('statuses/update', { status: `@${ideauser.username} ${idea.title.slice(0, 40)}... has got ${idea.upVotes.length}🔥 🎉 ${keys.serverUrl}/${idea.slug}` },  function(error, tweet, response) {
-
+    return twitterClient.post(
+      "statuses/update",
+      {
+        status: `@${ideauser.username} ${idea.title.slice(0, 40)}... has got ${
+          idea.upVotes.length
+        }🔥 🎉 ${keys.serverUrl}/${idea.slug}`
+      },
+      function(error, tweet, response) {
         return res.json(idea);
-    });
-
+      }
+    );
   }
 
   res.json(idea);
 };
 
 exports.upvoteComment = async (req, res) => {
-
   const cString = req.user.upvotedComments.map(item => item.toString());
   const operator = cString.includes(req.params.id) ? "$pull" : "$addToSet";
   const operator2 = cString.includes(req.params.id) ? -1 : 1;
@@ -121,7 +143,6 @@ exports.showIdea = async (req, res) => {
   const users = await Users.find();
   users.sort((a, b) => (a.upvotes > b.upvotes ? -1 : 1));
   res.render("specificIdea", { idea, user: req.user, users });
-
 };
 
 // post comment to db
