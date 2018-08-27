@@ -1,0 +1,6 @@
+mixin divider(chapter, title, gif)
+  .divider
+    .divider__container
+      .divider__container-num=chapter
+      .divider__container-text=title
+    video(src=`${gif}` playsinline loop muted autoplay class="divider__gif")

@@ -1,25 +1,31 @@
 extends main
+include mixins/divider
+include mixins/LeftMenu
 
-//- Page1
-include mixins/addIdea
-include mixins/ideaList
-include mixins/leaderboard
-include mixins/newsletter
+include mixins/Chapters/Idea
+include mixins/Chapters/Flashback
+include mixins/Chapters/Viral
+include mixins/Chapters/Coding
+include mixins/Chapters/Launch
+include mixins/Chapters/Reborn
+include mixins/Chapters/Billboards
+include mixins/Chapters/End
 
 block content
-  .p1
-  .bodyContainer
-    .ideaListWrapper
-      +ideaList()
-    .right
-      .right__text
-        .right__text-title Everyone has startup ideas
-        .right__text-title Most are worthless
-        .right__text-title Post yours, get honest feedback
-        .right__text-subtitle Built by
-          a(href="https://www.twitter.com/harrydry" target="_blank")  @harrydry
-          |  at
-          a(href="https://www.crowdform.co.uk/blog/building-venture-studio/?utm_source=Referral&utm_medium=link&utm_campaign=ideas-are-worthless" target="_blank")  Ourselves
-      +mailchimp()
-      .bigscreenleaderboard
-        +leaderboard()
+  +LeftMenu
+  +divider("01", "Idea", "https://s3.amazonaws.com/harrydry/kanyesad.mp4")
+  +Idea
+  +divider("02", "Flashback", "https://media.giphy.com/media/ZQ3GclO1YYXGE/giphy.mp4")
+  +Flashback
+  +divider("03", "Viral", "http://i.imgur.com/bf995.gif")
+  +Viral
+  +divider("04", "Coding", "https://media.giphy.com/media/1yPE9N5AcK71m/giphy.mp4")
+  +Coding
+  +divider("05", "Launch", "https://media.giphy.com/media/jg7Bq3EYD16Lu/giphy.mp4")
+  +Launch
+  +divider("06", "Reborn", "https://media.giphy.com/media/w6fXHomX8aldS/giphy.mp4")
+  +Reborn
+  +divider("07", "Billboards", "https://media.giphy.com/media/16e1J9ztaZ3na/giphy.mp4")
+  +Billboards
+  +divider("08", "End", "https://media.giphy.com/media/l0MYuLUvo8GNRrhss/giphy.mp4")
+  +End

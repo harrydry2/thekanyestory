@@ -1,0 +1,42 @@
+.leftmenu
+  position: fixed
+  margin: 0 15rem
+  top: 50%
+  transform: translate(0, -50%)
+  z-index: 0
+  transition: all 0.4s
+  &__item
+    position: relative
+    width: min-content
+    cursor: pointer
+    &::before
+      content: ""
+      width: 0%
+      height: 2px
+      background: $black
+      position: absolute
+      top: 50%
+      transform: translateY(-40%)
+      left: -2%
+      transition: all 0.5s
+    &:not(:first-of-type)
+      margin-top: 2rem
+    &-num
+      margin-right: 1rem
+      color: $red
+      font-size: 1.7rem
+      font-family: Roboto
+    &-text
+      letter-spacing: 1.8px
+      text-transform: uppercase
+      font-size: 1.6rem
+      font-family: Roboto
+
+
+.strike
+  &::before
+    width: 104%
+
+.leftmenu.hidden
+  opacity: 0
+  transition: all 0.4s

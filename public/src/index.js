@@ -1,21 +1,38 @@
 import "./sass/styles.sass";
 import { $, $$ } from "./modules/bling";
-import axios from "axios";
+import zenscroll from "zenscroll";
+zenscroll.setup(null, 0);
 
-import ajaxVote from "./modules/ajaxVote";
-import ajaxCommentVote from "./modules/ajaxCommentVote";
-import "./modules/modal";
+import "./modules/isChapterRead";
 
-const upVoteForms = $$(".votingButton");
-upVoteForms.on("click", ajaxVote);
+const images = [...$$(".fullWidth")];
+const leftmenu = $(".leftmenu");
 
-const upVoteCommentForms = $$("form.commentButton");
-upVoteCommentForms.on("submit", ajaxCommentVote);
+const isIntersecting = (imageRect, leftmenuRect) =>
+  imageRect.top < leftmenuRect.bottom && imageRect.bottom > leftmenuRect.top;
 
-if (document.querySelector(".p1")) {
-  $$(".ideaList__inner").on("click", function(e) {
-    const url = `https://ideasareworthless.io${this.dataset.location}`;
-    window.location.href = url;
-    return false;
-  });
+window.on("scroll", menuHide);
+
+function menuHide() {
+  if (
+    images.some(image =>
+      isIntersecting(
+        image.getBoundingClientRect(),
+        leftmenu.getBoundingClientRect()
+      )
+    )
+  ) {
+    leftmenu.classList.add("hidden");
+  } else {
+    leftmenu.classList.remove("hidden");
+  }
 }
+
+const menuItems = [...$$(".leftmenu__item")];
+const dividers = [...$$(".divider")];
+
+menuItems.forEach((item, index) => {
+  item.on("click", () => {
+    zenscroll.to(dividers[`${index}`], 0);
+  });
+});
