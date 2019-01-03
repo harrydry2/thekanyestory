@@ -2,38 +2,65 @@ html,body
   font-family: "Circular"
   font-size: 10px
   font-weight: 400
+  // background-color: #101922
 
 .outer
   max-width: 64rem
+  width: 100%
   margin: 0rem auto
+  position: relative
+  z-index: 2
+  @media (max-width: 1400px)
+    right: -5rem
+  @media (max-width: 1350px)
+    right: -8rem
+  @media (max-width: 1300px)
+    right: -8rem
+  @media (max-width: 1260px)
+    right: -10rem
+  @media (max-width: 1200px)
+    right: 0
+    // padding: 0 1.8rem
 
 p
   font-size: 2rem
   color: $grey
-  line-height: 3.7rem
+  line-height: 1.85
   padding: 1.7rem 0
+  @media (max-width: 1200px)
+    padding: 1rem 2rem
+    font-size: 1.7rem
   // &:not(:first-of-type)
   //   margin-top: 1.6rem
 
 .speech
   font-size: 2rem
   color: $grey
-  line-height: 3.7rem
+  line-height: 1.85
   &__one
     padding-top: 1.7rem
   &__two
     padding-bottom: 1.7rem
+  @media (max-width: 1200px)
+    padding: 0 2rem
+    font-size: 1.7rem
 
 li
   font-size: 2rem
   color: $grey
   list-style: none
-  line-height: 3.7rem
+  line-height: 1.85
   &:first-of-type
     margin-top: 1.6rem
+  @media (max-width: 1200px)
+    padding: 0 2rem
+    font-size: 1.7rem
 
 .italic
   font-style: italic
+
+.bold
+  font-weight: 500
 
 .link
   color: $red
@@ -47,6 +74,13 @@ li
   border: 1rem solid #ffdddd
   position: relative
   width: 100%
+  @media (max-width: 1200px)
+    margin: 2rem auto
+    border: none
+    // border: 0.5rem solid #ffdddd
+    border-bottom: 0.5rem solid #ffdddd
+    border-top: 0.5rem solid #ffdddd
+
 
 
 .fullWidth
@@ -56,6 +90,13 @@ li
   right: 50%
   margin: 5.2rem -49rem 5.2rem -49rem
   width: 98rem
+  @media (max-width: 1350px)
+    width: 94rem
+  @media (max-width: 1260px)
+    width: 90rem
+  @media (max-width: 1200px)
+    margin: 5.2rem -45rem 5.2rem -45rem
+    display: none
   &__video
     cursor: pointer
     transition: all 0.2s
@@ -70,6 +111,8 @@ li
   border: 1rem solid #ffdddd
   background-color: #fddddd
   width: min-content
+  @media (max-width: 1200px)
+    display: none
   &__img
     width: 25.8rem
     height: 46rem
@@ -82,3 +125,8 @@ li
     &:hover
       opacity: 0.9
       transition: all 0.2s
+
+.noScroll
+  overflow: hidden
+  // position: relative
+  // height: 100%

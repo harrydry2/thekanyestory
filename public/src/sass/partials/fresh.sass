@@ -1,0 +1,29 @@
+.fresh
+  width: 100vw
+  height: 100vh
+  overflow-y: hidden
+  position: relative
+  &__img1
+    transition: all 0.7s
+    transition-timing-function: cubic-bezier(.51,.25,.76,.49)
+    max-width: 100%
+    height: auto
+    position: absolute
+    left: 0
+    bottom: -180%
+  &__img2
+    position: absolute
+    z-index: 1
+    width: 77%
+    top: 18%
+    left: 110%
+    transition: all 0.3s
+    transform: rotate(-3deg)
+  &__img3
+    position: absolute
+    z-index: 1
+    width: 66%
+    bottom: 15%
+    right: 110%
+    transform: rotate(3deg)
+    transition: all 0.3s

@@ -1,10 +1,14 @@
 .leftmenu
   position: fixed
-  margin: 0 15rem
+  left: 9.4%
   top: 50%
   transform: translate(0, -50%)
   z-index: 0
   transition: all 0.4s
+  @media (max-width: 1300px)
+    left: 8%
+  @media (max-width: 1200px)
+    display: none
   &__item
     position: relative
     width: min-content
@@ -19,6 +23,8 @@
       transform: translateY(-40%)
       left: -2%
       transition: all 0.5s
+      @media (max-width: 1200px)
+        background: $white
     &:not(:first-of-type)
       margin-top: 2rem
     &-num
@@ -40,3 +46,74 @@
 .leftmenu.hidden
   opacity: 0
   transition: all 0.4s
+
+.mobileMenuOpen
+  position: fixed
+  width: 5.4rem
+  height: 5.4rem
+  border-radius: 100%
+  right: -2.6rem
+  top: -2.6rem
+  background-color: $red
+  display: flex
+  justify-content: center
+  align-items: center
+  z-index: 4
+  display: none
+  cursor: pointer
+  @media (max-width: 1200px)
+    display: flex
+  &__svgadd
+    position: relative
+    top: 22.5%
+    left: -19%
+    display: block
+  &__svgsubtract
+    position: relative
+    top: 18%
+    left: -19%
+    display: none
+  &__on
+    .mobileMenuOpen__svgsubtract
+      display: block
+    .mobileMenuOpen__svgadd
+      display: none
+
+
+// mobileMenu
+
+.mobilemenu
+  position: fixed
+  align-items: center
+  justify-content: center
+  background: $mb
+  padding: 2.4rem
+  color: #fff
+  width: 100%
+  height: 100%
+  visibility: hidden
+  opacity: 0
+  z-index: 3
+  top: 0
+  left: 0
+  margin: 0
+  overflow: hidden
+  display: none
+  @media (max-width: 1200px)
+    display: flex
+  &__active
+    opacity: 1
+    visibility: visible
+  &__bottom
+    position: absolute
+    display: flex
+    justify-content: space-between
+    align-items: flex-end
+    width: 100%
+    padding: 2rem 2.4rem
+    bottom: 0
+    &-left
+      font-size: 1.6rem
+      padding: 0.7rem 0
+      border-bottom: 1px solid #fff
+    &-right

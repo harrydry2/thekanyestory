@@ -1,26 +1,31 @@
 import { $, $$ } from "./bling";
 
+var mobOrLeft = window.innerWidth <= 1023 ? "mobilemenu__inner" : "leftmenu";
 var dividers = Array.from($$(".divider"));
 let dividerHeight = dividers[0].offsetHeight;
-let menuToTop = $(".leftmenu").getBoundingClientRect().top;
+let menuToTop = $(`.${mobOrLeft}`).getBoundingClientRect().top;
 
 window.on("scroll", isChapterRead);
 window.on("resize", updateCoords);
 
 function updateCoords() {
   dividerHeight = dividers[0].offsetHeight;
-  menuToTop = $(".leftmenu").getBoundingClientRect().top;
+  menuToTop = $(`.${mobOrLeft}`).getBoundingClientRect().top;
 }
 
 function isChapterRead() {
+  var counter = -2;
+  if (mobOrLeft === "leftmenu") {
+    counter = dividerHeight - menuToTop + 20;
+  }
   dividers.forEach((divider, index) => {
-    var lm = $(`.lm00${(index + 1).toString()}`);
-    if (
-      divider.getBoundingClientRect().top < -(dividerHeight - menuToTop + 20)
-    ) {
-      lm.classList.add("strike");
-    } else {
-      lm.classList.contains("strike") ? lm.classList.remove("strike") : null;
+    if (index > 0) {
+      var lm = $(`.${mobOrLeft} > .lm00${index.toString()}`);
+      if (divider.getBoundingClientRect().top < -counter) {
+        lm.classList.add("strike");
+      } else {
+        lm.classList.contains("strike") ? lm.classList.remove("strike") : null;
+      }
     }
   });
 }

@@ -1,5 +1,6 @@
-mixin LeftMenu()
-  .leftmenu
+mixin LeftMenu(mobile)
+  - var leftMenu = mobile ? "leftmenu" : "mobilemenu__inner"
+  div(class=`${leftMenu}`)
     .leftmenu__item.lm001
       span.leftmenu__item-num 01
       span.leftmenu__item-text Idea

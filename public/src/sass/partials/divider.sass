@@ -8,6 +8,10 @@
   justify-content: center
   position: relative
   opacity: 1
+  @media (max-width: 1200px)
+    overflow-x: hidden
+    width: 100%
+    margin: 5rem 0
   &__container
     text-align: center
     z-index: 2
@@ -17,6 +21,8 @@
       font-family: Roboto
       font-weight: bold
       font-size: 3rem
+      @media (max-width: 1200px)
+        font-size: 2.4rem
     &-text
       color: $white
       font-weight: 600
@@ -24,8 +30,20 @@
       text-transform: uppercase
       letter-spacing: 1rem
       margin-top: 3rem
+      @media (max-width: 1200px)
+        font-size: 4rem
+        letter-spacing: 3px
+        margin-top: 2rem
   &__gif
     position: absolute
     width: 100%
     opacity: 0.3
     height: 100%
+    @media (max-width: 1200px)
+      width: auto
+
+
+// specialCases
+
+.divider__01
+  margin-top: 0

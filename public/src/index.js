@@ -2,37 +2,41 @@ import "./sass/styles.sass";
 import { $, $$ } from "./modules/bling";
 import zenscroll from "zenscroll";
 zenscroll.setup(null, 0);
+import toggleMenu from "./modules/mobileMenu";
 
 import "./modules/isChapterRead";
-
-const images = [...$$(".fullWidth")];
-const leftmenu = $(".leftmenu");
-
-const isIntersecting = (imageRect, leftmenuRect) =>
-  imageRect.top < leftmenuRect.bottom && imageRect.bottom > leftmenuRect.top;
-
-window.on("scroll", menuHide);
-
-function menuHide() {
-  if (
-    images.some(image =>
-      isIntersecting(
-        image.getBoundingClientRect(),
-        leftmenu.getBoundingClientRect()
-      )
-    )
-  ) {
-    leftmenu.classList.add("hidden");
-  } else {
-    leftmenu.classList.remove("hidden");
-  }
-}
+// import "./modules/fresh";
+import menuHide from "./modules/menuHide";
 
 const menuItems = [...$$(".leftmenu__item")];
 const dividers = [...$$(".divider")];
 
 menuItems.forEach((item, index) => {
   item.on("click", () => {
-    zenscroll.to(dividers[`${index}`], 0);
+    if (index > 7) {
+      var nom = index - 8;
+    } else {
+      var nom = index;
+    }
+    zenscroll.to(dividers[`${nom}`], 0);
+    if (index > 7) {
+      toggleMenu();
+    }
   });
 });
+
+if (window.innerWidth > 1140) {
+  menuHide();
+}
+
+if (window.innerWidth <= 1023) {
+  $(".mobileMenuOpen").on("click", toggleMenu);
+}
+
+if (window.innerWidth < 1200) {
+  const fullWidthArray = Array.from($$(".fullWidth"));
+  fullWidthArray.forEach(img => {
+    img.classList.remove("fullWidth");
+    img.classList.add("normalWidth");
+  });
+}

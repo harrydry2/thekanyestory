@@ -1,5 +1,5 @@
 mixin divider(chapter, title, gif)
-  .divider
+  .divider(class=`divider__${chapter}`)
     .divider__container
       .divider__container-num=chapter
       .divider__container-text=title
