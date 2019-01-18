@@ -1,0 +1,83 @@
+.plug
+  width: 100%
+  position: relative
+  background-color: #14233C
+  margin-top: 14rem
+  @media (max-width: 1200px)
+    margin-top: 5rem
+  &__inner
+    max-width: 64rem
+    margin: 0 auto
+    padding: 10rem 0
+    display: flex
+    flex-direction: column
+    justify-content: center
+    &-box
+      display: flex
+      margin-top: 4rem
+      align-items: center
+      &-cd
+        animation: spinning 6s infinite linear
+        width: 10rem
+        height: 10rem
+        transform-origin: center center
+      &-titlebox
+        margin-left: 4rem
+        &-title
+          font-size: 1.9rem
+          font-family: Chantal
+          color: #fff
+          &:last-child
+            margin-top: 0.8rem
+    p
+      color: $plug
+    &-submitted
+      display: none
+      font-size: 1.9rem
+      color: #fff
+      font-family: Chantal
+  form
+    display: flex
+    align-items: center
+    margin: 2rem 0
+    input
+      border: none
+      background-color: transparent
+      border-bottom: 2px solid $plugBorder
+      font-size: 2rem
+      padding: 0.7rem 0
+      width: 22rem
+      color: $plug
+      &::placeholder
+        color: $plug
+        opacity: 0.7
+
+.mailCheck
+  margin-left: 2rem
+  cursor: pointer
+  .mailCheckSVG
+    & > *
+      fill: $plug
+      opacity: 0.6
+      transition: all 0.2s
+  &:hover
+    .mailCheckSVG
+      & > *
+        fill: $plug
+        opacity: 1
+        transition: all 0.2s
+
+.mailCheckChecked
+  .mailCheckSVG
+    & > *
+      fill: $red
+
+.divider__05
+  margin-top: 0 !important
+
+@keyframes spinning
+  from
+    transform: rotate(0deg)
+  to
+    transform: rotate(360deg)
+

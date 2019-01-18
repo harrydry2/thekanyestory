@@ -93,6 +93,10 @@ body, html {
   font-weight: normal;
   font-style: normal; }
 
+@font-face {
+  font-family: "Chantal";
+  src: url("/fonts/Chantal.ttf"); }
+
 html, body {
   font-family: "Circular";
   font-size: 10px;
@@ -131,6 +135,25 @@ p {
     p {
       padding: 1rem 2rem;
       font-size: 1.7rem; } }
+
+.inwardSpeech {
+  font-size: 2rem;
+  color: #484848;
+  line-height: 1.85;
+  font-style: italic;
+  width: 82%;
+  position: relative;
+  left: -2%;
+  margin: 0 auto; }
+  @media (max-width: 1200px) {
+    .inwardSpeech {
+      padding: 1.7rem 0rem;
+      font-size: 1.7rem; } }
+  .inwardSpeech__naval {
+    padding: 3rem 0; }
+    @media (max-width: 1200px) {
+      .inwardSpeech__naval {
+        padding: 1.7rem 0rem; } }
 
 .speech {
   font-size: 2rem;
@@ -235,6 +258,9 @@ li {
 .noScroll {
   overflow: hidden; }
 
+.ss {
+  background-image: linear-gradient(180deg, transparent 70%, #D0021B 0); }
+
 .divider {
   height: 100vh;
   background: black;
@@ -298,11 +324,11 @@ li {
     height: auto;
     position: absolute;
     left: 0;
-    bottom: -180%; }
+    bottom: -184%; }
   .fresh__img2 {
     position: absolute;
     z-index: 1;
-    width: 77%;
+    width: 68%;
     top: 18%;
     left: 110%;
     transition: all 0.3s;
@@ -310,11 +336,90 @@ li {
   .fresh__img3 {
     position: absolute;
     z-index: 1;
-    width: 66%;
+    width: 56%;
     bottom: 15%;
     right: 110%;
     transform: rotate(3deg);
     transition: all 0.3s; }
+
+.plug {
+  width: 100%;
+  position: relative;
+  background-color: #14233C;
+  margin-top: 14rem; }
+  @media (max-width: 1200px) {
+    .plug {
+      margin-top: 5rem; } }
+  .plug__inner {
+    max-width: 64rem;
+    margin: 0 auto;
+    padding: 10rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
+    .plug__inner-box {
+      display: flex;
+      margin-top: 4rem;
+      align-items: center; }
+      .plug__inner-box-cd {
+        animation: spinning 6s infinite linear;
+        width: 10rem;
+        height: 10rem;
+        transform-origin: center center; }
+      .plug__inner-box-titlebox {
+        margin-left: 4rem; }
+        .plug__inner-box-titlebox-title {
+          font-size: 1.9rem;
+          font-family: Chantal;
+          color: #fff; }
+          .plug__inner-box-titlebox-title:last-child {
+            margin-top: 0.8rem; }
+    .plug__inner p {
+      color: #b9c9da; }
+    .plug__inner-submitted {
+      display: none;
+      font-size: 1.9rem;
+      color: #fff;
+      font-family: Chantal; }
+  .plug form {
+    display: flex;
+    align-items: center;
+    margin: 2rem 0; }
+    .plug form input {
+      border: none;
+      background-color: transparent;
+      border-bottom: 2px solid #1f364d;
+      font-size: 2rem;
+      padding: 0.7rem 0;
+      width: 22rem;
+      color: #b9c9da; }
+      .plug form input::placeholder {
+        color: #b9c9da;
+        opacity: 0.7; }
+
+.mailCheck {
+  margin-left: 2rem;
+  cursor: pointer; }
+  .mailCheck .mailCheckSVG > * {
+    fill: #b9c9da;
+    opacity: 0.6;
+    transition: all 0.2s; }
+  .mailCheck:hover .mailCheckSVG > * {
+    fill: #b9c9da;
+    opacity: 1;
+    transition: all 0.2s; }
+
+.mailCheckChecked .mailCheckSVG > * {
+  fill: #D0021B; }
+
+.divider__05 {
+  margin-top: 0 !important; }
+
+@keyframes spinning {
+  from {
+    transform: rotate(0deg); }
+  to {
+    transform: rotate(360deg); } }
 
 .leftmenu {
   position: fixed;

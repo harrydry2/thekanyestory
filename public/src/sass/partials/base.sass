@@ -35,6 +35,23 @@ p
   // &:not(:first-of-type)
   //   margin-top: 1.6rem
 
+.inwardSpeech
+  font-size: 2rem
+  color: $grey
+  line-height: 1.85
+  font-style: italic
+  width: 82%
+  position: relative
+  left: -2%
+  margin: 0 auto
+  @media (max-width: 1200px)
+    padding:  1.7rem 0rem
+    font-size: 1.7rem
+  &__naval
+    padding: 3rem 0
+    @media (max-width: 1200px)
+      padding:  1.7rem 0rem
+
 .speech
   font-size: 2rem
   color: $grey
@@ -137,3 +154,6 @@ li
   overflow: hidden
   // position: relative
   // height: 100%
+
+.ss
+  background-image: linear-gradient(180deg,transparent 70%,$red 0)
