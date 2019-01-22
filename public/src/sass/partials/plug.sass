@@ -12,10 +12,14 @@
     display: flex
     flex-direction: column
     justify-content: center
+    @media (max-width: 1200px)
+      padding: 6rem 0
     &-box
       display: flex
       margin-top: 4rem
       align-items: center
+      @media (max-width: 1200px)
+        padding: 0 2rem
       &-cd
         animation: spinning 6s infinite linear
         width: 10rem
@@ -40,6 +44,8 @@
     display: flex
     align-items: center
     margin: 2rem 0
+    @media (max-width: 1200px)
+      margin: 1.6rem 2rem
     input
       border: none
       background-color: transparent
@@ -48,6 +54,9 @@
       padding: 0.7rem 0
       width: 22rem
       color: $plug
+      @media (max-width: 1200px)
+        font-size: 1.7rem
+        // width: 18rem
       &::placeholder
         color: $plug
         opacity: 0.7
@@ -56,10 +65,14 @@
   margin-left: 2rem
   cursor: pointer
   .mailCheckSVG
+    width: 2.8rem
+    @media (max-width: 1200px)
+      width: 2.4rem
     & > *
       fill: $plug
       opacity: 0.6
       transition: all 0.2s
+
   &:hover
     .mailCheckSVG
       & > *

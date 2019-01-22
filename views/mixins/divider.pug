@@ -1,6 +1,17 @@
-mixin divider(chapter, title, gif)
-  .divider(class=`divider__${chapter}`)
-    .divider__container
-      .divider__container-num=chapter
-      .divider__container-text=title
-    video(src=`${gif}` playsinline loop muted autoplay class="divider__gif")
+mixin divider(chapter, title, gif, dual=false, intro=false)
+  - var dividerExtra = intro === false ? "regDivider" : "roDivider";
+  .divider(class=`divider__${chapter} ${dividerExtra}`)
+    if (!intro)
+      .divider__container
+        .divider__container-num=chapter
+        .divider__container-text=title
+      if (!dual)
+        video(src=`${gif}` playsinline loop muted autoplay class="divider__gif")
+      if (dual)
+        .divider__dual
+          video(src=`${gif}` playsinline loop muted autoplay class="divider__dual-gif")
+          video(src=`${gif}` playsinline loop muted autoplay class="divider__dual-gif")
+    if (intro)
+      .divider__textIntro How I went from daydreaming in my bedroom to `negotiating a six-figure deal with the biggest superstar on planet earth.
+      video(src=`${gif}` playsinline loop muted autoplay class="divider__gif")
+

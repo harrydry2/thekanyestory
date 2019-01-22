@@ -1,17 +1,15 @@
 .divider
   height: 100vh
   background: black
-  margin: 14rem 0
   position: relative
   display: flex
   align-items: center
   justify-content: center
-  position: relative
   opacity: 1
+  overflow: hidden
   @media (max-width: 1200px)
     overflow-x: hidden
     width: 100%
-    margin: 5rem 0
   &__container
     text-align: center
     z-index: 2
@@ -36,14 +34,47 @@
         margin-top: 2rem
   &__gif
     position: absolute
-    width: 100%
+    min-width: 100%
+    min-height: 100%
     opacity: 0.3
+    // @media (max-width: 1200px)
+    //   width: auto
+  // intro
+  &__textIntro
+    font-size: 6.2rem
+    line-height: 1.3
+    font-weight: 600
+    color: $white
+    position: relative
+    z-index: 2
+    padding: 0 14rem
+    @media (max-width: 500px)
+      font-size: 3.2rem
+      padding: 0 2rem
+      width: 100%
+  // dual
+  &__dual
+    display: flex
+    position: absolute
+    opacity: 0.3
+    width: 100%
     height: 100%
-    @media (max-width: 1200px)
-      width: auto
+    &-gif
+      flex: 1
+      object-fit: cover
+
+
 
 
 // specialCases
 
-.divider__01
-  margin-top: 0
+.roDivider
+  margin: 0 0 14rem 0
+  @media (max-width: 1200px)
+    margin: 0 0 5rem 0
+
+
+.regDivider
+  margin: 14rem 0
+  @media (max-width: 1200px)
+    margin: 5rem 0

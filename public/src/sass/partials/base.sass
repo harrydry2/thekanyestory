@@ -98,7 +98,7 @@ li
   border: 1rem solid #ffdddd
   position: relative
   width: 100%
-  @media (max-width: 1200px)
+  @media (max-width: 800px)
     margin: 2rem auto
     border: none
     // border: 0.5rem solid #ffdddd
@@ -135,17 +135,29 @@ li
   border: 1rem solid #ffdddd
   background-color: #fddddd
   width: min-content
-  @media (max-width: 1200px)
-    display: none
+  @media (max-width: 1000px)
+    margin: 2rem auto
+    border: none
+    border-bottom: 0.5rem solid #ffdddd
+    border-top: 0.5rem solid #ffdddd
+    width: 100%
+    display: block
   &__img
     width: 25.8rem
     height: 46rem
+    @media (max-width: 1000px)
+      width: 50%
+      height: auto
   &__video
     width: 25.8rem
     height: 46rem
     cursor: pointer
     transition: all 0.2s
     margin-left: 1.5rem
+    @media (max-width: 1200px)
+      margin-left: 0
+      width: 50%
+      height: auto
     &:hover
       opacity: 0.9
       transition: all 0.2s
