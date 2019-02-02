@@ -4,6 +4,12 @@ const express = require("express");
 const path = require("path");
 const bodyParser = require("body-parser");
 const compression = require("compression");
+// const mongoose = require("mongoose");
+// mongoose.Promise = global.Promise;
+// mongoose.connect(
+//   "mongodb://harrydry:DavidLuiz4@ds163330.mlab.com:63330/harrydry"
+// );
+// require("./models/Emails.js");
 
 const fs = require("fs");
 const app = express();

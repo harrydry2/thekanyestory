@@ -2,6 +2,7 @@ extends main
 include mixins/divider
 include mixins/LeftMenu
 include mixins/mobileMenu
+include mixins/endPlug
 
 include mixins/Chapters/Idea
 include mixins/Chapters/Flashback
@@ -31,20 +32,17 @@ block content
   +Coding
   .plug
     .plug__inner
-      p Sorry to break the flow but if you’re enjoying the story I’d really appreciate it if you followed &nbsp;
-        a.ss(target="_blank" href="https://twitter.com/harrydry") @harrydry
-        | &nbsp; on twitter and subscribed to my email list. Every now and then I do some new writing and I'm trying to build a little  following up so it would mean a lot. Just enter your email and tick the checkbox below:
-      form(action='https://phonemekanyewest.us19.list-manage.com/subscribe/post', method='POST' target="_blank" class="plug__inner-form")
-        input(placeholder="example@example.com" name="MERGE0" type="email" class="plug__inner-input")
-        input(type='hidden', name='u', value='3b9e36df8128ff61a2eb6b004')
-        input(type='hidden', name='id', value='ce0fecc847')
-        .plug__inner-submitted Thank You! 💖
-        .mailCheck!=icon("mailCheck")
-      p For the last two years, I’ve been researching and writing a book on marketing. It's so good I'm calling it &nbsp;
-        span.ss an album
-        |. It’s going to be the marketing album of the decade. There’s no bullshit fluffy statements. It’s all&nbsp;
-        span.ss hyper specific
-        | &nbsp;advice. 150 startups. Step by step guide 30 techniques used to get sales. It’s 25% off pre-launch so  please do check out the site.
+      p Sorry to break the flow but if you’re enjoying the story I’d really appreciate it if you subscribed to my &nbsp;
+        span.ss email newsletter
+        | . You'll only hear from me when I have something valuable to share. Just enter your email and tick the checkbox below:
+      .plug__inner-notvalid.pinv1 Email not valid. Try again!
+      .plug__inner-form
+        input(placeholder="example@example.com" name="email" type="email" class="plug__inner-input pii1")
+        .plug__inner-submitted.pis1 Thank You! 💖
+        .mailCheck.mc1!=icon("mailCheck")
+      p Also I'm writing a book going in-depth on how to execute specific marketing techniques. It's so good I'm calling it an album. It’s going to be the marketing album of the decade. You can find out more about it &nbsp;
+        a(href="https://twitter.com/harrydry" target="_blank").ss here
+        | .
       p Anyway, distraction over! I hope you enjoy the rest of the story.
       a.plug__inner-box(href="https://harrydry.com" target="_blank")
         img.plug__inner-box-cd(src="https://s3.amazonaws.com/harrydry/cdRom.png", alt="")
@@ -57,23 +55,4 @@ block content
   +Billboards
   +divider("07", "End", "https://media.giphy.com/media/l0MYuLUvo8GNRrhss/giphy.mp4")
   +End
-  .plug.endPlug
-    .plug__inner
-      p Sorry to break the flow but if you’re enjoying the story I’d really appreciate it if you subscribed to my email list. Every now and then I do some new writing and I'm trying to build a little  following up so it would mean a lot. Just enter your email and tick the checkbox below:
-      form(action='https://phonemekanyewest.us19.list-manage.com/subscribe/post', method='POST' target="_blank" class="plug__inner-form")
-        input(placeholder="example@example.com" name="MERGE0" type="email" class="plug__inner-input")
-        input(type='hidden', name='u', value='3b9e36df8128ff61a2eb6b004')
-        input(type='hidden', name='id', value='ce0fecc847')
-        .plug__inner-submitted Thank You. Have a good day!
-        .mailCheck!=icon("mailCheck")
-      p For the last two years, I’ve been researching and writing a book on marketing. It's so good I'm calling it &nbsp;
-        span.ss an album
-        |. It’s going to be the marketing album of the decade. There’s no bullshit fluffy statements. It’s all&nbsp;
-        span.ss hyper specific
-        | &nbsp;advice. 150 startups. Step by step guide 30 techniques used to get sales. It’s 25% off pre-launch so  please do check out the site.
-      p Anyway, distraction over! I hope you enjoy the rest of the story.
-      a.plug__inner-box(href="https://harrydry.com" target="_blank")
-        img.plug__inner-box-cd(src="https://s3.amazonaws.com/harrydry/cdRom.png", alt="")
-        .plug__inner-box-titlebox
-          .plug__inner-box-titlebox-title The Marketing Album
-          .plug__inner-box-titlebox-title By Harry Dry
+  +endPlug()

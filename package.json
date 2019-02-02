@@ -60,7 +60,7 @@
     "loadash": "^1.0.0",
     "lodash": "^4.17.11",
     "lodash.debounce": "^4.0.8",
-    "mongoose": "^4.13.7",
+    "mongoose": "^4.13.18",
     "mongoose-sanitizer": "^1.0.0",
     "mongoose-url-slugs": "^1.0.2",
     "nodemailer": "^4.6.7",

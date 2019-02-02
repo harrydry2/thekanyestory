@@ -11,7 +11,9 @@
     display: none
   &__item
     position: relative
-    width: min-content
+    width: intrinsic
+    width: -moz-max-content
+    width: -webkit-max-content
     cursor: pointer
     &::before
       content: ""
@@ -47,18 +49,21 @@
   opacity: 0
   transition: all 0.4s
 
-.mobileMenuOpen
+.mobileMenuOuter
   position: fixed
+  right: -3rem
+  top: -3rem
+  z-index: 4
+  border: 0.5rem solid transparent
+
+.mobileMenuOpen
   width: 5.4rem
   height: 5.4rem
   border-radius: 100%
-  right: -2.6rem
-  top: -2.6rem
   background-color: $red
   display: flex
   justify-content: center
   align-items: center
-  z-index: 4
   display: none
   cursor: pointer
   @media (max-width: 1200px)

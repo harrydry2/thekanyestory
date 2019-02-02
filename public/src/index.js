@@ -4,6 +4,7 @@ import zenscroll from "zenscroll";
 zenscroll.setup(null, 0);
 import toggleMenu from "./modules/mobileMenu";
 import imgSwap from "./modules/imgSwap";
+import axios from "axios";
 
 import "./modules/isChapterRead";
 import "./modules/fresh";
@@ -33,7 +34,7 @@ if (window.innerWidth > 1140) {
 }
 
 if (window.innerWidth <= 1023) {
-  $(".mobileMenuOpen").on("click", toggleMenu);
+  $(".mobileMenuOuter").on("click", toggleMenu);
 }
 
 if (window.innerWidth < 1200) {
@@ -46,14 +47,50 @@ if (window.innerWidth < 1200) {
 
 // form submission
 
-const mailCheck = $(".mailCheck");
-const mailForm = $(".plug__inner-form");
-const mailSubmitted = $(".plug__inner-submitted");
-const mailInput = $(".plug__inner-input");
+function validateEmail(email) {
+  var re = /\S+@\S+\.\S+/;
+  return re.test(email);
+}
 
-mailCheck.on("click", () => {
-  mailForm.submit();
-  mailCheck.style.display = "none";
-  mailSubmitted.style.display = "block";
-  mailInput.style.display = "none";
+// const mailCheck = $(".mailCheck");
+// const mailSubmitted = $(".plug__inner-submitted");
+// const mailInput = $(".plug__inner-input");
+// const mailNotValid = $(".plug__inner-notvalid");
+
+const mailCheck1 = $(".mc1");
+const mailSubmitted1 = $(".pis1");
+const mailInput1 = $(".pii1");
+const mailNotValid1 = $(".pinv1");
+
+mailCheck1.on("click", async () => {
+  if (validateEmail(mailInput1.value)) {
+    const res = await axios.post("subscribe", {
+      email: mailInput1.value
+    });
+    mailCheck1.style.display = "none";
+    mailNotValid1.style.display = "none";
+    mailSubmitted1.style.display = "block";
+    mailInput1.style.display = "none";
+  } else {
+    mailNotValid1.style.display = "block";
+  }
+});
+
+const mailCheck2 = $(".mc2");
+const mailSubmitted2 = $(".pis2");
+const mailInput2 = $(".pii2");
+const mailNotValid2 = $(".pinv2");
+
+mailCheck2.on("click", async () => {
+  if (validateEmail(mailInput2.value)) {
+    const res = await axios.post("subscribe", {
+      email: mailInput2.value
+    });
+    mailCheck2.style.display = "none";
+    mailNotValid2.style.display = "none";
+    mailSubmitted2.style.display = "block";
+    mailInput2.style.display = "none";
+  } else {
+    mailNotValid2.style.display = "block";
+  }
 });

@@ -1,11 +1,12 @@
 include ./LeftMenu
 
 mixin mobileMenu()
-  .mobileMenuOpen
-    .mobileMenuOpen__svgadd!=icon("addIcon")
-    .mobileMenuOpen__svgsubtract!=icon("subtractIcon")
+  .mobileMenuOuter
+    .mobileMenuOpen
+      .mobileMenuOpen__svgadd!=icon("addIcon")
+      .mobileMenuOpen__svgsubtract!=icon("subtractIcon")
   .mobilemenu
     +LeftMenu(false)
     .mobilemenu__bottom
       a.mobilemenu__bottom-left(href="/") Buy my marketing book
-      a.mobilemenu__bottom-right(href="https://twitter.com/harrydry" target="_blank")!=icon("twitter")
+      a.mobilemenu__bottom-right(href="https://twitter.com/intent/follow?screen_name=harrydry" target="_blank")!=icon("twitter")

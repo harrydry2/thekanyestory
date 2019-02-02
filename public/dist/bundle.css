@@ -278,6 +278,10 @@ li {
 .ss {
   background-image: linear-gradient(180deg, transparent 70%, #D0021B 0); }
 
+.mailCheck {
+  border: none;
+  background-color: transparent; }
+
 .divider {
   height: 100vh;
   background: black;
@@ -451,6 +455,17 @@ li {
     @media (max-width: 1200px) {
       .plug__inner {
         padding: 6rem 0; } }
+    .plug__inner-socialContainer {
+      display: flex;
+      padding: 1rem 0rem;
+      align-items: center; }
+      @media (max-width: 1200px) {
+        .plug__inner-socialContainer {
+          padding: 1rem 2rem; } }
+      .plug__inner-socialContainer-twitter {
+        border: 1px solid transparent; }
+      .plug__inner-socialContainer-facebook {
+        margin-left: 1rem; }
     .plug__inner-box {
       display: flex;
       margin-top: 4rem;
@@ -473,32 +488,51 @@ li {
             margin-top: 0.8rem; }
     .plug__inner p {
       color: #b9c9da; }
-    .plug__inner-submitted {
-      display: none;
-      font-size: 1.9rem;
-      color: #fff;
-      font-family: Chantal; }
-  .plug form {
-    display: flex;
-    align-items: center;
-    margin: 2rem 0; }
+
+.plug__inner-form {
+  display: flex;
+  align-items: center;
+  margin: 2rem 0; }
+  @media (max-width: 1200px) {
+    .plug__inner-form {
+      margin: 1.6rem 2rem; } }
+  .plug__inner-form-mobile {
+    margin: 0; }
+  .plug__inner-form .plug__inner-input {
+    border: none;
+    background-color: transparent;
+    border-bottom: 2px solid #1f364d;
+    font-size: 2rem;
+    padding: 0.7rem 0;
+    width: 22rem;
+    color: #b9c9da; }
+    .plug__inner-form .plug__inner-input-mobile {
+      width: 20rem; }
     @media (max-width: 1200px) {
-      .plug form {
-        margin: 1.6rem 2rem; } }
-    .plug form input {
-      border: none;
-      background-color: transparent;
-      border-bottom: 2px solid #1f364d;
-      font-size: 2rem;
-      padding: 0.7rem 0;
-      width: 22rem;
-      color: #b9c9da; }
-      @media (max-width: 1200px) {
-        .plug form input {
-          font-size: 1.7rem; } }
-      .plug form input::placeholder {
-        color: #b9c9da;
-        opacity: 0.7; }
+      .plug__inner-form .plug__inner-input {
+        font-size: 1.7rem; } }
+    .plug__inner-form .plug__inner-input::placeholder {
+      color: #b9c9da;
+      opacity: 0.7; }
+  .plug__inner-form .plug__inner-submitted {
+    display: none;
+    font-size: 1.9rem;
+    color: #fff;
+    font-family: Chantal; }
+    @media (max-width: 1200px) {
+      .plug__inner-form .plug__inner-submitted {
+        font-size: 1.6rem; } }
+
+.plug__inner-notvalid {
+  display: none;
+  padding: 1rem 0rem 0rem 0rem;
+  font-size: 1.7rem;
+  color: #D0021B !important;
+  font-family: Chantal; }
+  @media (max-width: 1200px) {
+    .plug__inner-notvalid {
+      padding: 1rem 2rem 0rem 2rem;
+      font-size: 1.6rem; } }
 
 .mailCheck {
   margin-left: 2rem;
@@ -512,6 +546,9 @@ li {
       fill: #b9c9da;
       opacity: 0.6;
       transition: all 0.2s; }
+  .mailCheck-mobile .mailCheckSVG > * {
+    fill: white;
+    opacity: 1; }
   .mailCheck:hover .mailCheckSVG > * {
     fill: #b9c9da;
     opacity: 1;
@@ -529,6 +566,16 @@ li {
   to {
     transform: rotate(360deg); } }
 
+.twitterSVGPlug {
+  width: 2.6rem; }
+  .twitterSVGPlug > * {
+    fill: #4a6178; }
+
+.facebookSVGPlug {
+  width: 2.4rem; }
+  .facebookSVGPlug > * {
+    fill: #4a6178; }
+
 .leftmenu {
   position: fixed;
   left: 9.4%;
@@ -544,7 +591,9 @@ li {
       display: none; } }
   .leftmenu__item {
     position: relative;
-    width: min-content;
+    width: intrinsic;
+    width: -moz-max-content;
+    width: -webkit-max-content;
     cursor: pointer; }
     .leftmenu__item::before {
       content: "";
@@ -579,18 +628,21 @@ li {
   opacity: 0;
   transition: all 0.4s; }
 
-.mobileMenuOpen {
+.mobileMenuOuter {
   position: fixed;
+  right: -3rem;
+  top: -3rem;
+  z-index: 4;
+  border: 0.5rem solid transparent; }
+
+.mobileMenuOpen {
   width: 5.4rem;
   height: 5.4rem;
   border-radius: 100%;
-  right: -2.6rem;
-  top: -2.6rem;
   background-color: #D0021B;
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 4;
   display: none;
   cursor: pointer; }
   @media (max-width: 1200px) {

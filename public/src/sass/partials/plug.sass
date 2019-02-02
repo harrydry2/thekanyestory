@@ -14,6 +14,16 @@
     justify-content: center
     @media (max-width: 1200px)
       padding: 6rem 0
+    &-socialContainer
+      display: flex
+      padding: 1rem 0rem
+      align-items: center
+      @media (max-width: 1200px)
+        padding: 1rem 2rem
+      &-twitter
+        border: 1px solid transparent
+      &-facebook
+        margin-left: 1rem
     &-box
       display: flex
       margin-top: 4rem
@@ -35,31 +45,50 @@
             margin-top: 0.8rem
     p
       color: $plug
-    &-submitted
-      display: none
-      font-size: 1.9rem
-      color: #fff
-      font-family: Chantal
-  form
-    display: flex
-    align-items: center
-    margin: 2rem 0
+
+// new mail
+
+.plug__inner-form
+  display: flex
+  align-items: center
+  margin: 2rem 0
+  @media (max-width: 1200px)
+    margin: 1.6rem 2rem
+  &-mobile
+    margin: 0
+  .plug__inner-input
+    border: none
+    background-color: transparent
+    border-bottom: 2px solid $plugBorder
+    font-size: 2rem
+    padding: 0.7rem 0
+    width: 22rem
+    color: $plug
+    &-mobile
+      width: 20rem
     @media (max-width: 1200px)
-      margin: 1.6rem 2rem
-    input
-      border: none
-      background-color: transparent
-      border-bottom: 2px solid $plugBorder
-      font-size: 2rem
-      padding: 0.7rem 0
-      width: 22rem
+      font-size: 1.7rem
+      // width: 18rem
+    &::placeholder
       color: $plug
-      @media (max-width: 1200px)
-        font-size: 1.7rem
-        // width: 18rem
-      &::placeholder
-        color: $plug
-        opacity: 0.7
+      opacity: 0.7
+  .plug__inner-submitted
+    display: none
+    font-size: 1.9rem
+    color: #fff
+    font-family: Chantal
+    @media (max-width: 1200px)
+      font-size: 1.6rem
+
+.plug__inner-notvalid
+  display: none
+  padding: 1rem 0rem 0rem 0rem
+  font-size: 1.7rem
+  color: $red !important
+  font-family: Chantal
+  @media (max-width: 1200px)
+    padding: 1rem 2rem 0rem 2rem
+    font-size: 1.6rem
 
 .mailCheck
   margin-left: 2rem
@@ -72,6 +101,11 @@
       fill: $plug
       opacity: 0.6
       transition: all 0.2s
+  &-mobile
+    .mailCheckSVG
+      & > *
+        fill: white
+        opacity: 1
 
   &:hover
     .mailCheckSVG
@@ -94,3 +128,15 @@
   to
     transform: rotate(360deg)
 
+
+.twitterSVGPlug
+  width: 2.6rem
+  & > *
+    fill: #4a6178
+    // fill: $plug
+
+.facebookSVGPlug
+  width: 2.4rem
+  & > *
+    fill: #4a6178
+    // fill: $plug
