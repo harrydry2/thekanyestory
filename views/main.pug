@@ -12,6 +12,12 @@ html(lang='en')
     link(rel='mask-icon', href='/favicons/safari-pinned-tab.svg', color='#ff177b')
     meta(name='msapplication-TileColor', content='#ff177b')
     meta(name='theme-color', content='#ff177b')
+    script(async='', src='https://www.googletagmanager.com/gtag/js?id=UA-91909305-7')
+    script.
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-91909305-7');
     block head
       title The Kanye Story
       meta(name='description', content='I built a dating site which grew faster than Tinder. Then it crashed. I hired some billboards and ended up getting called by the CFO of YEEZY')
