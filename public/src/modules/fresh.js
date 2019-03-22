@@ -23,17 +23,17 @@ if (window.innerWidth > 500) {
 
   freshImg1.addEventListener("transitionend", event => {
     setTimeout(() => {
-      freshImg2.style.top = "18%";
+      freshImg2.style.top = "41%";
       freshImg2.style.opacity = "1";
     }, 300);
   });
 
-  freshImg2.addEventListener("transitionend", event => {
-    setTimeout(() => {
-      freshImg3.style.bottom = "15%";
-      freshImg3.style.opacity = "1";
-    }, 300);
-  });
+  // freshImg2.addEventListener("transitionend", event => {
+  //   setTimeout(() => {
+  //     freshImg3.style.bottom = "15%";
+  //     freshImg3.style.opacity = "1";
+  //   }, 300);
+  // });
 }
 
 if (window.innerWidth < 500) {
@@ -42,11 +42,11 @@ if (window.innerWidth < 500) {
       freshImg2Mob.style.top = "16%";
       freshImg2Mob.style.opacity = "0.9";
     }, 350);
-    freshImg2Mob.addEventListener("transitionend", event => {
-      setTimeout(() => {
-        freshImg3Mob.style.bottom = "38%";
-        freshImg3Mob.style.opacity = "0.9";
-      }, 500);
-    });
+    // freshImg2Mob.addEventListener("transitionend", event => {
+    //   setTimeout(() => {
+    //     freshImg3Mob.style.bottom = "38%";
+    //     freshImg3Mob.style.opacity = "0.9";
+    //   }, 500);
+    // });
   });
 }

@@ -131,7 +131,7 @@ html, body {
 
 p {
   font-size: 2rem;
-  color: #484848;
+  color: #222222;
   line-height: 1.85;
   padding: 1.7rem 0; }
   @media (max-width: 1200px) {
@@ -141,7 +141,7 @@ p {
 
 .inwardSpeech {
   font-size: 2rem;
-  color: #484848;
+  color: #222222;
   line-height: 1.85;
   font-style: italic;
   width: 82%;
@@ -160,7 +160,7 @@ p {
 
 .speech {
   font-size: 2rem;
-  color: #484848;
+  color: #222222;
   line-height: 1.85; }
   .speech__one {
     padding-top: 1.7rem; }
@@ -173,7 +173,7 @@ p {
 
 li {
   font-size: 2rem;
-  color: #484848;
+  color: #222222;
   list-style: none;
   line-height: 1.85; }
   li:first-of-type {
@@ -386,7 +386,7 @@ li {
     opacity: 0;
     width: 68%;
     top: -75%;
-    left: 10%;
+    left: 15%;
     transition: all .15s;
     transform: rotate(-3deg); }
     @media (max-width: 500px) {
@@ -599,7 +599,7 @@ li {
       content: "";
       width: 0%;
       height: 2px;
-      background: #14233c;
+      background: #222222;
       position: absolute;
       top: 50%;
       transform: translateY(-40%);
@@ -616,10 +616,10 @@ li {
       font-size: 1.7rem;
       font-family: Roboto; }
     .leftmenu__item-text {
-      letter-spacing: 1.8px;
+      letter-spacing: 1.4px;
       text-transform: uppercase;
       font-size: 1.6rem;
-      font-family: Roboto; }
+      font-weight: 500; }
 
 .strike::before {
   width: 104%; }
