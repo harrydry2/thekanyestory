@@ -474,6 +474,15 @@ li {
     .plug__inner p {
       color: #b9c9da; }
 
+.twitter-tweet {
+  margin: 3.4rem auto !important;
+  width: 42rem !important; }
+  @media (max-width: 500px) {
+    .twitter-tweet {
+      width: 93% !important;
+      padding: 0 2rem !important;
+      margin: 2rem auto !important; } }
+
 .plug__inner-form {
   display: flex;
   align-items: center;

@@ -2,7 +2,6 @@ import { $, $$ } from "./bling";
 
 function imgSwap() {
   if (window.innerWidth < 1000) {
-    $(".test6").src = "https://s3.amazonaws.com/harrydry/test7Mob.png";
     $(".disIMG").src = "https://s3.amazonaws.com/harrydry/disMob.png";
     $(".hunterIMG").src = "https://s3.amazonaws.com/harrydry/hunterMob.png";
     $(".bamn1").src =

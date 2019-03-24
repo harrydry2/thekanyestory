@@ -1,10 +1,17 @@
 mixin endPlug()
   .plug.endPlug
     .plug__inner
-      p Thanks for reading and making it all the way to the bottom. If you enjoyed it, it would really mean a lot if you shared with your friends.
-      span.plug__inner-socialContainer
-        a.plug__inner-socialContainer-twitter(target="_blank" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fwww.thekanyestory.com&via=harrydry&text=The%20Kanye%20Story")!=icon("twitterPlug")
-        a.plug__inner-socialContainer-facebook(target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A//thekanyestory.com")!=icon("facebookPlug")
+      p Thanks for making it all the way to the bottom. If you enjoyed reading, it would really mean a lot if you retweeted the tweet below. I spent a while writing this, so it would be nice for a few people to read it:
+      blockquote.twitter-tweet(data-cards='hidden', data-lang='en')
+        p(lang='en', dir='ltr')
+          | I signed up to volunteer for Our Future Our Choice. Join me!
+          a(href='https://t.co/6CPB2xSkho') https://t.co/6CPB2xSkho
+        | — Harry Dry (@harrydry)
+        a(href='https://twitter.com/harrydry/status/1042174834569105411?ref_src=twsrc%5Etfw') September 18, 2018
+      script(async='', src='https://platform.twitter.com/widgets.js', charset='utf-8')
+      //- span.plug__inner-socialContainer
+      //-   a.plug__inner-socialContainer-twitter(target="_blank" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fwww.thekanyestory.com&via=harrydry&text=The%20Kanye%20Story")!=icon("twitterPlug")
+      //-   a.plug__inner-socialContainer-facebook(target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A//thekanyestory.com")!=icon("facebookPlug")
       p Any questions feel free to tweet me, &nbsp;
         a.ss(href="https://twitter.com/intent/follow?screen_name=harrydry" target="_blank") @harrydry
         | . If you'd like to read more of my writing you can subscribe to my email list:
