@@ -192,11 +192,7 @@ li {
       border-bottom: 0.5rem solid #ffdddd;
       border-top: 0.5rem solid #ffdddd; } }
   .normalWidth__video {
-    cursor: pointer;
-    transition: all 0.2s; }
-    .normalWidth__video:hover {
-      opacity: 0.85;
-      transition: all 0.2s; }
+    cursor: pointer; }
 
 .fullWidth {
   border: 1rem solid #ffdddd;
@@ -243,15 +239,14 @@ li {
     height: 46rem;
     cursor: pointer;
     transition: all 0.2s;
-    margin-left: 1.5rem; }
+    margin-left: 1.5rem;
+    background: url(https://s3.amazonaws.com/harrydry/damPoster.jpg) no-repeat 0 0;
+    background-size: cover; }
     @media (max-width: 1200px) {
       .half__video {
         margin-left: 0;
         width: 50%;
         height: auto; } }
-    .half__video:hover {
-      opacity: 0.85;
-      transition: all 0.2s; }
 
 .noScroll {
   overflow: hidden; }
