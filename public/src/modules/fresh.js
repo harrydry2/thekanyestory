@@ -3,9 +3,11 @@ import { $, $$ } from "./bling";
 const freshOuter = $(".fresh");
 const freshImg1 = $(".fresh__img1");
 const freshImg2 = $(".fresh__img2");
-const freshImg3 = $(".fresh__img3");
+// mon
+const freshImg1Mob = $(".fresh__img1Mob");
 const freshImg2Mob = $(".fresh__img2Mob");
 const freshImg3Mob = $(".fresh__img3Mob");
+console.log(freshImg1Mob, freshImg2Mob, freshImg3Mob);
 
 // window height
 // const imgHeight = freshImg.clientHeight;
@@ -39,14 +41,20 @@ if (window.innerWidth > 500) {
 if (window.innerWidth < 500) {
   window.addEventListener("load", () => {
     setTimeout(() => {
-      freshImg2Mob.style.top = "16%";
-      freshImg2Mob.style.opacity = "0.9";
-    }, 350);
-    // freshImg2Mob.addEventListener("transitionend", event => {
-    //   setTimeout(() => {
-    //     freshImg3Mob.style.bottom = "38%";
-    //     freshImg3Mob.style.opacity = "0.9";
-    //   }, 500);
-    // });
+      freshImg1Mob.style.top = "14%";
+      freshImg1Mob.style.opacity = "1";
+    }, 300);
+    freshImg1Mob.addEventListener("transitionend", event => {
+      setTimeout(() => {
+        freshImg2Mob.style.top = "26%";
+        freshImg2Mob.style.opacity = "1";
+      }, 100);
+    });
+    freshImg2Mob.addEventListener("transitionend", event => {
+      setTimeout(() => {
+        freshImg3Mob.style.top = "39%";
+        freshImg3Mob.style.opacity = "1";
+      }, 100);
+    });
   });
 }
