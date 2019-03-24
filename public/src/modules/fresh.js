@@ -7,7 +7,6 @@ const freshImg2 = $(".fresh__img2");
 const freshImg1Mob = $(".fresh__img1Mob");
 const freshImg2Mob = $(".fresh__img2Mob");
 const freshImg3Mob = $(".fresh__img3Mob");
-console.log(freshImg1Mob, freshImg2Mob, freshImg3Mob);
 
 // window height
 // const imgHeight = freshImg.clientHeight;
