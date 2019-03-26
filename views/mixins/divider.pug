@@ -6,10 +6,10 @@ mixin divider(chapter, title, gif, dual=false, intro=false)
         .divider__container-num=chapter
         .divider__container-text=title
       if (!dual)
-        video(src=`${gif}` playsinline loop muted autoplay class="divider__gif")
+        video(src=`${gif}` playsinline loop muted autoplay class=`divider__gif divider__gif-${chapter}`)
       if (dual)
         .divider__dual
-          video(src=`${gif}` playsinline loop muted autoplay class="divider__dual-gif")
+          video(src=`${gif}` playsinline loop muted autoplay class=`divider__dual-gif divider__gif-${chapter}`)
           video(src=`${gif}` playsinline loop muted autoplay class="divider__dual-gif")
     if (intro)
       .divider__textIntro From lying in bed with no ideas to negotiating with the biggest superstar on planet earth.

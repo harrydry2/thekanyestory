@@ -8,7 +8,7 @@ import axios from "axios";
 
 import "./modules/isChapterRead";
 import "./modules/fresh";
-import menuHide from "./modules/menuHide";
+// import menuHide from "./modules/menuHide";
 
 const menuItems = [...$$(".leftmenu__item")];
 const dividers = [...$$(".divider")];
@@ -29,9 +29,9 @@ menuItems.forEach((item, index) => {
 
 imgSwap();
 
-if (window.innerWidth > 1140) {
-  menuHide();
-}
+// if (window.innerWidth > 1140) {
+//   menuHide();
+// }
 
 if (window.innerWidth <= 1023) {
   $(".mobileMenuOuter").on("click", toggleMenu);
