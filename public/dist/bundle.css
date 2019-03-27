@@ -698,7 +698,7 @@ li {
   .mobilemenu__bottom {
     position: absolute;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: flex-end;
     width: 100%;
     padding: 2rem 2.4rem;
