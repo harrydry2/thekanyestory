@@ -13,13 +13,13 @@ const freshImg3Mob = $(".fresh__img3Mob");
 // const diff = windowHeight - imgHeight;
 
 if (window.innerWidth > 500) {
-  const freshImgHeight = freshImg1.offsetHeight;
-  const windowHeight = freshOuter.clientHeight;
-  const subtactedNumber = Math.abs(freshImgHeight - windowHeight);
   const check = setInterval(() => {
     console.log("runaagin");
     if (freshImg1.complete && freshImg2.complete) {
       console.log("run");
+      const freshImgHeight = freshImg1.offsetHeight;
+      const windowHeight = freshOuter.clientHeight;
+      const subtactedNumber = Math.abs(freshImgHeight - windowHeight);
       setTimeout(() => (freshImg1.style.top = `-${subtactedNumber}px`), 500);
       clearInterval(check);
     }
