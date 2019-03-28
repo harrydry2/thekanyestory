@@ -13,14 +13,16 @@ const freshImg3Mob = $(".fresh__img3Mob");
 // const diff = windowHeight - imgHeight;
 
 if (window.innerWidth > 500) {
-  window.addEventListener("load", function(event) {
-    const freshImgHeight = freshImg1.offsetHeight;
-    const windowHeight = freshOuter.clientHeight;
-    setTimeout(
-      () => (freshImg1.style.top = `-${freshImgHeight - windowHeight}px`),
-      600
-    );
-  });
+  const freshImgHeight = freshImg1.offsetHeight;
+  const windowHeight = freshOuter.clientHeight;
+  const check = setInterval(() => {
+    console.log("tryagain");
+    if (freshImg1.complete && freshImg2.complete) {
+      console.log("run");
+      freshImg1.style.top = `-${freshImgHeight - windowHeight}px`;
+      clearInterval(check);
+    }
+  }, 150);
 
   freshImg1.addEventListener("transitionend", event => {
     setTimeout(() => {
@@ -38,7 +40,7 @@ if (window.innerWidth > 500) {
 }
 
 if (window.innerWidth < 500) {
-  window.addEventListener("load", () => {
+  document.addEventListener("DOMContentLoaded", () => {
     setTimeout(() => {
       freshImg1Mob.style.top = "14%";
       freshImg1Mob.style.opacity = "1";
