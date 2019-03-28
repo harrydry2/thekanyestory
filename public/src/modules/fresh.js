@@ -15,11 +15,12 @@ const freshImg3Mob = $(".fresh__img3Mob");
 if (window.innerWidth > 500) {
   const freshImgHeight = freshImg1.offsetHeight;
   const windowHeight = freshOuter.clientHeight;
+  const subtactedNumber = Math.abs(freshImgHeight - windowHeight);
   const check = setInterval(() => {
-    console.log("tryagain");
+    console.log("runaagin");
     if (freshImg1.complete && freshImg2.complete) {
       console.log("run");
-      freshImg1.style.top = `-${freshImgHeight - windowHeight}px`;
+      setTimeout(() => (freshImg1.style.top = `-${subtactedNumber}px`), 500);
       clearInterval(check);
     }
   }, 150);
