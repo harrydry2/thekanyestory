@@ -4,8 +4,9 @@
   overflow: hidden
   position: relative
   &__img1
-    transition: all 0.5s
-    transition-timing-function: cubic-bezier(.51,.25,.76,.49)
+    transition: top 0.5s
+    -webkit-transition: top 0.5s
+    // transition-timing-function: cubic-bezier(.51,.25,.76,.49)
     max-width: 100%
     height: auto
     position: absolute
@@ -25,7 +26,7 @@
     width: 68%
     top: -75%
     left: 15%
-    transition: all .15s
+    transition: top 0.15s, opacity 0.15s
     transform: rotate(-3deg)
     @media (max-width: 500px)
       display: none

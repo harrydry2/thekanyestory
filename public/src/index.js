@@ -1,5 +1,8 @@
 import "./sass/styles.sass";
 import { $, $$ } from "./modules/bling";
+// loadIntroVideo
+const introVideo = $(".divider__gif-01");
+introVideo.src = "https://s3.amazonaws.com/harrydry/steve/steve__01.mp4";
 import zenscroll from "zenscroll";
 zenscroll.setup(null, 0);
 import toggleMenu from "./modules/mobileMenu";
