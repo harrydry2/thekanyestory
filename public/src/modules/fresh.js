@@ -51,7 +51,7 @@ if (window.innerWidth < 500) {
       setTimeout(() => {
         freshImg1Mob.style.top = "14%";
         freshImg1Mob.style.opacity = "1";
-      }, 300);
+      }, 550);
     })
     .catch(e => console.log(e));
   freshImg1Mob.addEventListener("transitionend", event => {
