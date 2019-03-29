@@ -34,7 +34,6 @@ if (window.innerWidth > 500) {
     .catch(e => console.log(e));
   freshImg1.addEventListener("transitionend", event => {
     setTimeout(() => {
-      freshImg2.style.top = "41%";
       freshImg2.style.opacity = "1";
     }, 300);
   });
