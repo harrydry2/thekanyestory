@@ -400,11 +400,11 @@ li {
     opacity: 0;
     width: 39%;
     display: none;
-    top: -2%;
+    top: 14%;
     margin-left: auto;
     margin-right: auto;
     left: 12%;
-    transition: all .25s; }
+    transition: opacity 0.25s; }
     @media (max-width: 500px) {
       .fresh__img1Mob {
         display: block; } }
@@ -414,11 +414,11 @@ li {
     opacity: 0;
     width: 59%;
     display: none;
-    top: -2%;
+    top: 26%;
     margin-left: auto;
     margin-right: auto;
     left: 17.6%;
-    transition: all .25s; }
+    transition: opacity 0.25s; }
     @media (max-width: 500px) {
       .fresh__img2Mob {
         display: block; } }
@@ -428,11 +428,11 @@ li {
     opacity: 0;
     display: none;
     width: 59%;
-    top: -2%;
+    top: 39%;
     margin-left: auto;
     margin-right: auto;
     left: 31%;
-    transition: all .20s; }
+    transition: opacity 0.25s; }
     @media (max-width: 500px) {
       .fresh__img3Mob {
         display: block; } }

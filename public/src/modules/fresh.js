@@ -49,20 +49,17 @@ if (window.innerWidth < 500) {
   ])
     .then(() => {
       setTimeout(() => {
-        freshImg1Mob.style.top = "14%";
         freshImg1Mob.style.opacity = "1";
-      }, 550);
+      }, 600);
     })
     .catch(e => console.log(e));
   freshImg1Mob.addEventListener("transitionend", event => {
     setTimeout(() => {
-      freshImg2Mob.style.top = "26%";
       freshImg2Mob.style.opacity = "1";
     }, 100);
   });
   freshImg2Mob.addEventListener("transitionend", event => {
     setTimeout(() => {
-      freshImg3Mob.style.top = "39%";
       freshImg3Mob.style.opacity = "1";
     }, 100);
   });
