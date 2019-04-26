@@ -9,7 +9,9 @@ mongoose.Promise = global.Promise;
 mongoose.connect(
   `mongodb+srv://harrydry:${process.env.PWORD}@cluster0-cyuja.mongodb.net/test`,
   { useNewUrlParser: true }
-);
+).then(() => {
+  console.log("connection 100%")
+}).catch( (err) => console.error(err));
 require('./models/Emails.js');
 
 const fs = require("fs");
