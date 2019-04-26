@@ -11,7 +11,7 @@ mongoose.connect(
   { useNewUrlParser: true }
 ).then(() => {
   console.log("connection 100%")
-}).catch( (err) => console.error(err));
+}).catch( (err) => console.log("******************* ******************************************************************************************************************", err));
 require('./models/Emails.js');
 
 const fs = require("fs");
