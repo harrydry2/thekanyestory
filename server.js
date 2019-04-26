@@ -7,7 +7,7 @@ const compression = require("compression");
 const mongoose = require("mongoose");
 mongoose.Promise = global.Promise;
 mongoose.connect(
-  `mongodb+srv://harrydry:${process.env.pword}@cluster0-cyuja.mongodb.net/test`,
+  `mongodb+srv://harrydry:${process.env.PWORD}@cluster0-cyuja.mongodb.net/test`,
   { useNewUrlParser: true }
 );
 require('./models/Emails.js');
