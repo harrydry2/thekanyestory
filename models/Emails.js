@@ -8,4 +8,4 @@ const emailSchema = new mongoose.Schema({
   }
 });
 
-module.exports = mongoose.model("Email", emailSchema);
+module.exports = mongoose.model("Emails", emailSchema);
