@@ -66,12 +66,10 @@ const mailInput1 = $(".pii1");
 const mailNotValid1 = $(".pinv1");
 
 mailCheck1.on("click", async () => {
-  console.log("cunt")
   if (validateEmail(mailInput1.value)) {
     const res = await axios.post("/subscribe", {
       email: mailInput1.value
     });
-    console.log(res);
     mailCheck1.style.display = "none";
     mailNotValid1.style.display = "none";
     mailSubmitted1.style.display = "block";
@@ -85,8 +83,6 @@ const mailCheck2 = $(".mc2");
 const mailSubmitted2 = $(".pis2");
 const mailInput2 = $(".pii2");
 const mailNotValid2 = $(".pinv2");
-
-console.log(mailCheck1, mailCheck2)
 
 mailCheck2.on("click", async () => {
   if (validateEmail(mailInput2.value)) {

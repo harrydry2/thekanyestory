@@ -8,13 +8,6 @@ exports.home = async (req, res) => {
 };
 
 exports.subscribe = async (req, res) => {
-  console.log("2")
-  try {
-    const email = await new Emails(req.body).save();
-    console.log("beans")
-  }
-  catch(err) {
-    console.log(err, "err")
-  }
+  const email = await new Emails(req.body).save();
   res.json({fuck: "fuck"});
 };
