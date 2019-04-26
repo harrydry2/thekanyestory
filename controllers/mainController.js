@@ -9,5 +9,5 @@ exports.home = async (req, res) => {
 
 exports.subscribe = async (req, res) => {
   const email = await new Emails(req.body).save();
-  res.json(email);
+  res.json({fuck: "fuck"});
 };
